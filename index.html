@@ -34,7 +34,7 @@
     --paper-deep:#050403;
     --ink:#ffffff;
     --ink-soft:#ece4d3;
-    --ink-faint:#b8ad9a;
+    --ink-faint:#d3cce6;
     --accent:#cfb5ec;
     --accent-soft:#b89cd8;
     --accent-rgb:207,181,236;
@@ -235,12 +235,12 @@ td:first-child{width:23%}
 </style>
 </head><body><div class="wrap">
 <header class="top">
-<p class="eyebrow label">annotated reading list · 105 papers · 8 threads · v1.1 · updated 2026-08-10</p>
+<p class="eyebrow label">annotated reading list · 123 papers · 8 threads · v1.3 · updated 2026-08-10</p>
 <h1>joint planning &amp;<br>coordination</h1>
 <p class="dek">Where computational cognitive science, behavioral game theory, and multi-agent AI meet on the problem of two or more agents forming and acting on a shared plan. Every entry carries a tier, a note on why it earns its place, and — where relevant — a flag for a common citation trap.</p>
 </header>
 <div class="taped"><span class="label">how to read the tiers</span>
-<p><b>Tier 1</b> (24 papers) — read in full. <b>Tier 2</b> — skim the introduction and discussion. <b>Tier 3</b> — know it exists, cite when relevant. Tiers reflect value to someone building computational models of coordination, not the importance of the work in its own field; several Tier 3 entries are classics that simply are not the fastest route in.</p>
+<p><b>Tier 1</b> (25 papers) — read in full. <b>Tier 2</b> — skim the introduction and discussion. <b>Tier 3</b> — know it exists, cite when relevant. Tiers reflect value to someone building computational models of coordination, not the importance of the work in its own field; several Tier 3 entries are classics that simply are not the fastest route in.</p>
 <p>The threads are not mutually exclusive and the boundaries are arguable — thread <b>G</b> in particular cuts across <b>A</b> and <b>D</b> on the axis of continuous versus discrete time, which turns out to matter more than the disciplinary split.</p></div>
 <div class="sec"><span class="num">01</span><h2>a four-week path</h2></div>
 <p class="sec-note">Sixteen of the papers below, sequenced as roughly four hours a week for a month. The social and joint-planning material comes first deliberately: the single-agent resource-rational work is easier to absorb later, whereas these shape which questions look worth asking.</p>
@@ -333,7 +333,7 @@ td:first-child{width:23%}
 </div>
 </div>
 <div class="sec"><span class="num">02</span><h2>the library, by thread</h2></div>
-<details class="thread"><summary>A · behavioral game theory &amp; coordination<span class="cnt">18 items</span></summary><div class="inner">
+<details class="thread"><summary>A · behavioral game theory &amp; coordination<span class="cnt">20 items</span></summary><div class="inner">
 <div class="lib">
 <p class="cite"><b>Colman &amp; Gold (2018).</b> Team reasoning: solving the puzzle of coordination. <i>Psychonomic Bulletin &amp; Review</i>, 25(5), 1770–1783.</p>
 <p class="why">The entry point to team reasoning — written for psychologists, no game theory assumed. The economics-side cousin of the “joint intention” branch. Read it as: the same idea, thirty years earlier, in different notation. Noticing exactly these convergences is much of the payoff of reading across these traditions. (Skip Bacharach's book; read Gold &amp; Sugden's intro to it for more.)</p>
@@ -353,6 +353,16 @@ td:first-child{width:23%}
 <p class="cite"><b>Bardsley, Mehta, Starmer &amp; Sugden (2010).</b> Explaining focal points: cognitive hierarchy theory versus team reasoning. <i>Economic Journal</i>, 120(543), 40–79.</p>
 <p class="why">The horse-race paper — two of the three main model families fit to the same data. If a fifth hour turns up in a week, spend it here.</p>
 <div class="meta"><span class="tag t1">Tier 1</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Btesh, V., &amp; Ho, M. K. (2026).</b> Let's be friends! People work together even when there is no incentive to do so. <i>Proc. 48th CogSci</i> (in press).</p>
+<p class="why">People choose to work together in the absence of any material reason to. If that holds up, it is a direct challenge to accounts on which joint action is explained by payoff structure — team reasoning, virtual bargaining and joint-intention models all predict cooperation &lt;em&gt;because&lt;/em&gt; it pays, and would need something further to explain cooperating when it does not. Listed from the first author's own page; the proceedings were not yet posted at the time of writing.</p>
+<div class="meta"><span class="tag t2">Tier 2</span><a class="tag" href="https://vbtesh.github.io/" target="_blank" rel="noopener">author page</a></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Lamba, A., Houlihan, S. D., &amp; Saxe, R. (2025).</b> Solving strategic social coordination via Bayesian learning. <i>Proc. 47th CogSci</i>, 6117–6123.</p>
+<p class="why">An Asymmetric Social Exchange Game with N = 675, pitting a model that learns coordination from experience against one that infers partners' hidden motivations. A clean instance of the question that runs through this whole list: how much of coordination is reinforcement over outcomes, and how much is inference about what the other agent wants.</p>
+<div class="meta"><span class="tag t2">Tier 2</span><a class="tag" href="https://daeh.info/pubs/lamba2025ase.pdf" target="_blank" rel="noopener">PDF</a></div>
 </div>
 <div class="lib">
 <p class="cite"><b>Perea, A. (2021).</b> Epistemic game theory. In M. Knauff &amp; W. Spohn (Eds.), <i>The Handbook of Rationality</i> (Ch. 9.2, pp. 543–552). MIT Press.</p>
@@ -466,7 +476,7 @@ td:first-child{width:23%}
 <div class="meta"><span class="tag">Tier 3</span></div>
 </div>
 </div></details>
-<details class="thread"><summary>C · computational theory of mind &amp; inverse planning<span class="cnt">9 items</span></summary><div class="inner">
+<details class="thread"><summary>C · computational theory of mind &amp; inverse planning<span class="cnt">13 items</span></summary><div class="inner">
 <div class="lib">
 <p class="cite"><b>Wang, Davis &amp; Jara-Ettinger (2025).</b> Modeling other minds: a computational account of social cognition and its development. <i>Annual Review of Developmental Psychology</i>, 7.</p>
 <p class="why">One of the most important bridges on this page. Its central construct — “restricted scope models,” context-specific simplifications that make social reasoning tractable — is the direct social-cognition analogue of Ho's simplified task representations. An open direction sits somewhere in that overlap.</p>
@@ -481,6 +491,16 @@ td:first-child{width:23%}
 <p class="cite"><b>Banerjee, Cornelisse, Gopinath, Sumner, DeCastro, Rosman, Vinitsky &amp; Ho (2025).</b> Estimating cognitive biases with attention-aware inverse planning. <i>NeurIPS 38</i> (Spotlight).</p>
 <p class="why">Inverse planning where the inferred quantity is the partner's attentional and representational limits. One of the most recent entries in this line, and among the nearest published work to the problems this list circles. Worth reading early.</p>
 <div class="meta"><span class="tag t2">Tier 2</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Chandra, K., Houlihan, S. D., &amp; Kleiman-Weiner, M. (2025).</b> Building computational models of social cognition in memo. <i>Proc. 47th CogSci</i>.</p>
+<p class="why">&lt;code&gt;memo&lt;/code&gt; is a probabilistic programming language purpose-built for reasoning about reasoning — nested theory of mind written declaratively and compiled to run fast. Infrastructure rather than theory, and the most practical thing on this list for anyone who actually has to implement recursive partner models.</p>
+<div class="meta"><span class="tag t2">Tier 2</span><a class="tag" href="https://escholarship.org/content/qt30k5x6zk/qt30k5x6zk.pdf" target="_blank" rel="noopener">PDF</a></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Chen, T., Houlihan, S. D., Chandra, K., Tenenbaum, J. B., &amp; Saxe, R. (2024).</b> Intervening on emotions by planning over a theory of mind. <i>Proc. 46th CogSci</i>, 5887–5894.</p>
+<p class="why">Moves theory of mind from prediction to &lt;em&gt;intervention&lt;/em&gt;: agents plan actions in order to change another agent's state, including joint interventions by two agents, with prediction and intervention sharing one generative model. That prediction-to-intervention step is the mechanism a joint-planning model needs, even though the second agent here is a target rather than a co-planner.</p>
+<div class="meta"><span class="tag t2">Tier 2</span><a class="tag" href="https://chentoast.github.io/papers/emotions-cogsci-2024.pdf" target="_blank" rel="noopener">PDF</a></div>
 </div>
 <div class="lib">
 <p class="cite"><b>Baker, Jara-Ettinger, Saxe &amp; Tenenbaum (2017).</b> Rational quantitative attribution of beliefs, desires and percepts in human mentalizing. <i>Nature Human Behaviour</i>, 1, 0064.</p>
@@ -502,6 +522,16 @@ td:first-child{width:23%}
 <div class="meta"><span class="tag t2">Tier 2</span></div>
 </div>
 <div class="lib">
+<p class="cite"><b>Chen, A. M., Thomas, A. J., Tenenbaum, J. B., &amp; Saxe, R. (2026).</b> A social inverse-planning model captures how relationship intimacy constrains action planning and interpretation. <i>Proc. 48th CogSci</i>.</p>
+<p class="why">Inverse planning where the relationship between agents is itself a parameter shaping which actions are chosen and how they are read. Relevant to joint planning as a reminder that the utilities two agents coordinate over are not fixed by the task alone — who they are to each other changes what counts as a good joint outcome.</p>
+<div class="meta"><span class="tag">Tier 3</span><a class="tag" href="https://escholarship.org/uc/item/90w9j48b" target="_blank" rel="noopener">PDF</a></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Btesh, V., Lagnado, D. A., &amp; Gerstenberg, T. (2025).</b> Taking others for granted: Balancing personal and presentational goals in action selection. <i>Proc. 47th CogSci</i>.</p>
+<p class="why">Agents choose actions whose value depends partly on how those actions shift an observer's beliefs about them, and observers invert that reasoning. Recursive in the same way inverse planning is, but with reputation rather than a shared goal as the object — useful as a contrast case for what joint planning adds.</p>
+<div class="meta"><span class="tag">Tier 3</span><a class="tag" href="https://cicl.stanford.edu/papers/btesh2025taking.pdf" target="_blank" rel="noopener">PDF</a></div>
+</div>
+<div class="lib">
 <p class="cite"><b>Zhi-Xuan, Ying, Mansinghka &amp; Tenenbaum (2024).</b> Pragmatic instruction following and goal assistance via cooperative language-guided inverse planning. <i>AAMAS 2024</i>.</p>
 <div class="meta"><span class="tag">Tier 3</span></div>
 </div>
@@ -511,7 +541,7 @@ td:first-child{width:23%}
 <div class="meta"><span class="tag">Tier 3</span></div>
 </div>
 </div></details>
-<details class="thread"><summary>D · joint action, shared agency, commitment, norms<span class="cnt">23 items</span></summary><div class="inner">
+<details class="thread"><summary>D · joint action, shared agency, commitment, norms<span class="cnt">28 items</span></summary><div class="inner">
 <div class="lib">
 <p class="cite"><b>Kuang, Brockbank, Bicchieri &amp; Hawkins (2026).</b> Inferring joint commitment from observed coordination. <i>Proc. 48th CogSci</i>.</p>
 <p class="why">Hawkins again. Two experiments, N = 785, gridworld farm with an explicit stag hunt payoff structure (solo harvest of the center tree yields 1 berry, joint harvest 8). The model is Bayesian ToM over a latent commitment parameter θ ∈ [0,1] that interpolates between individual and collective expected utility — turning we-mode-vs-I-mode from a discrete model comparison into a fitted continuous dial. That single move is the most useful idea on this whole list.</p>
@@ -543,14 +573,29 @@ td:first-child{width:23%}
 <div class="meta"><span class="tag t2">Tier 2</span><a class="tag" href="https://repository.essex.ac.uk/39815/1/1-s2.0-S0149763424004482-main.pdf" target="_blank" rel="noopener">PDF</a></div>
 </div>
 <div class="lib">
+<p class="cite"><b>Wang, J., Meng, F., Xu, C., Zhang, Y., Liang, K., Han, C., Gao, Y., Yu, X., Li, Z., Zeng, X., Ni, J., Tan, H., Yang, J., &amp; Ma, Y. (2025).</b> Simultaneous intracranial recordings of interacting brains reveal neurocognitive dynamics of human cooperation. <i>Nature Neuroscience</i>, 28, 161–173.</p>
+<p class="why">As far as can be determined, the only published &lt;em&gt;dual-brain simultaneous intracranial&lt;/em&gt; study of a cooperation game. High-gamma activity in TPJ and amygdala separately encodes coordinating-with-a-teammate versus pursuing-a-goal, with distinct signatures for establishing versus maintaining cooperation, and cross-brain synchrony predicting coordination success. The coordination/goal-pursuit dissociation maps onto joint-planning theory unusually directly.</p>
+<div class="meta"><span class="tag t2">Tier 2</span><a class="tag" href="https://www.nature.com/articles/s41593-024-01824-y" target="_blank" rel="noopener">journal</a></div>
+</div>
+<div class="lib">
 <p class="cite"><b>Oldenburg &amp; Zhi-Xuan (2024).</b> Learning and sustaining shared normative systems via Bayesian rule induction in Markov games. <i>AAMAS 2024</i>.</p>
 <p class="why">The cleanest current bridge from inverse planning to normative systems — a direct descendant of Ho's 2016 norm-learning paper.</p>
 <div class="meta"><span class="tag t2">Tier 2</span></div>
 </div>
 <div class="lib">
+<p class="cite"><b>Yu, D., &amp; Thompson, B. D. (2024).</b> People balance joint reward, fairness and complexity to develop social norms in a two-player game. <i>Proc. 46th CogSci</i>.</p>
+<p class="why">Pairs converge on norms that trade off three things at once — how much the pair earns, how evenly it is split, and how simple the rule is to state. The complexity term is the interesting one: it suggests joint plans are selected partly for describability, not only for payoff.</p>
+<div class="meta"><span class="tag t2">Tier 2</span><a class="tag" href="https://osf.io/preprints/psyarxiv/qe6bp" target="_blank" rel="noopener">PsyArXiv</a></div>
+</div>
+<div class="lib">
 <p class="cite"><b>Bangerter, A., Genty, E., Heesen, R., Rossano, F., &amp; Zuberbühler, K. (2022).</b> Every product needs a process: Unpacking joint commitment as a process across species. <i>Phil. Trans. R. Soc. B</i>, 377(1859), 20210095.</p>
 <p class="why">Argues that joint commitment should be modelled as a &lt;em&gt;process&lt;/em&gt; — entry, maintenance, exit — rather than a state that either holds or does not. That reframing matters for continuous-time paradigms, where commitment is precisely something that builds and decays over a trajectory.</p>
 <div class="meta"><span class="tag t2">Tier 2</span><a class="tag" href="https://doi.org/10.1098/rstb.2021.0095" target="_blank" rel="noopener">open access</a></div>
+</div>
+<div class="lib">
+<p class="cite"><b>McEllin, L., Felber, A., &amp; Michael, J. (2022).</b> The fruits of our labour: Interpersonal coordination generates commitment by signalling a willingness to adapt. <i>Quarterly Journal of Experimental Psychology</i>, 75(11), 2062–2073.</p>
+<p class="why">The causal claim the commitment literature needed: coordinating with someone &lt;em&gt;generates&lt;/em&gt; commitment, because adapting to a partner signals a willingness to keep adapting. Pairs naturally with third-party commitment-inference work — one shows observers read commitment off coordination, this shows participants acquire it.</p>
+<div class="meta"><span class="tag t2">Tier 2</span></div>
 </div>
 <div class="lib">
 <p class="cite"><b>Ho, Cushman, Littman &amp; Austerweil (2021).</b> Communication in action: planning and interpreting communicative demonstrations. <i>JEP: General</i>.</p>
@@ -602,6 +647,16 @@ td:first-child{width:23%}
 <div class="meta"><span class="tag t2">Tier 2</span></div>
 </div>
 <div class="lib">
+<p class="cite"><b>Fanghella, M., Mussini, E., Zazio, A., Genovese, F., Satta, E., Barchiesi, G., Battaglia-Mayer, A., Bortoletto, M., &amp; Sinigaglia, C. (2025).</b> Distinct neural dynamics in joint versus side-by-side actions: Insights from dual EEG. <i>Social Cognitive and Affective Neuroscience</i>, 20(1), nsaf075.</p>
+<p class="why">Acting on a shared goal shows elevated early preparatory activity and reduced late activity relative to acting alongside someone, and the reversal tracks how predictable the partner is rather than one's own performance. A neural cost-benefit signature of committing to a collective goal.</p>
+<div class="meta"><span class="tag">Tier 3</span><a class="tag" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12401490/" target="_blank" rel="noopener">PMC</a></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Chandra, K., Chen, T., Li, T.-M., Ragan-Kelley, J., &amp; Tenenbaum, J. B. (2024).</b> Cooperative explanation as rational communication. <i>Proc. 46th CogSci</i>.</p>
+<p class="why">An explainer models the questioner's understanding and chooses what to say so as to maximize the listener's future utility — cooperative communication about plans, applied in planning domains. The natural bridge between the pedagogy literature and joint planning.</p>
+<div class="meta"><span class="tag">Tier 3</span><a class="tag" href="https://escholarship.org/uc/item/8bf5g4h6" target="_blank" rel="noopener">PDF</a></div>
+</div>
+<div class="lib">
 <p class="cite"><b>Bonalumi, F., Michael, J., &amp; Heintz, C. (2022).</b> Perceiving commitments: When we both know that you are counting on me. <i>Mind &amp; Language</i>, 37(4), 502–524.</b></p>
 <p class="why">Puts common knowledge at the centre of commitment: what matters is not that a partner is relying on you but that you both know it. Connects this thread directly to the common-knowledge work in thread A.</p>
 <div class="meta"><span class="tag">Tier 3</span><a class="tag" href="https://research.ceu.edu/ws/portalfiles/portal/4950884/Heintz_-Christophe1_2022.pdf" target="_blank" rel="noopener">PDF</a></div>
@@ -626,7 +681,12 @@ td:first-child{width:23%}
 <div class="meta"><span class="tag">Tier 3</span></div>
 </div>
 </div></details>
-<details class="thread"><summary>E · resource-rational &amp; hierarchical planning — the lab's home turf<span class="cnt">8 items</span></summary><div class="inner">
+<details class="thread"><summary>E · resource-rational &amp; hierarchical planning — the lab's home turf<span class="cnt">10 items</span></summary><div class="inner">
+<div class="lib">
+<p class="cite"><b>Arfaei, N., &amp; Ma, W. J. (2024).</b> Planning with others in mind. <i>Conference on Cognitive Computational Neuroscience (CCN)</i>.</p>
+<p class="why">The clearest existing instance of joint planning treated as a &lt;em&gt;planning&lt;/em&gt; problem rather than a game-theoretic or attributional one. Dyads take turns building a road network to connect cities under a shared budget, over decision sequences up to length 16. The winning model, Collaborative Heuristic Tree Search, predicts the partner's next action using the same value function it uses for itself and evaluates its own moves by simulating the partner's response — joint planning as recursive tree search rather than as equilibrium selection. Fills the gap where hierarchical and resource-rational planning meets two agents.</p>
+<div class="meta"><span class="tag t1">Tier 1</span><a class="tag" href="https://2024.ccneuro.org/pdf/544_Paper_authored_CCN_2024_Arfaei.pdf" target="_blank" rel="noopener">PDF</a></div>
+</div>
 <div class="lib">
 <p class="cite"><b>Ho, Saxe &amp; Cushman (2022).</b> Planning with theory of mind. <i>Trends in Cognitive Sciences</i>, 26(11), 959–971.</p>
 <p class="why">Read this before anything technical. Ho's own framing of the multi-agent planning problem, and a serviceable MDP refresher — it reintroduces the planning formalism in 12 pages of prose rather than 200 of Sutton &amp; Barto. Highest hours-saved-per-hour-spent item on the whole list.</p>
@@ -661,12 +721,17 @@ td:first-child{width:23%}
 <div class="meta"><span class="tag t2">Tier 2</span></div>
 </div>
 <div class="lib">
+<p class="cite"><b>Török, G., Pomiechowska, B., Csibra, G., &amp; Sebanz, N. (2019).</b> Rationality in joint action: Maximizing coefficiency in coordination. <i>Psychological Science</i>, 30(6), 930–941.</p>
+<p class="why">&amp;ldquo;Coefficiency&amp;rdquo; — co-actors minimize the &lt;em&gt;aggregate dyadic&lt;/em&gt; cost of an action sequence even at personal cost. The cleanest empirical rationality principle for joint plans, and the natural behavioural anchor for any resource-rational treatment of multi-agent planning. See also Török et al. (2021, &lt;i&gt;Open Mind&lt;/i&gt;) on computing joint action costs.</p>
+<div class="meta"><span class="tag t2">Tier 2</span><a class="tag" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6560520/" target="_blank" rel="noopener">PMC</a></div>
+</div>
+<div class="lib">
 <p class="cite"><b>Lieder &amp; Griffiths (2020).</b> Resource-rational analysis. <i>BBS</i>, 43, e1 — <b>target article, first 15pp only.</b></p>
 <p class="why">Deliberately down-tiered. Everything essential is compressed into the opening and restated in the papers above. Not worth five hours plus commentaries.</p>
 <div class="meta"><span class="tag">Tier 3</span></div>
 </div>
 </div></details>
-<details class="thread"><summary>F · multi-agent AI &amp; cooperative AI<span class="cnt">12 items</span></summary><div class="inner">
+<details class="thread"><summary>F · multi-agent AI &amp; cooperative AI<span class="cnt">14 items</span></summary><div class="inner">
 <div class="lib">
 <p class="cite"><b>Mon-Williams, Taylor-Davies, Mieczkowski, Vélez, Bramley, Wang, Griffiths &amp; Lucas (2025).</b> Partner modelling emerges in recurrent agents (but only when it matters). <i>NeurIPS 2025</i>.</p>
 <p class="why">Recurrent RL agents in Overcooked develop internal partner models — only when task structure makes partner-modeling instrumentally necessary. Read as an adversarial check on the obvious claims: an argument that human stag-hunt behavior requires recursive partner modeling has to clear what a non-recursive baseline already achieves. The null hypothesis, pre-built.</p>
@@ -686,6 +751,11 @@ td:first-child{width:23%}
 <p class="cite"><b>Jha, Carvalho, Liang, Du, Kleiman-Weiner &amp; Jaques (2025).</b> Cross-environment cooperation enables zero-shot multi-agent coordination. <i>ICML 2025</i> (Oral).</p>
 <p class="why">The field's current answer: training across many environments, not clever equilibrium selection, is what produces partners humans can work with.</p>
 <div class="meta"><span class="tag t2">Tier 2</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Liang, Y., Chen, D., Gupta, A., Du, S. S., &amp; Jaques, N. (2024).</b> Learning to cooperate with humans using generative agents. <i>NeurIPS 2024</i>.</p>
+<p class="why">The direct successor to the Overcooked human-AI coordination result: train a generative latent-variable model of human partner strategies, then train a cooperator against samples from it. Evaluated with real human teammates rather than proxies, which is rarer in this literature than it should be.</p>
+<div class="meta"><span class="tag t2">Tier 2</span><a class="tag" href="https://arxiv.org/abs/2411.13934" target="_blank" rel="noopener">arXiv</a></div>
 </div>
 <div class="lib">
 <p class="cite"><b>Dafoe, Bachrach, Hadfield, Horvitz, Larson &amp; Graepel (2021).</b> Cooperative AI: machines must learn to find common ground. <i>Nature</i>, 593, 33–36.</p>
@@ -713,6 +783,11 @@ td:first-child{width:23%}
 <div class="meta"><span class="tag t2">Tier 2</span><a class="tag" href="https://proceedings.neurips.cc/paper_files/paper/2019/file/f5b1b89d98b7286673128a5fb112cb9a-Paper.pdf" target="_blank" rel="noopener">PDF</a></div>
 </div>
 <div class="lib">
+<p class="cite"><b>Dizdarević, T., Hammond, R., Gessler, T., Calinescu, A., Cook, J., Gallici, M., Lupu, A., &amp; Foerster, J. N. (2025).</b> Ad-hoc human-AI coordination challenge. <i>ICML 2025</i>, PMLR 267, 13900–13937.</p>
+<p class="why">Distils a corpus of 3,079 human Hanabi games into standardized human-proxy partners behind a controlled evaluation server, so human-facing coordination can be measured reproducibly without re-running expensive human studies per algorithm. Read for the methodological argument as much as the benchmark.</p>
+<div class="meta"><span class="tag">Tier 3</span><a class="tag" href="https://proceedings.mlr.press/v267/dizdarevic25a.html" target="_blank" rel="noopener">PMLR</a></div>
+</div>
+<div class="lib">
 <p class="cite"><b>Oliehoek &amp; Amato (2016).</b> <i>A Concise Introduction to Decentralized POMDPs</i>. Springer — Ch. 1–2.</p>
 <p class="why">Redundant for anyone doing the MARL book in Week 4. Keep as reference for Dec-POMDP specifics. “Concise” is relative.</p>
 <div class="meta"><span class="tag">Tier 3</span><a class="tag" href="https://www.fransoliehoek.net/docs/OliehoekAmato16book.pdf" target="_blank" rel="noopener">PDF</a></div>
@@ -728,7 +803,7 @@ td:first-child{width:23%}
 <div class="meta"><span class="tag">Tier 3</span><a class="tag" href="https://jmvidal.cse.sc.edu/library/grosz96a.pdf" target="_blank" rel="noopener">PDF</a></div>
 </div>
 </div></details>
-<details class="thread" open><summary>G · continuous-time &amp; real-time spatial coordination<span class="cnt">20 items</span></summary><div class="inner">
+<details class="thread" open><summary>G · continuous-time &amp; real-time spatial coordination<span class="cnt">22 items</span></summary><div class="inner">
 <p class="lead-in">Nearly everything in threads A–F is <b>discrete and turn-based</b>: one simultaneous move, or a step through a gridworld. This thread is <b>continuous-time and spatial</b> — agents move freely, watch each other move, and commitment emerges over a trajectory rather than in a single choice. The distinction is not cosmetic. It changes which equilibrium gets selected, which models are even expressible, and what a task has to log in order to measure anything.</p>
 <div class="lib">
 <p class="cite"><b>Deng, … Garg &amp; Mobbs (2026).</b> Linking compromise and responsibility attribution to risky decision-making in dyadic foraging. <i>PNAS</i>. doi:10.1073/pnas.2602570123</p>
@@ -756,6 +831,11 @@ td:first-child{width:23%}
 <div class="meta"><span class="tag t2">Tier 2</span></div>
 </div>
 <div class="lib">
+<p class="cite"><b>De Vicariis, C., Chackochan, V. T., Bandini, L., Ravaschio, A., &amp; Sanguineti, V. (2024).</b> Computational joint action: Dynamical models to understand the development of joint coordination. <i>PLOS Computational Biology</i>, 20(10), e1011948.</p>
+<p class="why">Human dyads, physically coupled, in a continuous two-via-point reaching task, modelled as a differential game — and tested for whether they converge on the predicted game-theoretic solutions as a function of what each partner can sense of the other. One of very few papers where continuous-time coordination with real humans is given an explicit game-theoretic treatment.</p>
+<div class="meta"><span class="tag t2">Tier 2</span><a class="tag" href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011948" target="_blank" rel="noopener">open access</a></div>
+</div>
+<div class="lib">
 <p class="cite"><b>Möller, Unakafov, Fischer, Gail, Treue &amp; Kagan (2023).</b> Human and macaque pairs employ different coordination strategies in a transparent decision game. <i>eLife</i>, 12, e80943.</p>
 <p class="why">Transparency — mutual real-time observation of the partner's action — is what enables human coordination, and macaques largely don't exploit it. Directly relevant to any task that manipulates what partners see of each other, which most such tasks probably should.</p>
 <div class="meta"><span class="tag t2">Tier 2</span></div>
@@ -778,6 +858,11 @@ td:first-child{width:23%}
 <div class="lib">
 <p class="cite"><b>Nalepka, Lamb, Kallen, Shockley, Chemero, Saltzman &amp; Richardson (2019).</b> Human social motor solutions for human–machine interaction in dynamical task contexts. <i>PNAS</i>, 116(4), 1437–1446.</p>
 <p class="why">Dynamical-motor-primitive agents coordinate as well as humans and pass a Turing-like test. Relevant twice over: as a partner model for cross-play simulation, and as a bot fallback for unmatched participants.</p>
+<div class="meta"><span class="tag t2">Tier 2</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Wolf, T., Sebanz, N., &amp; Knoblich, G. (2018).</b> Joint action coordination in expert–novice pairs: Can experts predict novices' suboptimal timing? <i>Cognition</i>, 178, 103–108.</p>
+<p class="why">A sharp test of whether co-actors model each other's &lt;em&gt;planning&lt;/em&gt; or merely entrain to each other's rhythm: experts have to predict a novice partner's suboptimal timing, which entrainment alone cannot deliver. Useful wherever a model needs to distinguish partner-modelling from coupling.</p>
 <div class="meta"><span class="tag t2">Tier 2</span></div>
 </div>
 <div class="lib">
@@ -831,7 +916,7 @@ td:first-child{width:23%}
 <div class="meta"><span class="tag">Tier 3</span></div>
 </div>
 </div></details>
-<details class="thread" open><summary>H · collective intelligence &amp; social learning — Wu, Vélez<span class="cnt">7 items</span></summary><div class="inner">
+<details class="thread" open><summary>H · collective intelligence &amp; social learning — Wu, Vélez<span class="cnt">8 items</span></summary><div class="inner">
 <p class="lead-in">Adjacent rather than central, and worth being precise about why. This work models <em>social learning</em> — extracting information from others — rather than <em>joint planning</em>, reasoning about a partner's plan toward a shared goal. The foraging paradigms here are congestion problems: peers are simultaneously information sources and competitors for the same resource, with no payoff-dominant joint equilibrium to coordinate onto. That mutual-expectation problem is the entire content of a stag hunt. What this thread does supply, and supplies better than anything in A–G, is the methodological craft for running and fitting real-time multi-agent tasks.</p>
 <div class="lib">
 <p class="cite"><b>Wu, Deffner, Kahl, Meder, Ho &amp; Kurvers (2025).</b> Adaptive mechanisms of social and asocial learning in immersive collective foraging. <i>Nature Communications</i>, 16, 3539.</p>
@@ -852,6 +937,11 @@ td:first-child{width:23%}
 <p class="cite"><b>Witt, Toyokawa, Lala, Gaissmaier &amp; Wu (2024).</b> Humans flexibly integrate social information despite interindividual differences in reward. <i>PNAS</i>, 121(39), e2404928121.</p>
 <p class="why">The formal-framework paper for the synthesis bullet. Four competing model families — asocial GP-UCB, Decision Biasing, Value Shaping, Social Generalization — arbitrated by exceedance probability. SG wins. The DB/VS/SG trichotomy maps directly onto the policy-level vs. value-level vs. belief-level places a partner can be inserted into a joint-planning model. A genuinely useful carve-up of the model space.</p>
 <div class="meta"><span class="tag t2">Tier 2</span><a class="tag" href="https://charleywu.github.io/downloads/witt2024humans.pdf" target="_blank" rel="noopener">PDF</a></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Boyce, V., Hawkins, R. D., Goodman, N. D., &amp; Frank, M. C. (2024).</b> Interaction structure constrains the emergence of conventions in group communication. <i>PNAS</i>, 121, e2403888121.</p>
+<p class="why">Large synchronous online reference games in groups of two to six, showing that &lt;em&gt;who talks to whom, in what order&lt;/em&gt; determines whether a shared convention emerges at all. Both a result about coordination and a working demonstration of how to run multiplayer experiments at scale.</p>
+<div class="meta"><span class="tag t2">Tier 2</span><a class="tag" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11252989/" target="_blank" rel="noopener">PMC</a></div>
 </div>
 <div class="lib">
 <p class="cite"><b>Xiang, Vélez &amp; Gershman (2023).</b> Collaborative decision making is grounded in representations of other people's competence and effort. <i>JEP: General</i>, 152, 1565–1579.</p>
@@ -942,7 +1032,50 @@ human data at all.</p>
 <tr><td><b>Jakob Foerster · Cooperative AI Foundation</b><br><span class="faint">Oxford FLAIR</span></td><td>Hengyuan Hu · Johannes Treutlein · Nolan Bard</td><td>Zero-shot coordination, other-play, Hanabi, emergent communication</td><td>The AI-side audience: different venues, different standards of evidence.</td></tr>
 <tr><td><b>Pascal Vrtička · Stefanie Hoehl</b><br><span class="faint">Essex, Vienna</span></td><td>Sara De Felice</td><td>Hyperscanning and dual-brain approaches to real-time interaction</td><td>The neural counterpart to everything in thread G, and now engaging the mechanism-versus-epiphenomenon question rather than cataloguing synchrony.</td></tr>
 </tbody></table>
-<div class="foot"><p><b>Version 1.1</b>, last updated 2026-08-10. 105 entries.</p>
+<h3>Early career — worth following directly</h3>
+<p class="sec-note">People without their own labs yet, whose output is close enough to this list to be worth watching in its own right rather than through a senior author. Grouped by what they contribute, most central first; relevance is stated rather than assumed.</p>
+<h4 style="margin:30px 0 4px">Joint planning as a planning problem</h4>
+<p class="sec-note" style="margin-bottom:10px">Closest to the core of this list: two agents forming and acting on a shared plan, modelled as planning rather than as equilibrium selection or third-party attribution.</p>
+<table><thead><tr><th>name</th><th>where</th><th>focus</th><th>relevance</th></tr></thead><tbody>
+<tr><td><b>Nastaran Arfaei</b><br><span class="faint"><span class='faint'>ccneuro.org</span></span></td><td class="faint">NYU Psychology, w/ Wei Ji Ma</td><td><b>E</b> · Collaborative planning over long horizons; heuristic tree search that simulates a partner's next move using the same value function</td><td>The closest person found to joint planning treated as a <em>planning</em> problem rather than a game or an attribution. Also the nearest one geographically to anyone at NYU.</td></tr>
+<tr><td><b>Tan Zhi-Xuan</b><br><span class="faint"><a href='https://ztangent.github.io/' target='_blank' rel='noopener'>ztangent.github.io</a></span></td><td class="faint">Assistant Professor, National University of Singapore (from Aug 2025) · MIT PhD w/ Mansinghka &amp; Tenenbaum</td><td><b>C · F</b> · Inverse planning over multi-agent goals, cooperative language-guided assistance, norm induction in Markov games, probabilistic programming</td><td>Newly independent — runs the Cooperative Intelligence &amp; Systems lab. Thesis was literally <i>Scaling Cooperative Intelligence via Inverse Planning and Probabilistic Programming</i>, and she connects the MIT inference machinery to virtual bargaining via the Levine collaboration.</td></tr>
+<tr><td><b>Luke McEllin</b><br><span class="faint"><a href='https://somby.ceu.edu/luke-mcellin' target='_blank' rel='noopener'>somby.ceu.edu</a></span></td><td class="faint">Postdoc, Social Mind Center, Central European University</td><td><b>D</b> · Coordination as a generator of commitment; sensorimotor communication, trust and generosity; synchrony and public-goods contributions</td><td>The best-positioned early-career person bridging the Sebanz/Knoblich joint-action tradition and the Michael commitment tradition, with an economic-games extension.</td></tr>
+<tr><td><b>Georgina Török</b><br><span class="faint"><a href='https://somby.ceu.edu/georgina-torok' target='_blank' rel='noopener'>somby.ceu.edu</a></span></td><td class="faint">TU Munich (position unconfirmed) · CEU PhD w/ Sebanz &amp; Csibra</td><td><b>E</b> · &ldquo;Coefficiency&rdquo; — co-actors minimizing aggregate dyadic cost; computing joint action costs; efficiency versus fairness in distributing joint actions</td><td>The coefficiency result is the strongest empirical rationality principle for joint plans from the psychology side. Recent output is thin and the current post is unconfirmed.</td></tr>
+<tr><td><b>Yiling Yun</b><br><span class="faint"><span class='faint'>arXiv:2504.21224</span></span></td><td class="faint">PhD candidate, UCLA (Tao Gao's orbit)</td><td><b>C · B</b> · Joint utility versus pragmatic reasoning in cooperative communication; ambiguous signal choice in cooperative gridworlds</td><td>Finds joint utility explains human signal choice better than standard RSA pragmatics — which is the seam between communication and joint planning. One paper so far; a bet rather than a fixture.</td></tr>
+</tbody></table>
+<h4 style="margin:30px 0 4px">Building and instrumenting real-time multi-agent tasks</h4>
+<p class="sec-note" style="margin-bottom:10px">The methodological half. Synchronous multiplayer at scale, continuous trajectories, what a task has to log, and the tooling for writing recursive partner models.</p>
+<table><thead><tr><th>name</th><th>where</th><th>focus</th><th>relevance</th></tr></thead><tbody>
+<tr><td><b>Veronica Boyce</b><br><span class="faint"><a href='https://vboyce.github.io/' target='_blank' rel='noopener'>vboyce.github.io</a></span></td><td class="faint">NSF Postdoctoral Fellow, MIT, w/ Roger Levy · Stanford PhD w/ Frank</td><td><b>H</b> · Large synchronous online multiplayer reference games; how interaction structure constrains whether conventions emerge; Refbank</td><td>The best living example of running synchronous multiplayer behavioural experiments at scale, and of aggregating them for meta-analysis.</td></tr>
+<tr><td><b>Chase McDonald</b><br><span class="faint"><a href='https://chasemcd.com/' target='_blank' rel='noopener'>chasemcd.com</a></span></td><td class="faint">Riot Games · CMU PhD w/ Coty Gonzalez (DDMLab)</td><td><b>G · F</b> · Real-time browser-based human-AI experiments; subjective as well as objective measures of complementarity; builds Interactive Gym, CoGrid, MUG</td><td>Has left academia, but the tooling is live and derived from the Overcooked demo — the closest thing to an off-the-shelf harness for real-time human-agent studies.</td></tr>
+<tr><td><b>Cecilia De Vicariis</b><br><span class="faint"><span class='faint'>PLOS Comp Biol 2024</span></span></td><td class="faint">Università di Genova, w/ Sanguineti</td><td><b>G</b> · Physically coupled human dyads in continuous joint reaching, modelled as a differential game</td><td>One of very few people giving continuous-time coordination with real humans an explicit game-theoretic treatment. Bioengineering edge rather than the ML edge.</td></tr>
+<tr><td><b>Thomas Wolf</b><br><span class="faint"><a href='https://somby.ceu.edu/thomas-wolf' target='_blank' rel='noopener'>somby.ceu.edu</a></span></td><td class="faint">Postdoc, Social Mind Center, Central European University</td><td><b>G</b> · Real-time temporal coordination; expert–novice prediction asymmetries; joint rushing; work songs and musical improvisation</td><td>The strongest early-career person on the continuous/real-time side, and his work on &ldquo;dissensus&rdquo; is a useful counterweight to the field's synchrony-is-good default.</td></tr>
+<tr><td><b>Kartik Chandra</b><br><span class="faint"><a href='https://cs.stanford.edu/~kach/' target='_blank' rel='noopener'>kach</a></span></td><td class="faint">MIT CSAIL / CoCoSci / Saxelab, w/ Ragan-Kelley &amp; Tenenbaum</td><td><b>C</b> · Cooperative explanation as rational communication; storytelling as inverse inverse planning; <code>memo</code>, a probabilistic language for reasoning about reasoning</td><td>Acting <em>so as to be understood</em> — the communication-side instance of joint planning. <code>memo</code> is separately the most practical piece of infrastructure on this list.</td></tr>
+</tbody></table>
+<h4 style="margin:30px 0 4px">Human-facing multi-agent AI</h4>
+<p class="sec-note" style="margin-bottom:10px">Coordination with partners who were not trained against you — the cross-play problem, and how to evaluate it against real people rather than proxies.</p>
+<table><thead><tr><th>name</th><th>where</th><th>focus</th><th>relevance</th></tr></thead><tbody>
+<tr><td><b>Yancheng Liang</b><br><span class="faint"><a href='https://liangyancheng.com/' target='_blank' rel='noopener'>liangyancheng.com</a></span></td><td class="faint">PhD student, University of Washington, w/ Du &amp; Jaques</td><td><b>F</b> · Generative models of human partner strategies for human-AI coordination; adversarial training for robust cooperation</td><td>Evaluates with real human teammates rather than proxies, which is less common in this literature than it should be. The direct successor line to the Overcooked result.</td></tr>
+<tr><td><b>Bidipta Sarkar</b><br><span class="faint"><a href='https://bsarkar321.github.io/' target='_blank' rel='noopener'>bsarkar321.github.io</a></span></td><td class="faint">DPhil student, Oxford FLAIR, w/ Foerster &amp; Whiteson</td><td><b>F</b> · Diverse conventions for human-AI collaboration; emergent discussion in social-deduction games</td><td>Generating <em>multiple</em> self-play conventions so an agent can recognize whichever one a human partner happens to use — convention selection as an explicit design problem.</td></tr>
+<tr><td><b>Tin Dizdarević</b><br><span class="faint"><span class='faint'>docs.ah2ac2.com</span></span></td><td class="faint">Oxford FLAIR, w/ Foerster</td><td><b>F</b> · Reproducible human-facing evaluation of coordination; human-proxy partners distilled from a large Hanabi corpus</td><td>Worth knowing for the methodological argument about how human-facing coordination should be measured, not only for the benchmark.</td></tr>
+<tr><td><b>Dhara Yu</b><br><span class="faint"><a href='https://dharakyu.com/' target='_blank' rel='noopener'>dharakyu.com</a></span></td><td class="faint">PhD student, UC Berkeley, w/ Bill Thompson · Cooperative AI Fellow</td><td><b>D · H</b> · Two-player games with human participants: how pairs trade off joint reward, fairness and rule complexity; adaptive vagueness; emergent communication</td><td>Rare combination — runs human behavioural experiments <em>and</em> multi-agent simulation on the same questions.</td></tr>
+</tbody></table>
+<h4 style="margin:30px 0 4px">Interacting brains</h4>
+<p class="sec-note" style="margin-bottom:10px">The neural side of coordination: dual-brain and intracranial approaches to two agents acting together, and the individual differences that modulate it.</p>
+<table><thead><tr><th>name</th><th>where</th><th>focus</th><th>relevance</th></tr></thead><tbody>
+<tr><td><b>Martina Fanghella</b><br><span class="faint"><span class='faint'>unimi.it</span></span></td><td class="faint">Postdoc &amp; Co-PI, Cognition in Action Unit, Milan, w/ Michael &amp; Sinigaglia</td><td><b>D</b> · Dual-EEG contrasts of joint versus side-by-side action; the psychophysiology of commitment</td><td>The person most directly welding the commitment tradition to dual-brain electrophysiology — the seam between the behavioural and neural strands.</td></tr>
+<tr><td><b>Qianying Wu</b><br><span class="faint"><a href='https://wuqy052.github.io/' target='_blank' rel='noopener'>wuqy052.github.io</a></span></td><td class="faint">PhD candidate, Caltech, w/ Adolphs &amp; O'Doherty</td><td><b>—</b> · Social attention and social learning; goal inference from observation; individual differences and autistic traits; eye-tracking, behavioural modelling, fMRI</td><td>Adjacent rather than central: goal inference and social learning rather than joint planning. The individual-differences and computational-psychiatry angle is the closer fit.</td></tr>
+<tr><td><b>Setayesh Radkani</b><br><span class="faint"><span class='faint'>saxelab.mit.edu</span></span></td><td class="faint">PhD candidate, MIT Saxelab, w/ Saxe</td><td><b>D</b> · Punishment as rational communicative action; what people learn from being punished; perceived legitimacy of authority</td><td>An explicit inverse-planning model of acting to change another agent's beliefs about norms, with a coordination-failure result. Authority-to-observer rather than co-planners.</td></tr>
+</tbody></table>
+<h4 style="margin:30px 0 4px">Neighbouring theory</h4>
+<p class="sec-note" style="margin-bottom:10px">Adjacent problems that share the machinery — legibility, teaching a bounded partner, role allocation, and commitment at population scale.</p>
+<table><thead><tr><th>name</th><th>where</th><th>focus</th><th>relevance</th></tr></thead><tbody>
+<tr><td><b>Amanda Royka</b><br><span class="faint"><a href='https://amandaroyka.github.io/' target='_blank' rel='noopener'>amandaroyka.github.io</a></span></td><td class="faint">PhD candidate, Yale, w/ Jara-Ettinger &amp; Santos</td><td><b>C</b> · Legibility and ostension — how agents make their own behaviour intelligible; signalling intentions through efficient action; comparative and cross-cultural work</td><td>The legibility half of joint action: modifying one's own plan so a partner can recover the intention behind it. Same recursive machinery as coordination, one agent at a time.</td></tr>
+<tr><td><b>Huang Ham</b><br><span class="faint"><a href='https://huangham.github.io/' target='_blank' rel='noopener'>huangham.github.io</a></span></td><td class="faint">PhD candidate, Princeton, w/ Vélez &amp; Griffiths</td><td><b>H · E</b> · Higher-order epistemic reasoning; teaching against a model of a <em>bounded</em> partner; how collective representations emerge from individual minds</td><td>The epistemic-reasoning work models nested &ldquo;I know that you know&rdquo; of the kind coordination games require; the teaching work is planning against a resource-limited partner.</td></tr>
+<tr><td><b>Max E. Potter</b><br><span class="faint"><span class='faint'>cogsci.ucsd.edu</span></span></td><td class="faint">PhD student, UC San Diego, w/ Rossano</td><td><b>D</b> · Coordinative difficulty as a driver of role-taking in group tasks</td><td>Role differentiation as a response to coordination cost is exactly the phenomenon a joint-planning model has to predict. Comparative/behavioural tradition, so the phenomenon travels, not the model.</td></tr>
+<tr><td><b>Julien Lie-Panis</b><br><span class="faint"><a href='https://jliep.github.io/' target='_blank' rel='noopener'>jliep.github.io</a></span></td><td class="faint">Postdoc, joining SMILE at ENS (Sept 2026)</td><td><b>D</b> · Institutions as commitment devices; why moral rules are rigid; cooperation as a signal of time preferences</td><td>The population-scale analogue of commitment — evolutionary game theory rather than planning representations, but the rigidity-of-rules work is directly usable.</td></tr>
+</tbody></table>
+<div class="foot"><p><b>Version 1.3</b>, last updated 2026-08-10. 123 entries.</p>
 
 <p>Roughly half these entries are CogSci proceedings with no DOI — worth knowing before building
 anything that keys on one. Citations were verified against publisher pages, author-hosted PDFs,

@@ -3,7 +3,7 @@
 A curated, annotated reading list on **joint planning and multi-agent coordination** —
 where computational cognitive science, behavioral game theory, and multi-agent AI meet.
 
-105 papers across eight threads, each with a tier (read in full / skim / know it exists)
+123 papers across eight threads, each with a tier (read in full / skim / know it exists)
 and a note on why it earns its place.
 
 ## Threads
@@ -43,7 +43,7 @@ The dashboard tables update automatically. Write under `## Notes`. Link papers w
 
 ## Use it as data
 
-`data/papers.json` is the machine-readable source of record — 105 records with title,
+`data/papers.json` is the machine-readable source of record — 123 records with title,
 authors, year, venue, tier, thread, week, annotation, links, and flags.
 
 ```bash
@@ -61,5 +61,5 @@ before building anything that keys on one.
 ## Files
 
 - `vault/` — Obsidian vault: `papers/` + `Reading dashboard.md`
-- `data/papers.json` — machine-readable source of record (v1.1, updated 2026-08-10)
+- `data/papers.json` — machine-readable source of record
 - `scripts/make_vault.py` — regenerates the vault from the JSON

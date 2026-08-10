@@ -83,6 +83,163 @@ the current exemplar. That is a legitimate research program in its own right and
 human data at all.</p>
 """
 
+EARLY_BANDS = [
+ ("Joint planning as a planning problem",
+  "Closest to the core of this list: two agents forming and acting on a shared plan, modelled as "
+  "planning rather than as equilibrium selection or third-party attribution.",
+  ["Nastaran Arfaei", "Tan Zhi-Xuan", "Luke McEllin", "Georgina Török", "Yiling Yun"]),
+ ("Building and instrumenting real-time multi-agent tasks",
+  "The methodological half. Synchronous multiplayer at scale, continuous trajectories, what a task "
+  "has to log, and the tooling for writing recursive partner models.",
+  ["Veronica Boyce", "Chase McDonald", "Cecilia De Vicariis", "Thomas Wolf", "Kartik Chandra"]),
+ ("Human-facing multi-agent AI",
+  "Coordination with partners who were not trained against you — the cross-play problem, and how to "
+  "evaluate it against real people rather than proxies.",
+  ["Yancheng Liang", "Bidipta Sarkar", "Tin Dizdarević", "Dhara Yu"]),
+ ("Interacting brains",
+  "The neural side of coordination: dual-brain and intracranial approaches to two agents acting "
+  "together, and the individual differences that modulate it.",
+  ["Martina Fanghella", "Qianying Wu", "Setayesh Radkani"]),
+ ("Neighbouring theory",
+  "Adjacent problems that share the machinery — legibility, teaching a bounded partner, role "
+  "allocation, and commitment at population scale.",
+  ["Amanda Royka", "Huang Ham", "Max E. Potter", "Julien Lie-Panis"]),
+]
+
+EARLY = [
+ # ── closest to joint planning proper ──
+ ("Nastaran Arfaei", "NYU Psychology, w/ Wei Ji Ma",
+  "<span class='faint'>ccneuro.org</span>",
+  "<b>E</b> · Collaborative planning over long horizons; heuristic tree search that simulates a "
+  "partner's next move using the same value function",
+  "The closest person found to joint planning treated as a <em>planning</em> problem rather than a "
+  "game or an attribution. Also the nearest one geographically to anyone at NYU."),
+ ("Tan Zhi-Xuan", "Assistant Professor, National University of Singapore (from Aug 2025) · MIT PhD w/ Mansinghka &amp; Tenenbaum",
+  "<a href='https://ztangent.github.io/' target='_blank' rel='noopener'>ztangent.github.io</a>",
+  "<b>C · F</b> · Inverse planning over multi-agent goals, cooperative language-guided assistance, "
+  "norm induction in Markov games, probabilistic programming",
+  "Newly independent — runs the Cooperative Intelligence &amp; Systems lab. Thesis was literally "
+  "<i>Scaling Cooperative Intelligence via Inverse Planning and Probabilistic Programming</i>, and "
+  "she connects the MIT inference machinery to virtual bargaining via the Levine collaboration."),
+ ("Luke McEllin", "Postdoc, Social Mind Center, Central European University",
+  "<a href='https://somby.ceu.edu/luke-mcellin' target='_blank' rel='noopener'>somby.ceu.edu</a>",
+  "<b>D</b> · Coordination as a generator of commitment; sensorimotor communication, trust and "
+  "generosity; synchrony and public-goods contributions",
+  "The best-positioned early-career person bridging the Sebanz/Knoblich joint-action tradition and "
+  "the Michael commitment tradition, with an economic-games extension."),
+ ("Thomas Wolf", "Postdoc, Social Mind Center, Central European University",
+  "<a href='https://somby.ceu.edu/thomas-wolf' target='_blank' rel='noopener'>somby.ceu.edu</a>",
+  "<b>G</b> · Real-time temporal coordination; expert–novice prediction asymmetries; joint rushing; "
+  "work songs and musical improvisation",
+  "The strongest early-career person on the continuous/real-time side, and his work on "
+  "&ldquo;dissensus&rdquo; is a useful counterweight to the field's synchrony-is-good default."),
+ ("Georgina Török", "TU Munich (position unconfirmed) · CEU PhD w/ Sebanz &amp; Csibra",
+  "<a href='https://somby.ceu.edu/georgina-torok' target='_blank' rel='noopener'>somby.ceu.edu</a>",
+  "<b>E</b> · &ldquo;Coefficiency&rdquo; — co-actors minimizing aggregate dyadic cost; computing "
+  "joint action costs; efficiency versus fairness in distributing joint actions",
+  "The coefficiency result is the strongest empirical rationality principle for joint plans from "
+  "the psychology side. Recent output is thin and the current post is unconfirmed."),
+ # ── computational ToM & cooperative communication ──
+ ("Kartik Chandra", "MIT CSAIL / CoCoSci / Saxelab, w/ Ragan-Kelley &amp; Tenenbaum",
+  "<a href='https://cs.stanford.edu/~kach/' target='_blank' rel='noopener'>kach</a>",
+  "<b>C</b> · Cooperative explanation as rational communication; storytelling as inverse inverse "
+  "planning; <code>memo</code>, a probabilistic language for reasoning about reasoning",
+  "Acting <em>so as to be understood</em> — the communication-side instance of joint planning. "
+  "<code>memo</code> is separately the most practical piece of infrastructure on this list."),
+ ("Amanda Royka", "PhD candidate, Yale, w/ Jara-Ettinger &amp; Santos",
+  "<a href='https://amandaroyka.github.io/' target='_blank' rel='noopener'>amandaroyka.github.io</a>",
+  "<b>C</b> · Legibility and ostension — how agents make their own behaviour intelligible; "
+  "signalling intentions through efficient action; comparative and cross-cultural work",
+  "The legibility half of joint action: modifying one's own plan so a partner can recover the "
+  "intention behind it. Same recursive machinery as coordination, one agent at a time."),
+ ("Yiling Yun", "PhD candidate, UCLA (Tao Gao's orbit)",
+  "<span class='faint'>arXiv:2504.21224</span>",
+  "<b>C · B</b> · Joint utility versus pragmatic reasoning in cooperative communication; "
+  "ambiguous signal choice in cooperative gridworlds",
+  "Finds joint utility explains human signal choice better than standard RSA pragmatics — which is "
+  "the seam between communication and joint planning. One paper so far; a bet rather than a fixture."),
+ ("Huang Ham", "PhD candidate, Princeton, w/ Vélez &amp; Griffiths",
+  "<a href='https://huangham.github.io/' target='_blank' rel='noopener'>huangham.github.io</a>",
+  "<b>H · E</b> · Higher-order epistemic reasoning; teaching against a model of a <em>bounded</em> "
+  "partner; how collective representations emerge from individual minds",
+  "The epistemic-reasoning work models nested &ldquo;I know that you know&rdquo; of the kind "
+  "coordination games require; the teaching work is planning against a resource-limited partner."),
+ # ── human-facing multi-agent AI ──
+ ("Dhara Yu", "PhD student, UC Berkeley, w/ Bill Thompson · Cooperative AI Fellow",
+  "<a href='https://dharakyu.com/' target='_blank' rel='noopener'>dharakyu.com</a>",
+  "<b>D · H</b> · Two-player games with human participants: how pairs trade off joint reward, "
+  "fairness and rule complexity; adaptive vagueness; emergent communication",
+  "Rare combination — runs human behavioural experiments <em>and</em> multi-agent simulation on the "
+  "same questions."),
+ ("Yancheng Liang", "PhD student, University of Washington, w/ Du &amp; Jaques",
+  "<a href='https://liangyancheng.com/' target='_blank' rel='noopener'>liangyancheng.com</a>",
+  "<b>F</b> · Generative models of human partner strategies for human-AI coordination; adversarial "
+  "training for robust cooperation",
+  "Evaluates with real human teammates rather than proxies, which is less common in this literature "
+  "than it should be. The direct successor line to the Overcooked result."),
+ ("Bidipta Sarkar", "DPhil student, Oxford FLAIR, w/ Foerster &amp; Whiteson",
+  "<a href='https://bsarkar321.github.io/' target='_blank' rel='noopener'>bsarkar321.github.io</a>",
+  "<b>F</b> · Diverse conventions for human-AI collaboration; emergent discussion in social-deduction "
+  "games",
+  "Generating <em>multiple</em> self-play conventions so an agent can recognize whichever one a human "
+  "partner happens to use — convention selection as an explicit design problem."),
+ ("Tin Dizdarević", "Oxford FLAIR, w/ Foerster",
+  "<span class='faint'>docs.ah2ac2.com</span>",
+  "<b>F</b> · Reproducible human-facing evaluation of coordination; human-proxy partners distilled "
+  "from a large Hanabi corpus",
+  "Worth knowing for the methodological argument about how human-facing coordination should be "
+  "measured, not only for the benchmark."),
+ # ── methods & infrastructure for real-time multiplayer ──
+ ("Veronica Boyce", "NSF Postdoctoral Fellow, MIT, w/ Roger Levy · Stanford PhD w/ Frank",
+  "<a href='https://vboyce.github.io/' target='_blank' rel='noopener'>vboyce.github.io</a>",
+  "<b>H</b> · Large synchronous online multiplayer reference games; how interaction structure "
+  "constrains whether conventions emerge; Refbank",
+  "The best living example of running synchronous multiplayer behavioural experiments at scale, and "
+  "of aggregating them for meta-analysis."),
+ ("Chase McDonald", "Riot Games · CMU PhD w/ Coty Gonzalez (DDMLab)",
+  "<a href='https://chasemcd.com/' target='_blank' rel='noopener'>chasemcd.com</a>",
+  "<b>G · F</b> · Real-time browser-based human-AI experiments; subjective as well as objective "
+  "measures of complementarity; builds Interactive Gym, CoGrid, MUG",
+  "Has left academia, but the tooling is live and derived from the Overcooked demo — the closest "
+  "thing to an off-the-shelf harness for real-time human-agent studies."),
+ ("Cecilia De Vicariis", "Università di Genova, w/ Sanguineti",
+  "<span class='faint'>PLOS Comp Biol 2024</span>",
+  "<b>G</b> · Physically coupled human dyads in continuous joint reaching, modelled as a "
+  "differential game",
+  "One of very few people giving continuous-time coordination with real humans an explicit "
+  "game-theoretic treatment. Bioengineering edge rather than the ML edge."),
+ # ── neighbouring, worth knowing ──
+ ("Martina Fanghella", "Postdoc &amp; Co-PI, Cognition in Action Unit, Milan, w/ Michael &amp; Sinigaglia",
+  "<span class='faint'>unimi.it</span>",
+  "<b>D</b> · Dual-EEG contrasts of joint versus side-by-side action; the psychophysiology of "
+  "commitment",
+  "The person most directly welding the commitment tradition to dual-brain electrophysiology — the "
+  "seam between the behavioural and neural strands."),
+ ("Setayesh Radkani", "PhD candidate, MIT Saxelab, w/ Saxe",
+  "<span class='faint'>saxelab.mit.edu</span>",
+  "<b>D</b> · Punishment as rational communicative action; what people learn from being punished; "
+  "perceived legitimacy of authority",
+  "An explicit inverse-planning model of acting to change another agent's beliefs about norms, with "
+  "a coordination-failure result. Authority-to-observer rather than co-planners."),
+ ("Max E. Potter", "PhD student, UC San Diego, w/ Rossano",
+  "<span class='faint'>cogsci.ucsd.edu</span>",
+  "<b>D</b> · Coordinative difficulty as a driver of role-taking in group tasks",
+  "Role differentiation as a response to coordination cost is exactly the phenomenon a joint-planning "
+  "model has to predict. Comparative/behavioural tradition, so the phenomenon travels, not the model."),
+ ("Julien Lie-Panis", "Postdoc, joining SMILE at ENS (Sept 2026)",
+  "<a href='https://jliep.github.io/' target='_blank' rel='noopener'>jliep.github.io</a>",
+  "<b>D</b> · Institutions as commitment devices; why moral rules are rigid; cooperation as a signal "
+  "of time preferences",
+  "The population-scale analogue of commitment — evolutionary game theory rather than planning "
+  "representations, but the rigidity-of-rules work is directly usable."),
+ ("Qianying Wu", "PhD candidate, Caltech, w/ Adolphs &amp; O'Doherty",
+  "<a href='https://wuqy052.github.io/' target='_blank' rel='noopener'>wuqy052.github.io</a>",
+  "<b>—</b> · Social attention and social learning; goal inference from observation; individual "
+  "differences and autistic traits; eye-tracking, behavioural modelling, fMRI",
+  "Adjacent rather than central: goal inference and social learning rather than joint planning. The "
+  "individual-differences and computational-psychiatry angle is the closer fit."),
+]
+
 GROUPS = [
  ("Nick Chater", "Warwick",
   "Julia Misyak · Tigran Melkonyan · Hossam Zeitoun · Arthur Le Pargneux",
@@ -294,6 +451,35 @@ def build(papers, style, meta=None):
         o.append(f'<tr><td><b>{name}</b><br><span class="faint">{where}</span></td>'
                  f'<td>{firsts}</td><td>{focus}</td><td>{note}</td></tr>')
     o.append('</tbody></table>')
+
+    o.append('<h3>Early career — worth following directly</h3>')
+    o.append('<p class="sec-note">People without their own labs yet, whose output is close enough '
+             'to this list to be worth watching in its own right rather than through a senior '
+             'author. Grouped by what they contribute, most central first; relevance is stated '
+             'rather than assumed.</p>')
+    by_name = {e[0]: e for e in EARLY}
+    placed = set()
+    for band, blurb, names in EARLY_BANDS:
+        o.append(f'<h4 style="margin:30px 0 4px">{band}</h4>')
+        o.append(f'<p class="sec-note" style="margin-bottom:10px">{blurb}</p>')
+        o.append('<table><thead><tr><th>name</th><th>where</th><th>focus</th>'
+                 '<th>relevance</th></tr></thead><tbody>')
+        for n in names:
+            if n not in by_name:
+                continue
+            name, where, site, focus, note = by_name[n]
+            placed.add(n)
+            o.append(f'<tr><td><b>{name}</b><br><span class="faint">{site}</span></td>'
+                     f'<td class="faint">{where}</td><td>{focus}</td><td>{note}</td></tr>')
+        o.append('</tbody></table>')
+    leftover = [e for e in EARLY if e[0] not in placed]
+    if leftover:
+        o.append('<h4 style="margin:30px 0 10px">Unsorted</h4>')
+        o.append('<table><tbody>')
+        for name, where, site, focus, note in leftover:
+            o.append(f'<tr><td><b>{name}</b><br><span class="faint">{site}</span></td>'
+                     f'<td class="faint">{where}</td><td>{focus}</td><td>{note}</td></tr>')
+        o.append('</tbody></table>')
 
     o.append('<div class="foot">'
              f'<p><b>Version {meta.get("version","1.0")}</b>, last updated '
