@@ -20,8 +20,6 @@ tags: [paper]
 
 *Stacy, Zhao, Zhao & Gao (2020).*
 
-> [!warning] 2020, not 2021 — commonly miscited
-
 ## Notes
 
 <!-- write here. `## 2026-09-03` headings if you want a running log. -->

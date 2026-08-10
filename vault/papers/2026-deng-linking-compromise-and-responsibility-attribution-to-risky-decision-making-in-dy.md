@@ -24,8 +24,6 @@ tags: [paper]
 
 Arguably the closest paradigm match to a spatial stag hunt anywhere: 120 solo trials calibrating individual risk tolerance under predation, then 60 rounds of dyadic play where the avatar moves to the midpoint between both players' choices — a literal continuous compromise mechanism — plus post-hoc credit/blame attribution. Self-serving responsibility asymmetry predicts reduced willingness to compromise.
 
-> [!warning] partially verified — PNAS blocked direct fetch; confirm the full author list from the DOI before citing
-
 ## Notes
 
 <!-- write here. `## 2026-09-03` headings if you want a running log. -->

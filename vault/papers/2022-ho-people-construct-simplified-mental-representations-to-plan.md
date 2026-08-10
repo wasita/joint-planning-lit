@@ -4,8 +4,8 @@ authors: "Ho, Abel, Correa, Littman, Cohen & Griffiths"
 year: 2022
 venue: "Nature, 606, 129–136"
 tier: 1
-thread: ""
-thread_label: ""
+thread: "E"
+thread_label: "E · resource-rational & hierarchical planning — the lab's home turf"
 week: 1
 week_title: "foundations: planning, theory of mind, joint intention"
 week_dates: "Sep 1–7"

@@ -4,8 +4,8 @@ authors: "Camerer, Ho & Chong"
 year: 2004
 venue: "Quarterly Journal of Economics, 119(3), 861–898"
 tier: 2
-thread: ""
-thread_label: ""
+thread: "A"
+thread_label: "A · behavioral game theory & coordination"
 week: 2
 week_title: "the behavioral-economics half"
 week_dates: "Sep 8–14"

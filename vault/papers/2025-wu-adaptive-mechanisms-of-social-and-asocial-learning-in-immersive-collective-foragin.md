@@ -27,8 +27,6 @@ url: "https://www.nature.com/articles/s41467-025-58365-6"
 
 Ho is a co-author, and this is the best methodological template available for building a real-time task. It solves the three hard problems: how to define a discrete decision event inside continuous movement, how to reconstruct what each agent could actually see of the other (automated visual-field transcription — essential for conditioning a model on observability), and how to fit a time-varying-weight choice model to trajectory data. Public data on Zenodo. Read the methods, not just the results.
 
-> [!warning] an Author Correction exists — "Mark K. Ho" was printed as "Mark H. Ho"; cite the corrected form
-
 ## Notes
 
 <!-- write here. `## 2026-09-03` headings if you want a running log. -->

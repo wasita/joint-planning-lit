@@ -4,8 +4,8 @@ authors: "Albrecht, Christianos & Schäfer"
 year: 2024
 venue: "MIT Press. — Ch. 3 and 4 only"
 tier: 1
-thread: ""
-thread_label: ""
+thread: "F"
+thread_label: "F · multi-agent AI & cooperative AI"
 week: 4
 week_title: "formalism, one hard constraint, one paradigm"
 week_dates: "Sep 22–28"

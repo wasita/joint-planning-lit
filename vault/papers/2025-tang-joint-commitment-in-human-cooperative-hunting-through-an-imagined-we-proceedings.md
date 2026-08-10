@@ -4,8 +4,8 @@ authors: "Tang, Gong, Zhao, Zhou, Shen & Gao"
 year: 2025
 venue: ""
 tier: 1
-thread: ""
-thread_label: ""
+thread: "G"
+thread_label: "G · continuous-time & real-time spatial coordination"
 week: 3
 week_title: "models that actually run"
 week_dates: "Sep 15–21"

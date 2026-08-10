@@ -4,8 +4,8 @@ authors: "Kuang, Brockbank, Bicchieri & Hawkins"
 year: 2026
 venue: "Proc. 48th CogSci"
 tier: 1
-thread: ""
-thread_label: ""
+thread: "D"
+thread_label: "D · joint action, shared agency, commitment, norms"
 week: 3
 week_title: "models that actually run"
 week_dates: "Sep 15–21"

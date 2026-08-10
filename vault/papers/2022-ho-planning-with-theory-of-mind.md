@@ -4,8 +4,8 @@ authors: "Ho, Saxe & Cushman"
 year: 2022
 venue: "Trends in Cognitive Sciences, 26(11), 959–971"
 tier: 1
-thread: ""
-thread_label: ""
+thread: "E"
+thread_label: "E · resource-rational & hierarchical planning — the lab's home turf"
 week: 1
 week_title: "foundations: planning, theory of mind, joint intention"
 week_dates: "Sep 1–7"

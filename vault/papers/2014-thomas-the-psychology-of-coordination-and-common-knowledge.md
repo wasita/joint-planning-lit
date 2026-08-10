@@ -4,8 +4,8 @@ authors: "Thomas, DeScioli, Haque & Pinker"
 year: 2014
 venue: "JPSP, 107(4), 657–676"
 tier: 1
-thread: ""
-thread_label: ""
+thread: "A"
+thread_label: "A · behavioral game theory & coordination"
 week: 4
 week_title: "formalism, one hard constraint, one paradigm"
 week_dates: "Sep 22–28"

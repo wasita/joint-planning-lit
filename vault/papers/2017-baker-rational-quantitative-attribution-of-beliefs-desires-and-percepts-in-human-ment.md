@@ -4,8 +4,8 @@ authors: "Baker, Jara-Ettinger, Saxe & Tenenbaum"
 year: 2017
 venue: "Nature Human Behaviour, 1, 0064"
 tier: 2
-thread: ""
-thread_label: ""
+thread: "C"
+thread_label: "C · computational theory of mind & inverse planning"
 week: 3
 week_title: "models that actually run"
 week_dates: "Sep 15–21"

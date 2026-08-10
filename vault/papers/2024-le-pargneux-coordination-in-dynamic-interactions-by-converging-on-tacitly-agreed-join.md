@@ -4,8 +4,8 @@ authors: "Le Pargneux, Zeitoun, Konstantinidis & Chater"
 year: 2024
 venue: "Proc. 46th CogSci"
 tier: 1
-thread: ""
-thread_label: ""
+thread: "B"
+thread_label: "B · virtual bargaining & the current synthesis frontier"
 week: 3
 week_title: "models that actually run"
 week_dates: "Sep 15–21"

@@ -4,8 +4,8 @@ authors: "Colman & Gold"
 year: 2018
 venue: "Psychonomic Bulletin & Review, 25(5), 1770–1783"
 tier: 1
-thread: ""
-thread_label: ""
+thread: "A"
+thread_label: "A · behavioral game theory & coordination"
 week: 2
 week_title: "the behavioral-economics half"
 week_dates: "Sep 8–14"

@@ -4,8 +4,8 @@ authors: "Crawford, Costa-Gomes & Iriberri"
 year: 2013
 venue: "Journal of Economic Literature, 51(1), 5–62"
 tier: 1
-thread: ""
-thread_label: ""
+thread: "A"
+thread_label: "A · behavioral game theory & coordination"
 week: 2
 week_title: "the behavioral-economics half"
 week_dates: "Sep 8–14"

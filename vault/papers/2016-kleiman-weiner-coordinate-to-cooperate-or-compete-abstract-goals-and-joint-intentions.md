@@ -4,8 +4,8 @@ authors: "Kleiman-Weiner, Ho, Austerweil, Littman & Tenenbaum"
 year: 2016
 venue: "Proc. 38th CogSci"
 tier: 1
-thread: ""
-thread_label: ""
+thread: "D"
+thread_label: "D · joint action, shared agency, commitment, norms"
 week: 1
 week_title: "foundations: planning, theory of mind, joint intention"
 week_dates: "Sep 1–7"

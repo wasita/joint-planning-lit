@@ -4,8 +4,8 @@ authors: "Ho, MacGlashan, Greenwald, Littman, Hilliard, Trimbach, Brawner, Tenen
 year: 2016
 venue: "Proc. 38th CogSci, 1158–1163"
 tier: 1
-thread: ""
-thread_label: ""
+thread: "D"
+thread_label: "D · joint action, shared agency, commitment, norms"
 week: 1
 week_title: "foundations: planning, theory of mind, joint intention"
 week_dates: "Sep 1–7"

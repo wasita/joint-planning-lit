@@ -4,8 +4,8 @@ authors: "Wu, Wang, Evans, Tenenbaum, Parkes & Kleiman-Weiner"
 year: 2021
 venue: "Topics in Cognitive Science, 13(2), 414–432"
 tier: 1
-thread: ""
-thread_label: ""
+thread: "D"
+thread_label: "D · joint action, shared agency, commitment, norms"
 week: 3
 week_title: "models that actually run"
 week_dates: "Sep 15–21"
@@ -26,8 +26,6 @@ url: "https://sarahawu.github.io/assets/papers/wu2021cooks.pdf"
 ## Why it's here
 
 The algorithm to Kleiman-Weiner 2016's hypothesis: Bayesian delegation — agents hold a posterior over sub-task assignments and infer from a partner's behavior who is doing what. Plus human data. The closest thing to a template for both the model and the write-up in this genre.
-
-> [!warning] cite the TopiCS version — arXiv / CogSci / AAMAS variants differ in title and author order
 
 ## Notes
 

@@ -3,8 +3,8 @@
 A curated, annotated reading list on **joint planning and multi-agent coordination** —
 where computational cognitive science, behavioral game theory, and multi-agent AI meet.
 
-87 papers across eight threads, each with a tier (read in full / skim / know it exists),
-an annotation on why it matters, and flags for common citation traps.
+105 papers across eight threads, each with a tier (read in full / skim / know it exists)
+and a note on why it earns its place.
 
 ## Threads
 
@@ -20,19 +20,6 @@ an annotation on why it matters, and flags for common citation traps.
 | **H** | collective intelligence & social learning |
 
 A four-week reading plan (~4 hrs/week) picks 16 of them as a spine.
-
-## Read it in a browser
-
-`index.html` is the whole list as a single self-contained page — threads, tiers,
-annotations, flags, the four-week path, and a note on what "simulation experiments" means
-in this literature. Open it locally, or serve it with GitHub Pages
-(Settings → Pages → deploy from `main`, root).
-
-Regenerate after editing the data:
-
-```bash
-python3 scripts/build_site.py data/papers.json index.html
-```
 
 ## Use it as an Obsidian vault
 
@@ -56,7 +43,7 @@ The dashboard tables update automatically. Write under `## Notes`. Link papers w
 
 ## Use it as data
 
-`data/papers.json` is the machine-readable source of record — 87 records with title,
+`data/papers.json` is the machine-readable source of record — 105 records with title,
 authors, year, venue, tier, thread, week, annotation, links, and flags.
 
 ```bash
@@ -66,17 +53,13 @@ python3 scripts/make_vault.py data/papers.json vault/   # regenerate; skips exis
 ## Caveats
 
 Annotations are editorial judgments, not consensus positions — they reflect one reading
-of the literature and are meant to be argued with. Several entries carry explicit flags
-where a paper is commonly miscited, where a venue or author list differs across versions,
-or where a result is weaker than its abstract suggests. Corrections welcome.
+of the literature and are meant to be argued with. Corrections welcome.
 
 Roughly half these papers are CogSci proceedings with no DOI, which is worth knowing
 before building anything that keys on one.
 
 ## Files
 
-- `index.html` — the reading list as a single self-contained page
 - `vault/` — Obsidian vault: `papers/` + `Reading dashboard.md`
-- `data/papers.json` — machine-readable source of record
+- `data/papers.json` — machine-readable source of record (v1.1, updated 2026-08-10)
 - `scripts/make_vault.py` — regenerates the vault from the JSON
-- `scripts/build_site.py` — regenerates `index.html` from the JSON

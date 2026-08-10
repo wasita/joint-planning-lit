@@ -84,67 +84,81 @@ human data at all.</p>
 """
 
 GROUPS = [
- ("Nick Chater", "Warwick, with Melkonyan &amp; Zeitoun",
+ ("Nick Chater", "Warwick",
+  "Julia Misyak · Tigran Melkonyan · Hossam Zeitoun · Arthur Le Pargneux",
   "Virtual bargaining, tacit commitments, instantaneous conventions",
   "The longest-running formal program on tacitly agreed joint plans, and still active."),
- ("Arthur Le Pargneux", "Harvard (with Cushman), prev. Warwick",
-  "Joint plans in dynamic coordination; precedent vs. mutual benefit; bargaining power",
-  "Several 2025–26 items are not yet indexed; the author's own page is ahead of the databases."),
- ("Fiery Cushman", "Harvard, with Sydney Levine",
-  "Resource-rational contractualism",
-  "Where the bargaining tradition and resource-rationality have already met."),
+ ("Fiery Cushman", "Harvard",
+  "Sydney Levine · Arthur Le Pargneux · Diego Trujillo",
+  "Resource-rational contractualism; bargaining power in moral judgment",
+  "Where the bargaining tradition and resource-rationality have already met. Le Pargneux's own "
+  "output is the nearest published work to joint planning proper; his page runs ahead of the databases."),
  ("Max Kleiman-Weiner", "University of Washington",
+  "Sarah A. Wu · Kunal Jha",
   "Joint intentions, Bayesian delegation, evolving cooperation, minds-as-code",
   "The through-line of computational joint planning from 2016 to the present runs through here."),
- ("Robert Hawkins", "Stanford Linguistics (&amp; Psychology), with Erik Brockbank",
+ ("Robert Hawkins", "Stanford",
+  "Jinyi Kuang · Erik Brockbank",
   "Real-time convention formation; commitment inference; continuous-time stag hunt",
   "Three of the most on-point items on this list. The 2016 PLOS ONE paper is the methodological "
   "precedent for treating movement trajectories as coordination data."),
- ("Tao Gao &amp; Ning Tang", "UCLA",
+ ("Tao Gao", "UCLA",
+  "Ning Tang · Stephanie Stacy · Minglu Zhao · Siyi Gong · Aishni Parab",
   "&ldquo;Imagined We,&rdquo; joint commitment, cooperative hunting, psychophysics of animacy",
   "The formalization of shared intentionality currently winning model comparisons in "
-  "continuous-time coordination."),
+  "continuous-time coordination — and the one place cooperation and communication are derived "
+  "from a single framework."),
+ ("John Michael", "Central European University / Warwick",
+  "Francesca Bonalumi",
+  "The sense of commitment; commitment cues; coordination as a source of commitment",
+  "The commitment literature proper. Mostly descriptive rather than formal, which is precisely "
+  "the gap computational accounts have started to fill."),
  ("Charley Wu", "TU Darmstadt (from Tübingen, 2025)",
+  "Charley M. Wu · Dominik Deffner · Alexandra Witt",
   "Real-time multi-agent foraging, social learning strategies, GP generalization",
   "Unusual depth of experience running real-time spatial multi-agent tasks <em>with a fitted "
   "moment-to-moment choice model</em> rather than aggregate outcomes."),
  ("Natalia Vélez", "UC San Diego (from Princeton, 2026)",
+  "Elise Mieczkowski · Ross Mon-Williams · Yang Xiang",
   "Division of labor, collective intelligence, competence and effort inference",
-  "Mostly one abstraction level above dyadic coordination; the Griffiths-lab MARL papers are "
-  "the directly applicable part."),
+  "Mostly one abstraction level above dyadic coordination; the Griffiths-lab multi-agent RL "
+  "papers are the directly applicable part."),
  ("Julian Jara-Ettinger", "Yale",
+  "Zoe Wang · Ilona Davis",
   "Naïve utility calculus; &ldquo;restricted scope models&rdquo;",
   "The social-cognition analogue of simplified task representations in planning. The overlap "
   "is largely unclaimed."),
- ("Tenenbaum / Zhi-Xuan / Ying", "MIT CoCoSci",
+ ("Joshua Tenenbaum", "MIT CoCoSci",
+  "Tan Zhi-Xuan · Lance Ying · Katherine Collins · Kelsey Allen",
   "Bayesian ToM, cooperative language-guided inverse planning, norm induction",
   "Where much of the inference machinery gets built."),
- ("Sugden, Colman, Gold", "UEA, Leicester",
+ ("Robert Sugden · Andrew Colman · Natalie Gold", "UEA, Leicester",
+  "Nicholas Bardsley · Andrea Isoni",
   "Team reasoning, focal points, the Bacharach line",
   "Economics has been arguing about &ldquo;we-mode&rdquo; since the 1990s. A good deal of what "
   "reads as new in cognitive science is a rediscovery."),
- ("Sebanz &amp; Knoblich", "Central European University",
+ ("Michael Tomasello", "Duke / MPI EVA",
+  "Maria Gräfenhain · Felix Warneken · Barbara Siposova",
+  "Shared intentionality; developmental and comparative evidence on joint commitment",
+  "The developmental work is where commitment is manipulated rather than described — which "
+  "makes it more useful to a modeler than the framework papers."),
+ ("Natalie Sebanz &amp; Günther Knoblich", "Central European University",
+  "Cordula Vesper",
   "The empirical joint-action programme",
   "A separate tradition — sensorimotor, real-time, embodied — whose citation graph barely "
   "touches the modeling one."),
  ("Jakob Foerster · Cooperative AI Foundation", "Oxford FLAIR",
-  "Zero-shot coordination, other-play, Hanabi, JaxMARL",
+  "Hengyuan Hu · Johannes Treutlein · Nolan Bard",
+  "Zero-shot coordination, other-play, Hanabi, emergent communication",
   "The AI-side audience: different venues, different standards of evidence."),
+ ("Pascal Vrtička · Stefanie Hoehl", "Essex, Vienna",
+  "Sara De Felice",
+  "Hyperscanning and dual-brain approaches to real-time interaction",
+  "The neural counterpart to everything in thread G, and now engaging the "
+  "mechanism-versus-epiphenomenon question rather than cataloguing synchrony."),
 ]
 
 FOOTER = """
-<p><b>Citation traps flagged in this list.</b> &ldquo;Too many cooks&rdquo; circulates under
-multiple titles and author orders — the journal of record is the 2021 <i>Topics in Cognitive
-Science</i> version. Stacy et al., &ldquo;Intuitive signaling through an &lsquo;imagined
-we&rsquo;,&rdquo; is CogSci 2020, not 2021. There is no Ho &amp; Griffiths review titled
-&ldquo;the cognitive science of planning&rdquo;; the actual review is the 2022 <i>Annual Review
-of Control, Robotics, and Autonomous Systems</i> piece, framed for a robotics audience, and it is
-not the same as Gollwitzer &amp; Sheeran's 2025 <i>Annual Review of Psychology</i>
-&ldquo;Psychology of Planning,&rdquo; which concerns implementation intentions and a different
-literature entirely. Vélez has moved Princeton → UCSD and Wu Tübingen → TU Darmstadt; many pages
-still say otherwise. Deng et al. (2026, <i>PNAS</i>) is partially verified only — confirm the
-author list from the DOI. Xiang, Gershman &amp; Vélez, &ldquo;Cognitive foundations of
-collaboration,&rdquo; is listed as under review with no public preprint.</p>
 
 <p>Roughly half these entries are CogSci proceedings with no DOI — worth knowing before building
 anything that keys on one. Citations were verified against publisher pages, author-hosted PDFs,
@@ -154,16 +168,13 @@ arXiv/OpenReview, or lab publication lists; errors that remain are the compiler'
 welcome.</p>
 """
 
-
 def yr(p):
     """First 4-digit year in the field; 0 if absent (handles '2024/2026')."""
     m = re.search(r"\d{4}", str(p.get("year") or ""))
     return int(m.group()) if m else 0
 
-
 def esc(s):
     return html.escape(s or "", quote=False)
-
 
 def tier_tag(t):
     if t == 1:
@@ -173,7 +184,6 @@ def tier_tag(t):
     if t == 3:
         return '<span class="tag">Tier 3</span>'
     return ""
-
 
 def entry(p, li_class="lib"):
     bits = [f'<div class="{li_class}">']
@@ -193,8 +203,8 @@ def entry(p, li_class="lib"):
     bits.append("</div>")
     return "\n".join(bits)
 
-
-def build(papers, style):
+def build(papers, style, meta=None):
+    meta = meta or {}
     by_thread = collections.defaultdict(list)
     weeks = collections.defaultdict(list)
     for p in papers:
@@ -219,7 +229,8 @@ def build(papers, style):
 
     o.append('<header class="top">')
     o.append('<p class="eyebrow label">annotated reading list · '
-             f'{len(papers)} papers · 8 threads</p>')
+             f'{len(papers)} papers · 8 threads · v{meta.get("version","1.0")} · '
+             f'updated {meta.get("updated","")}</p>')
     o.append('<h1>joint planning &amp;<br>coordination</h1>')
     o.append('<p class="dek">Where computational cognitive science, behavioral game theory, and '
              'multi-agent AI meet on the problem of two or more agents forming and acting on a '
@@ -276,25 +287,28 @@ def build(papers, style):
     o.append(SIM_NOTE)
 
     o.append('<div class="sec"><span class="num">04</span><h2>where this work lives</h2></div>')
-    o.append('<p class="sec-note">Groups whose output this list draws on most heavily. Useful '
-             'as a set of standing alerts.</p>')
-    o.append('<table><thead><tr><th>group</th><th>focus</th><th>note</th></tr></thead><tbody>')
-    for name, where, focus, note in GROUPS:
+    o.append('<p class="sec-note">Groups whose output this list draws on most heavily. Senior authors anchor the columns because that is how the areas are usually named, but the second column is the more useful one for alerts — first authors are who is actually producing the work, and several are on the job market or moving.</p>')
+    o.append('<table><thead><tr><th>senior author / group</th>'
+             '<th>first authors to follow</th><th>focus</th><th>note</th></tr></thead><tbody>')
+    for name, where, firsts, focus, note in GROUPS:
         o.append(f'<tr><td><b>{name}</b><br><span class="faint">{where}</span></td>'
-                 f'<td>{focus}</td><td>{note}</td></tr>')
+                 f'<td>{firsts}</td><td>{focus}</td><td>{note}</td></tr>')
     o.append('</tbody></table>')
 
-    o.append(f'<div class="foot">{FOOTER}</div>')
+    o.append('<div class="foot">'
+             f'<p><b>Version {meta.get("version","1.0")}</b>, last updated '
+             f'{meta.get("updated","")}. {len(papers)} entries.</p>'
+             f'{FOOTER}</div>')
     o.append('</div></body></html>')
     return "\n".join(o)
-
 
 if __name__ == "__main__":
     src = sys.argv[1] if len(sys.argv) > 1 else "data/papers.json"
     dst = sys.argv[2] if len(sys.argv) > 2 else "index.html"
     style_path = os.path.join(HERE, "style.html")
     style = open(style_path, encoding="utf-8").read()
-    papers = json.load(open(src, encoding="utf-8"))["papers"]
-    out = build(papers, style)
+    data = json.load(open(src, encoding="utf-8"))
+    papers = data["papers"]
+    out = build(papers, style, data)
     open(dst, "w", encoding="utf-8").write(out)
     print(f"{len(papers)} papers -> {dst} ({len(out)//1024} KB)")

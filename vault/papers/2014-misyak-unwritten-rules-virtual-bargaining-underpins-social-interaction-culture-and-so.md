@@ -4,8 +4,8 @@ authors: "Misyak, Melkonyan, Zeitoun & Chater"
 year: 2014
 venue: "TiCS, 18(10), 512–519"
 tier: 1
-thread: ""
-thread_label: ""
+thread: "B"
+thread_label: "B · virtual bargaining & the current synthesis frontier"
 week: 2
 week_title: "the behavioral-economics half"
 week_dates: "Sep 8–14"

@@ -36,6 +36,7 @@ def note(p):
     fm.append(f"thread_label: {esc(thread.get('label'))}")
     fm.append(f"week: {week.get('n') or ''}")
     fm.append(f"week_title: {esc(week.get('title'))}")
+    fm.append(f"week_dates: {esc(week.get('dates'))}")
     fm.append(f"est_hours: {p.get('est_hours') or ''}")
     fm.append("status: to-read")          # to-read | reading | skimmed | read
     fm.append("rating: ")
@@ -63,7 +64,7 @@ def note(p):
         b.append(f"> [!warning] {f}\n")
 
     b.append("## Notes\n")
-    b.append("<!-- write here. `## 2026-08-14` headings if you want a running log. -->\n")
+    b.append("<!-- write here. `## 2026-09-03` headings if you want a running log. -->\n")
     b.append("\n## Connections\n")
     b.append("<!-- [[Other Paper]] — rebuts / extends / same-model-as / method-for -->\n")
 
@@ -85,7 +86,7 @@ TABLE WITHOUT ID
 FROM "papers"
 WHERE week
 SORT week ASC, tier ASC
-GROUP BY "Week " + week + " — " + week_title
+GROUP BY "Week " + week + "  ·  " + week_dates + "  —  " + week_title
 ```
 
 ## Unread tier-1
@@ -141,53 +142,69 @@ SORT started ASC
 
 README = """# joint-planning-lit
 
-Reading database for the joint-planning / multi-agent coordination literature.
+A curated, annotated reading list on **joint planning and multi-agent coordination** —
+where computational cognitive science, behavioral game theory, and multi-agent AI meet.
 
-## Open it
+105 papers across eight threads, each with a tier (read in full / skim / know it exists)
+and a note on why it earns its place.
+
+## Threads
+
+| | |
+|---|---|
+| **A** | behavioral game theory & coordination — focal points, level-k, team reasoning |
+| **B** | virtual bargaining & the current synthesis frontier |
+| **C** | computational theory of mind & inverse planning |
+| **D** | joint action, shared agency, commitment, norms |
+| **E** | resource-rational & hierarchical planning |
+| **F** | multi-agent AI & cooperative AI |
+| **G** | continuous-time & real-time spatial coordination |
+| **H** | collective intelligence & social learning |
+
+A four-week reading plan (~4 hrs/week) picks 16 of them as a spine.
+
+## Use it as an Obsidian vault
 
 1. Install [Obsidian](https://obsidian.md) (free).
-2. **Open folder as vault** → point it at this `vault/` directory.
+2. **Open folder as vault** → point it at `vault/`.
 3. Settings → Community plugins → Browse → install and enable **Dataview**.
 4. Open `Reading dashboard.md`.
 
-That's the whole setup. Notes are plain markdown on disk, versioned in this git repo.
-
-## Using it
-
-Each paper is one note in `papers/`. Edit the frontmatter to track state:
+Notes are plain markdown on disk. Track state by editing frontmatter:
 
 ```yaml
 status: to-read | reading | skimmed | read
 rating: 1-5
-started: 2026-08-05
-finished: 2026-08-06
+started: 2026-09-02
+finished: 2026-09-03
 tags: [paper, stag-hunt, bayesian-tom]
 ```
 
-The dashboard tables update automatically. Write freely under `## Notes`.
+The dashboard tables update automatically. Write under `## Notes`. Link papers with
+`[[Wikilinks]]` under `## Connections` and Obsidian's graph view (⌘G) draws the network.
 
-Link papers to each other with `[[Wikilinks]]` under `## Connections` — Obsidian's graph
-view (⌘G) then shows the citation/argument network for free.
+## Use it as data
 
-## Regenerating
-
-`data/papers.json` is the seed, extracted from `reading-guide.html`:
+`data/papers.json` is the machine-readable source of record — 105 records with title,
+authors, year, venue, tier, thread, week, annotation, links, and flags.
 
 ```bash
-python3 scripts/extract_papers.py reading-guide.html data/papers.json
-python3 scripts/make_vault.py data/papers.json vault/     # will NOT overwrite existing notes
+python3 scripts/make_vault.py data/papers.json vault/   # regenerate; skips existing notes
 ```
 
-`make_vault.py` skips any note that already exists, so re-running is safe once you've
-started writing.
+## Caveats
+
+Annotations are editorial judgments, not consensus positions — they reflect one reading
+of the literature and are meant to be argued with. Corrections welcome.
+
+Roughly half these papers are CogSci proceedings with no DOI, which is worth knowing
+before building anything that keys on one.
 
 ## Files
 
-- `reading-guide.html` — the curated guide (the readable artifact)
-- `vault/` — the Obsidian vault: `papers/` + `Reading dashboard.md`
-- `data/papers.json` — machine-readable seed, 87 records
-- `scripts/` — extractor and vault generator
-- `PLAN.md` — architecture notes for a custom web app, if this ever outgrows Obsidian
+- `vault/` — Obsidian vault: `papers/` + `Reading dashboard.md`
+- `data/papers.json` — machine-readable source of record
+- `scripts/make_vault.py` — regenerates the vault from the JSON
 """
 
 if __name__ == "__main__":

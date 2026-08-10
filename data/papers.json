@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "joint-planning-onboarding.html",
-  "count": 87,
+  "count": 105,
   "papers": [
     {
       "authors_raw": "Ho, Saxe & Cushman",
@@ -20,7 +20,10 @@
         }
       ],
       "flags": [],
-      "thread": null,
+      "thread": {
+        "key": "E",
+        "label": "E · resource-rational & hierarchical planning — the lab's home turf"
+      },
       "week": {
         "n": 1,
         "title": "foundations: planning, theory of mind, joint intention",
@@ -50,7 +53,10 @@
         }
       ],
       "flags": [],
-      "thread": null,
+      "thread": {
+        "key": "E",
+        "label": "E · resource-rational & hierarchical planning — the lab's home turf"
+      },
       "week": {
         "n": 1,
         "title": "foundations: planning, theory of mind, joint intention",
@@ -80,7 +86,10 @@
         }
       ],
       "flags": [],
-      "thread": null,
+      "thread": {
+        "key": "D",
+        "label": "D · joint action, shared agency, commitment, norms"
+      },
       "week": {
         "n": 1,
         "title": "foundations: planning, theory of mind, joint intention",
@@ -118,7 +127,10 @@
         }
       ],
       "flags": [],
-      "thread": null,
+      "thread": {
+        "key": "D",
+        "label": "D · joint action, shared agency, commitment, norms"
+      },
       "week": {
         "n": 1,
         "title": "foundations: planning, theory of mind, joint intention",
@@ -148,7 +160,10 @@
         }
       ],
       "flags": [],
-      "thread": null,
+      "thread": {
+        "key": "A",
+        "label": "A · behavioral game theory & coordination"
+      },
       "week": {
         "n": 2,
         "title": "the behavioral-economics half",
@@ -173,7 +188,10 @@
       "est_hours": 1.0,
       "links": [],
       "flags": [],
-      "thread": null,
+      "thread": {
+        "key": "A",
+        "label": "A · behavioral game theory & coordination"
+      },
       "week": {
         "n": 2,
         "title": "the behavioral-economics half",
@@ -203,7 +221,10 @@
         }
       ],
       "flags": [],
-      "thread": null,
+      "thread": {
+        "key": "B",
+        "label": "B · virtual bargaining & the current synthesis frontier"
+      },
       "week": {
         "n": 2,
         "title": "the behavioral-economics half",
@@ -233,7 +254,10 @@
         }
       ],
       "flags": [],
-      "thread": null,
+      "thread": {
+        "key": "A",
+        "label": "A · behavioral game theory & coordination"
+      },
       "week": {
         "n": 2,
         "title": "the behavioral-economics half",
@@ -262,10 +286,11 @@
           "url": "https://sarahawu.github.io/assets/papers/wu2021cooks.pdf"
         }
       ],
-      "flags": [
-        "cite the TopiCS version — arXiv / CogSci / AAMAS variants differ in title and author order"
-      ],
-      "thread": null,
+      "flags": [],
+      "thread": {
+        "key": "D",
+        "label": "D · joint action, shared agency, commitment, norms"
+      },
       "week": {
         "n": 3,
         "title": "models that actually run",
@@ -299,7 +324,10 @@
         }
       ],
       "flags": [],
-      "thread": null,
+      "thread": {
+        "key": "G",
+        "label": "G · continuous-time & real-time spatial coordination"
+      },
       "week": {
         "n": 3,
         "title": "models that actually run",
@@ -329,7 +357,10 @@
         }
       ],
       "flags": [],
-      "thread": null,
+      "thread": {
+        "key": "B",
+        "label": "B · virtual bargaining & the current synthesis frontier"
+      },
       "week": {
         "n": 3,
         "title": "models that actually run",
@@ -362,7 +393,10 @@
         "not dyadic — third-party observers rating pre-generated stimuli, N = 785 individuals",
         "for commitment ratings the null model slightly beat the full model; only agreement ratings fit well (r = .90)"
       ],
-      "thread": null,
+      "thread": {
+        "key": "D",
+        "label": "D · joint action, shared agency, commitment, norms"
+      },
       "week": {
         "n": 3,
         "title": "models that actually run",
@@ -392,7 +426,10 @@
         }
       ],
       "flags": [],
-      "thread": null,
+      "thread": {
+        "key": "C",
+        "label": "C · computational theory of mind & inverse planning"
+      },
       "week": {
         "n": 3,
         "title": "models that actually run",
@@ -422,7 +459,10 @@
         }
       ],
       "flags": [],
-      "thread": null,
+      "thread": {
+        "key": "F",
+        "label": "F · multi-agent AI & cooperative AI"
+      },
       "week": {
         "n": 4,
         "title": "formalism, one hard constraint, one paradigm",
@@ -452,7 +492,10 @@
         }
       ],
       "flags": [],
-      "thread": null,
+      "thread": {
+        "key": "A",
+        "label": "A · behavioral game theory & coordination"
+      },
       "week": {
         "n": 4,
         "title": "formalism, one hard constraint, one paradigm",
@@ -485,9 +528,7 @@
           "url": "https://zenodo.org/records/14979323"
         }
       ],
-      "flags": [
-        "an Author Correction exists — \"Mark K. Ho\" was printed as \"Mark H. Ho\"; cite the corrected form"
-      ],
+      "flags": [],
       "thread": {
         "key": "H",
         "label": "H · collective intelligence & social learning — Wu, Vélez"
@@ -697,19 +738,19 @@
       "id": "1992-communication-in-coordination-games"
     },
     {
-      "authors_raw": null,
-      "year": null,
-      "title": "Perea. Epistemic game theory (chapter for the Handbook of Rationality).",
-      "venue": null,
-      "citation_raw": "Perea. Epistemic game theory (chapter for the Handbook of Rationality).",
-      "citation_html": "<b>Perea.</b> Epistemic game theory (chapter for the <i>Handbook of Rationality</i>).",
-      "why": "Free, chapter-length, written for non-game-theorists. The right entry point for epistemic foundations — not the books.",
+      "authors_raw": "Perea",
+      "year": "2021",
+      "title": "Epistemic game theory",
+      "venue": "In M. Knauff &amp; W. Spohn (Eds.), <i>The Handbook of Rationality</i> (Ch. 9.2, pp. 543–552). MIT Press",
+      "citation_raw": "Perea, A. (2021). Epistemic game theory. In Knauff & Spohn (Eds.), The Handbook of Rationality (Ch. 9.2, pp. 543-552). MIT Press.",
+      "citation_html": "<b>Perea, A. (2021).</b> Epistemic game theory. In M. Knauff &amp; W. Spohn (Eds.), <i>The Handbook of Rationality</i> (Ch. 9.2, pp. 543–552). MIT Press.",
+      "why": "The right entry point to epistemic foundations for a reader without formal game theory — chapter-length, self-contained, and free. Preferable to the book-length treatments. Note that the widely circulated EGT.pdf on the author's site is a 2018 preprint; the typeset proof linked here matches the published chapter.",
       "tier": 2,
       "est_hours": null,
       "links": [
         {
-          "label": "PDF",
-          "url": "https://epicenter.name/Perea/Papers/EGT.pdf"
+          "label": "PDF (typeset proof)",
+          "url": "https://epicenter.name/Perea/Papers/581-93313_ch42_1P.pdf"
         }
       ],
       "flags": [],
@@ -718,7 +759,7 @@
         "label": "A · behavioral game theory & coordination"
       },
       "week": null,
-      "doi": null,
+      "doi": "10.7551/mitpress/11252.003.0057",
       "corpusId": null,
       "abstract": null,
       "tags": [],
@@ -1178,30 +1219,6 @@
       "id": "2024-pragmatic-instruction-following-and-goal-assistance-via"
     },
     {
-      "authors_raw": null,
-      "year": null,
-      "title": "The commitment-cues cluster — Michael & Pacherie (2015) on prior interaction history and effortfulness; Bonalumi et al. (2019, 2022); Siposova, Tomasello & Carpenter (2018) and Bangerter et al. (2022) on communicative signals, eye contact and gesture; Michael et al. (2016) on social dependency between agents.",
-      "venue": null,
-      "citation_raw": "The commitment-cues cluster — Michael & Pacherie (2015) on prior interaction history and effortfulness; Bonalumi et al. (2019, 2022); Siposova, Tomasello & Carpenter (2018) and Bangerter et al. (2022) on communicative signals, eye contact and gesture; Michael et al. (2016) on social dependency between agents.",
-      "citation_html": "<b>The commitment-cues cluster</b> — Michael & Pacherie (2015) on prior interaction history and effortfulness; Bonalumi et al. (2019, 2022); Siposova, Tomasello & Carpenter (2018) and Bangerter et al. (2022) on communicative signals, eye contact and gesture; Michael et al. (2016) on social dependency between agents.",
-      "why": "An easily missed literature, and Kuang et al. is the door into it — these are precisely the works it positions against, on the grounds that they identify commitment cues descriptively without formalizing the inference. That gap is an opening. Pull the exact citations from Kuang et al.'s reference list rather than from this entry; the ones here are second-hand.",
-      "tier": 2,
-      "est_hours": null,
-      "links": [],
-      "flags": [],
-      "thread": {
-        "key": "D",
-        "label": "D · joint action, shared agency, commitment, norms"
-      },
-      "week": null,
-      "doi": null,
-      "corpusId": null,
-      "abstract": null,
-      "tags": [],
-      "status": "to-read",
-      "id": "the-commitment-cues-cluster-michael-pacherie-2015-on-prior-i"
-    },
-    {
       "authors_raw": "Gilbert (1999) on joint commitment and plural subjects · Searle (1990) on collective intentions · Bacharach",
       "year": "2006",
       "title": "",
@@ -1385,9 +1402,7 @@
       "tier": 3,
       "est_hours": null,
       "links": [],
-      "flags": [
-        "2020, not 2021 — commonly miscited"
-      ],
+      "flags": [],
       "thread": {
         "key": "D",
         "label": "D · joint action, shared agency, commitment, norms"
@@ -1849,9 +1864,7 @@
       "tier": 1,
       "est_hours": null,
       "links": [],
-      "flags": [
-        "partially verified — PNAS blocked direct fetch; confirm the full author list from the DOI before citing"
-      ],
+      "flags": [],
       "thread": {
         "key": "G",
         "label": "G · continuous-time & real-time spatial coordination"
@@ -2105,30 +2118,6 @@
       "id": "2024-collaborative-hunting-in-artificial-agents-with-deep-re"
     },
     {
-      "authors_raw": null,
-      "year": null,
-      "title": "Gao, Newman & Scholl (2009) on the psychophysics of chasing · Keller, Novembre & Hove (2014) on rhythm in joint action · Konvalinka et al. (2010) on continuous mutual adaptation in joint tapping · Boesch & Boesch (1989) and Samuni et al. (2018) on chimpanzee cooperative hunting.",
-      "venue": null,
-      "citation_raw": "Gao, Newman & Scholl (2009) on the psychophysics of chasing · Keller, Novembre & Hove (2014) on rhythm in joint action · Konvalinka et al. (2010) on continuous mutual adaptation in joint tapping · Boesch & Boesch (1989) and Samuni et al. (2018) on chimpanzee cooperative hunting.",
-      "citation_html": "<b>Gao, Newman &amp; Scholl (2009)</b> on the psychophysics of chasing · <b>Keller, Novembre &amp; Hove (2014)</b> on rhythm in joint action · <b>Konvalinka et al. (2010)</b> on continuous mutual adaptation in joint tapping · <b>Boesch &amp; Boesch (1989)</b> and <b>Samuni et al. (2018)</b> on chimpanzee cooperative hunting.",
-      "why": "Background depth. The Gao one earns its place: people detect chasing rapidly and automatically from motion alone, so in a continuous spatial task partners are reading intentions off trajectories perceptually, below anything that would count as inference. Worth knowing before attributing all of it to a model.",
-      "tier": 3,
-      "est_hours": null,
-      "links": [],
-      "flags": [],
-      "thread": {
-        "key": "G",
-        "label": "G · continuous-time & real-time spatial coordination"
-      },
-      "week": null,
-      "doi": null,
-      "corpusId": null,
-      "abstract": null,
-      "tags": [],
-      "status": "to-read",
-      "id": "gao-newman-scholl-2009-on-the-psychophysics-of-chasing-kelle"
-    },
-    {
       "authors_raw": "Deffner, Mezey, Kahl, Schakowski, Romanczuk, Wu & Kurvers",
       "year": "2024",
       "title": "Collective incentives reduce over-exploitation of social information in unconstrained human groups",
@@ -2301,7 +2290,569 @@
       "tags": [],
       "status": "to-read",
       "id": "2021-learning-from-other-minds-an-optimistic-critique-of-rei"
+    },
+    {
+      "id": "2015-michael-pacherie-on-commitments",
+      "authors_raw": "Michael, J., &amp; Pacherie, E.",
+      "year": "2015",
+      "title": "On commitments and other uncertainty reduction tools in joint action",
+      "venue": "Journal of Social Ontology, 1(1), 89–120",
+      "citation_raw": "Michael, J., &amp; Pacherie, E. (2015). On commitments and other uncertainty reduction tools in joint action. Journal of Social Ontology, 1(1), 89–120.",
+      "citation_html": "<b>Michael, J., &amp; Pacherie, E. (2015).</b> On commitments and other uncertainty reduction tools in joint action. <i>Journal of Social Ontology</i>, 1(1), 89–120.",
+      "why": "The framing paper for the commitment literature: commitments are treated as one of a family of devices that reduce uncertainty about what a partner will do, which makes them comparable to signalling, convention, and habit rather than sui generis. Useful for anyone trying to state precisely what a commitment adds over a shared plan.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [
+        {
+          "label": "open access",
+          "url": "https://doi.org/10.1515/jso-2014-0021"
+        }
+      ],
+      "flags": [],
+      "thread": {
+        "key": "D",
+        "label": "D · joint action, shared agency, commitment, norms"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read"
+    },
+    {
+      "id": "2016-michael-sense-of-commitment-minimal",
+      "authors_raw": "Michael, J., Sebanz, N., &amp; Knoblich, G.",
+      "year": "2016",
+      "title": "The sense of commitment: A minimal approach",
+      "venue": "Frontiers in Psychology, 6, 1968",
+      "citation_raw": "Michael, J., Sebanz, N., &amp; Knoblich, G. (2016). The sense of commitment: A minimal approach. Frontiers in Psychology, 6, 1968.",
+      "citation_html": "<b>Michael, J., Sebanz, N., &amp; Knoblich, G. (2016).</b> The sense of commitment: A minimal approach. <i>Frontiers in Psychology</i>, 6, 1968.",
+      "why": "The framework half of a pair. Argues for a <em>sense</em> of commitment assembled from minimal cues — repetition, effort, coordination itself — rather than from explicit promising or full mentalizing. This is the account a computational model of commitment inference is implicitly formalizing.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [
+        {
+          "label": "open access",
+          "url": "https://doi.org/10.3389/fpsyg.2015.01968"
+        }
+      ],
+      "flags": [],
+      "thread": {
+        "key": "D",
+        "label": "D · joint action, shared agency, commitment, norms"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read"
+    },
+    {
+      "id": "2016-michael-observing-joint-action-coordination-creates-commitment",
+      "authors_raw": "Michael, J., Sebanz, N., &amp; Knoblich, G.",
+      "year": "2016",
+      "title": "Observing joint action: Coordination creates commitment",
+      "venue": "Cognition, 157, 106–113",
+      "citation_raw": "Michael, J., Sebanz, N., &amp; Knoblich, G. (2016). Observing joint action: Coordination creates commitment. Cognition, 157, 106–113.",
+      "citation_html": "<b>Michael, J., Sebanz, N., &amp; Knoblich, G. (2016).</b> Observing joint action: Coordination creates commitment. <i>Cognition</i>, 157, 106–113.",
+      "why": "The empirical half, and the direct precursor to third-party commitment-inference work: observers attribute commitment on the basis of observed coordination alone, with no agreement having been made. Establishes the effect that later computational accounts try to explain.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [
+        {
+          "label": "PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5146639/"
+        }
+      ],
+      "flags": [],
+      "thread": {
+        "key": "D",
+        "label": "D · joint action, shared agency, commitment, norms"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read"
+    },
+    {
+      "id": "2019-bonalumi-cueing-implicit-commitment",
+      "authors_raw": "Bonalumi, F., Isella, M., &amp; Michael, J.",
+      "year": "2019",
+      "title": "Cueing implicit commitment",
+      "venue": "Review of Philosophy and Psychology, 10(4), 669–688",
+      "citation_raw": "Bonalumi, F., Isella, M., &amp; Michael, J. (2019). Cueing implicit commitment. Review of Philosophy and Psychology, 10(4), 669–688.",
+      "citation_html": "<b>Bonalumi, F., Isella, M., &amp; Michael, J. (2019).</b> Cueing implicit commitment. <i>Review of Philosophy and Psychology</i>, 10(4), 669–688.",
+      "why": "On how commitments get signalled without being stated — the cues that let a partner infer they are being counted on.",
+      "tier": 3,
+      "est_hours": null,
+      "links": [
+        {
+          "label": "PDF",
+          "url": "https://wrap.warwick.ac.uk/111517/WRAP-cueing-implicit-commitment-Michael-2018.pdf"
+        }
+      ],
+      "flags": [],
+      "thread": {
+        "key": "D",
+        "label": "D · joint action, shared agency, commitment, norms"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read"
+    },
+    {
+      "id": "2022-bonalumi-perceiving-commitments",
+      "authors_raw": "Bonalumi, F., Michael, J., &amp; Heintz, C.",
+      "year": "2022",
+      "title": "Perceiving commitments: When we both know that you are counting on me",
+      "venue": "Mind &amp; Language, 37(4), 502–524",
+      "citation_raw": "Bonalumi, F., Michael, J., &amp; Heintz, C. (2022). Perceiving commitments: When we both know that you are counting on me. Mind &amp; Language, 37(4), 502–524.",
+      "citation_html": "<b>Bonalumi, F., Michael, J., &amp; Heintz, C. (2022).</b> Perceiving commitments: When we both know that you are counting on me. <i>Mind &amp; Language</i>, 37(4), 502–524.</b>",
+      "why": "Puts common knowledge at the centre of commitment: what matters is not that a partner is relying on you but that you both know it. Connects this thread directly to the common-knowledge work in thread A.",
+      "tier": 3,
+      "est_hours": null,
+      "links": [
+        {
+          "label": "PDF",
+          "url": "https://research.ceu.edu/ws/portalfiles/portal/4950884/Heintz_-Christophe1_2022.pdf"
+        }
+      ],
+      "flags": [],
+      "thread": {
+        "key": "D",
+        "label": "D · joint action, shared agency, commitment, norms"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read"
+    },
+    {
+      "id": "2018-siposova-communicative-eye-contact",
+      "authors_raw": "Siposova, B., Tomasello, M., &amp; Carpenter, M.",
+      "year": "2018",
+      "title": "Communicative eye contact signals a commitment to cooperate for young children",
+      "venue": "Cognition, 179, 192–201",
+      "citation_raw": "Siposova, B., Tomasello, M., &amp; Carpenter, M. (2018). Communicative eye contact signals a commitment to cooperate for young children. Cognition, 179, 192–201.",
+      "citation_html": "<b>Siposova, B., Tomasello, M., &amp; Carpenter, M. (2018).</b> Communicative eye contact signals a commitment to cooperate for young children. <i>Cognition</i>, 179, 192–201.",
+      "why": "A single ostensive cue — mutual gaze — is enough to make young children behave as though a commitment is in force. A useful reminder that the cues carrying commitment can be far thinner than any explicit agreement.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [
+        {
+          "label": "PDF",
+          "url": "https://www.eva.mpg.de/documents/Elsevier/Siposova_Communicative_Cognition_2018_2608916.pdf"
+        }
+      ],
+      "flags": [],
+      "thread": {
+        "key": "D",
+        "label": "D · joint action, shared agency, commitment, norms"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read"
+    },
+    {
+      "id": "2022-bangerter-every-product-needs-a-process",
+      "authors_raw": "Bangerter, A., Genty, E., Heesen, R., Rossano, F., &amp; Zuberbühler, K.",
+      "year": "2022",
+      "title": "Every product needs a process: Unpacking joint commitment as a process across species",
+      "venue": "Phil. Trans. R. Soc. B, 377(1859), 20210095",
+      "citation_raw": "Bangerter, A., Genty, E., Heesen, R., Rossano, F., &amp; Zuberbühler, K. (2022). Every product needs a process: Unpacking joint commitment as a process across species. Phil. Trans. R. Soc. B, 377(1859), 20210095.",
+      "citation_html": "<b>Bangerter, A., Genty, E., Heesen, R., Rossano, F., &amp; Zuberbühler, K. (2022).</b> Every product needs a process: Unpacking joint commitment as a process across species. <i>Phil. Trans. R. Soc. B</i>, 377(1859), 20210095.",
+      "why": "Argues that joint commitment should be modelled as a <em>process</em> — entry, maintenance, exit — rather than a state that either holds or does not. That reframing matters for continuous-time paradigms, where commitment is precisely something that builds and decays over a trajectory.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [
+        {
+          "label": "open access",
+          "url": "https://doi.org/10.1098/rstb.2021.0095"
+        }
+      ],
+      "flags": [],
+      "thread": {
+        "key": "D",
+        "label": "D · joint action, shared agency, commitment, norms"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read"
+    },
+    {
+      "id": "2009-gao-psychophysics-of-chasing",
+      "authors_raw": "Gao, T., Newman, G. E., &amp; Scholl, B. J.",
+      "year": "2009",
+      "title": "The psychophysics of chasing: A case study in the perception of animacy",
+      "venue": "Cognitive Psychology, 59(2), 154–179",
+      "citation_raw": "Gao, T., Newman, G. E., &amp; Scholl, B. J. (2009). The psychophysics of chasing: A case study in the perception of animacy. Cognitive Psychology, 59(2), 154–179.",
+      "citation_html": "<b>Gao, T., Newman, G. E., &amp; Scholl, B. J. (2009).</b> The psychophysics of chasing: A case study in the perception of animacy. <i>Cognitive Psychology</i>, 59(2), 154–179.",
+      "why": "Chasing is detected rapidly and automatically from motion alone. In continuous spatial tasks this matters more than it first appears: partners are reading intentions off trajectories perceptually, below the level of anything that deserves to be called inference — which is a competing explanation for behaviour a planning model would otherwise claim.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [
+        {
+          "label": "PDF",
+          "url": "https://taogao.comm.ucla.edu/static/pdf/The%20psychophysics%20of%20chasing_Gao%20Newman%20Scholl_2009.pdf"
+        }
+      ],
+      "flags": [],
+      "thread": {
+        "key": "G",
+        "label": "G · continuous-time & real-time spatial coordination"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read"
+    },
+    {
+      "id": "2014-keller-rhythm-in-joint-action",
+      "authors_raw": "Keller, P. E., Novembre, G., &amp; Hove, M. J.",
+      "year": "2014",
+      "title": "Rhythm in joint action: Psychological and neurophysiological mechanisms for real-time interpersonal coordination",
+      "venue": "Phil. Trans. R. Soc. B, 369(1658), 20130394",
+      "citation_raw": "Keller, P. E., Novembre, G., &amp; Hove, M. J. (2014). Rhythm in joint action: Psychological and neurophysiological mechanisms for real-time interpersonal coordination. Phil. Trans. R. Soc. B, 369(1658), 20130394.",
+      "citation_html": "<b>Keller, P. E., Novembre, G., &amp; Hove, M. J. (2014).</b> Rhythm in joint action: Psychological and neurophysiological mechanisms for real-time interpersonal coordination. <i>Phil. Trans. R. Soc. B</i>, 369(1658), 20130394.",
+      "why": "The temporal-coordination literature, largely built on music ensembles, framed around anticipation, adaptation, and attention. Relevant wherever coordination is continuous rather than turn-based.",
+      "tier": 3,
+      "est_hours": null,
+      "links": [
+        {
+          "label": "PMC",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4240961/"
+        }
+      ],
+      "flags": [],
+      "thread": {
+        "key": "G",
+        "label": "G · continuous-time & real-time spatial coordination"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read"
+    },
+    {
+      "id": "2010-konvalinka-follow-you-follow-me",
+      "authors_raw": "Konvalinka, I., Vuust, P., Roepstorff, A., &amp; Frith, C. D.",
+      "year": "2010",
+      "title": "Follow you, follow me: Continuous mutual prediction and adaptation in joint tapping",
+      "venue": "Quarterly Journal of Experimental Psychology, 63(11), 2220–2230",
+      "citation_raw": "Konvalinka, I., Vuust, P., Roepstorff, A., &amp; Frith, C. D. (2010). Follow you, follow me: Continuous mutual prediction and adaptation in joint tapping. Quarterly Journal of Experimental Psychology, 63(11), 2220–2230.",
+      "citation_html": "<b>Konvalinka, I., Vuust, P., Roepstorff, A., &amp; Frith, C. D. (2010).</b> Follow you, follow me: Continuous mutual prediction and adaptation in joint tapping. <i>Quarterly Journal of Experimental Psychology</i>, 63(11), 2220–2230.",
+      "why": "Both partners adapt to each other simultaneously and continuously; neither simply leads. A constraint on any model that assigns fixed leader and follower roles.",
+      "tier": 3,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "G",
+        "label": "G · continuous-time & real-time spatial coordination"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read"
+    },
+    {
+      "id": "1989-boesch-hunting-behavior-tai",
+      "authors_raw": "Boesch, C., &amp; Boesch, H.",
+      "year": "1989",
+      "title": "Hunting behavior of wild chimpanzees in the Taï National Park",
+      "venue": "American Journal of Physical Anthropology, 78(4), 547–573",
+      "citation_raw": "Boesch, C., &amp; Boesch, H. (1989). Hunting behavior of wild chimpanzees in the Taï National Park. American Journal of Physical Anthropology, 78(4), 547–573.",
+      "citation_html": "<b>Boesch, C., &amp; Boesch, H. (1989).</b> Hunting behavior of wild chimpanzees in the Taï National Park. <i>American Journal of Physical Anthropology</i>, 78(4), 547–573.",
+      "why": "The classic field description of role differentiation in cooperative hunting — driver, blocker, chaser, ambusher. The comparative baseline against which claims about uniquely human joint commitment are usually argued.",
+      "tier": 3,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "G",
+        "label": "G · continuous-time & real-time spatial coordination"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read"
+    },
+    {
+      "id": "2018-samuni-reward-of-labor-coordination",
+      "authors_raw": "Samuni, L., Preis, A., Deschner, T., Crockford, C., &amp; Wittig, R. M.",
+      "year": "2018",
+      "title": "Reward of labor coordination and hunting success in wild chimpanzees",
+      "venue": "Communications Biology, 1(1), 138",
+      "citation_raw": "Samuni, L., Preis, A., Deschner, T., Crockford, C., &amp; Wittig, R. M. (2018). Reward of labor coordination and hunting success in wild chimpanzees. Communications Biology, 1(1), 138.",
+      "citation_html": "<b>Samuni, L., Preis, A., Deschner, T., Crockford, C., &amp; Wittig, R. M. (2018).</b> Reward of labor coordination and hunting success in wild chimpanzees. <i>Communications Biology</i>, 1(1), 138.",
+      "why": "Hunt participation predicts meat received, independent of begging — evidence that payoff structure sustains cooperative hunting in the wild, and a natural counterpart to the payoff manipulations used in laboratory stag hunts.",
+      "tier": 3,
+      "est_hours": null,
+      "links": [
+        {
+          "label": "open access",
+          "url": "https://www.nature.com/articles/s42003-018-0142-3"
+        }
+      ],
+      "flags": [],
+      "thread": {
+        "key": "G",
+        "label": "G · continuous-time & real-time spatial coordination"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read"
+    },
+    {
+      "id": "1996-grosz-kraus-collaborative-plans",
+      "authors_raw": "Grosz, B. J., &amp; Kraus, S.",
+      "year": "1996",
+      "title": "Collaborative plans for complex group action",
+      "venue": "Artificial Intelligence, 86(2), 269–357",
+      "citation_raw": "Grosz, B. J., &amp; Kraus, S. (1996). Collaborative plans for complex group action. Artificial Intelligence, 86(2), 269–357.",
+      "citation_html": "<b>Grosz, B. J., &amp; Kraus, S. (1996).</b> Collaborative plans for complex group action. <i>Artificial Intelligence</i>, 86(2), 269–357.",
+      "why": "The canonical AI formalization of shared plans, and a genuine alternative to joint-intention accounts. SharedPlans builds collaboration entirely out of <em>individual</em> attitudes — crucially <code>Int.Th</code>, intending <em>that</em> a proposition hold, which does not itself drive action but licenses meshing subplans, helping a partner, and keeping them informed. The authors are explicit that no unreduced notion of we-intention is required. The other half of the contribution is partiality: agents begin with incomplete recipes and no settled allocation of who does what, and elaborate the plan as they go. Long, and worth reading selectively, but the reductive-versus-primitive question it poses is still live in every model in threads B and D.",
+      "tier": 3,
+      "est_hours": null,
+      "links": [
+        {
+          "label": "PDF",
+          "url": "https://jmvidal.cse.sc.edu/library/grosz96a.pdf"
+        }
+      ],
+      "flags": [],
+      "thread": {
+        "key": "F",
+        "label": "F · multi-agent AI & cooperative AI"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read"
+    },
+    {
+      "id": "2009-grafenhain-young-childrens-understanding-of-joint-commitments",
+      "authors_raw": "Gräfenhain, M., Behne, T., Carpenter, M., &amp; Tomasello, M.",
+      "year": "2009",
+      "title": "Young children's understanding of joint commitments",
+      "venue": "Developmental Psychology, 45(5), 1430–1443",
+      "citation_raw": "Gräfenhain, M., Behne, T., Carpenter, M., &amp; Tomasello, M. (2009). Young children's understanding of joint commitments. Developmental Psychology, 45(5), 1430–1443.",
+      "citation_html": "<b>Gräfenhain, M., Behne, T., Carpenter, M., &amp; Tomasello, M. (2009).</b> Young children's understanding of joint commitments. <i>Developmental Psychology</i>, 45(5), 1430–1443.",
+      "why": "The best single empirical entry on commitment specifically rather than cooperation generally, because it manipulates commitment as an independent variable. Children play a game they either explicitly agreed to or that an adult joined uninvited; when the adult then breaks off, three-year-olds — but not two-year-olds — react differentially to the rupture of an agreed commitment, and acknowledge their own departure more often when leaving a mutually agreed activity. Evidence that commitment carries normative force, and a developmental constraint on what the construct has to be.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [
+        {
+          "label": "PDF",
+          "url": "https://www.eva.mpg.de/documents/AmericanPsychologicalAss/Gr%C3%A4fenhain_Young_DevPsych_2009_1553092.pdf"
+        }
+      ],
+      "flags": [],
+      "thread": {
+        "key": "D",
+        "label": "D · joint action, shared agency, commitment, norms"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read"
+    },
+    {
+      "id": "2006-warneken-cooperative-activities-young-children-chimpanzees",
+      "authors_raw": "Warneken, F., Chen, F., &amp; Tomasello, M.",
+      "year": "2006",
+      "title": "Cooperative activities in young children and chimpanzees",
+      "venue": "Child Development, 77(3), 640–663",
+      "citation_raw": "Warneken, F., Chen, F., &amp; Tomasello, M. (2006). Cooperative activities in young children and chimpanzees. Child Development, 77(3), 640–663.",
+      "citation_html": "<b>Warneken, F., Chen, F., &amp; Tomasello, M. (2006).</b> Cooperative activities in young children and chimpanzees. <i>Child Development</i>, 77(3), 640–663.",
+      "why": "The phylogenetic companion to Gräfenhain et al.: when a partner stops participating, children re-engage them communicatively, while chimpanzees do not and treat only the instrumental tasks as worth resuming. Read for the comparative contrast rather than for a measure of commitment as such.",
+      "tier": 3,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "D",
+        "label": "D · joint action, shared agency, commitment, norms"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read"
+    },
+    {
+      "id": "2020-lazaridou-baroni-emergent-communication",
+      "authors_raw": "Lazaridou, A., &amp; Baroni, M.",
+      "year": "2020",
+      "title": "Emergent multi-agent communication in the deep learning era. arXiv:2006.02419",
+      "venue": null,
+      "citation_raw": "Lazaridou, A., &amp; Baroni, M. (2020). Emergent multi-agent communication in the deep learning era. arXiv:2006.02419.",
+      "citation_html": "<b>Lazaridou, A., &amp; Baroni, M. (2020).</b> Emergent multi-agent communication in the deep learning era. arXiv:2006.02419.",
+      "why": "Where signalling systems come from when nobody specifies them. Framed around the scientific question — what conditions let a shared communication system emerge among agents, and what that implies about human language — rather than around architectures, which makes it the better entry point than the engineering surveys. Sits naturally against the cheap-talk literature in thread A: same problem, opposite methodology.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2006.02419"
+        }
+      ],
+      "flags": [],
+      "thread": {
+        "key": "F",
+        "label": "F · multi-agent AI & cooperative AI"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read"
+    },
+    {
+      "id": "2016-foerster-learning-to-communicate",
+      "authors_raw": "Foerster, J. N., Assael, Y. M., de Freitas, N., &amp; Whiteson, S.",
+      "year": "2016",
+      "title": "Learning to communicate with deep multi-agent reinforcement learning",
+      "venue": "Advances in Neural Information Processing Systems 29, 2145–2153",
+      "citation_raw": "Foerster, J. N., Assael, Y. M., de Freitas, N., &amp; Whiteson, S. (2016). Learning to communicate with deep multi-agent reinforcement learning. Advances in Neural Information Processing Systems 29, 2145–2153.",
+      "citation_html": "<b>Foerster, J. N., Assael, Y. M., de Freitas, N., &amp; Whiteson, S. (2016).</b> Learning to communicate with deep multi-agent reinforcement learning. <i>Advances in Neural Information Processing Systems 29</i>, 2145–2153.",
+      "why": "The canonical primary source for the above — RIAL and DIAL, with differentiable communication under centralized training and decentralized execution. Read alongside Lazaridou &amp; Baroni rather than instead of it.",
+      "tier": 3,
+      "est_hours": null,
+      "links": [
+        {
+          "label": "PDF",
+          "url": "https://proceedings.neurips.cc/paper_files/paper/2016/file/c7635bfd99248a2cdef8249ef7bfbef4-Paper.pdf"
+        }
+      ],
+      "flags": [],
+      "thread": {
+        "key": "F",
+        "label": "F · multi-agent AI & cooperative AI"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read"
+    },
+    {
+      "id": "2013-schilbach-toward-a-second-person-neuroscience",
+      "authors_raw": "Schilbach, L., Timmermans, B., Reddy, V., Costall, A., Bente, G., Schlicht, T., &amp; Vogeley, K.",
+      "year": "2013",
+      "title": "Toward a second-person neuroscience",
+      "venue": "Behavioral and Brain Sciences, 36(4), 393–414",
+      "citation_raw": "Schilbach, L., Timmermans, B., Reddy, V., Costall, A., Bente, G., Schlicht, T., &amp; Vogeley, K. (2013). Toward a second-person neuroscience. Behavioral and Brain Sciences, 36(4), 393–414.",
+      "citation_html": "<b>Schilbach, L., Timmermans, B., Reddy, V., Costall, A., Bente, G., Schlicht, T., &amp; Vogeley, K. (2013).</b> Toward a second-person neuroscience. <i>Behavioral and Brain Sciences</i>, 36(4), 393–414.",
+      "why": "The argument that studying social cognition in detached observers misses what is distinctive about being <em>in</em> an interaction — and the target article that licensed a decade of dual-brain work. Directly relevant to any paradigm choosing between third-party judgment and first-person engagement. The open peer commentary is where the objections live.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "D",
+        "label": "D · joint action, shared agency, commitment, norms"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read"
+    },
+    {
+      "id": "2025-de-felice-relational-neuroscience-hyperscanning",
+      "authors_raw": "De Felice, S., Chand, T., Croy, I., Engert, V., Goldstein, P., Holroyd, C. B., Kirsch, P., Krach, S., Ma, Y., Scheele, D., Schurz, M., Schweinberger, S. R., Hoehl, S., &amp; Vrtička, P.",
+      "year": "2025",
+      "title": "Relational neuroscience: Insights from hyperscanning research",
+      "venue": "Neuroscience &amp; Biobehavioral Reviews, 169, 105979",
+      "citation_raw": "De Felice, S., Chand, T., Croy, I., Engert, V., Goldstein, P., Holroyd, C. B., Kirsch, P., Krach, S., Ma, Y., Scheele, D., Schurz, M., Schweinberger, S. R., Hoehl, S., &amp; Vrtička, P. (2025). Relational neuroscience: Insights from hyperscanning research. Neuroscience &amp; Biobehavioral Reviews, 169, 105979.",
+      "citation_html": "<b>De Felice, S., Chand, T., Croy, I., Engert, V., Goldstein, P., Holroyd, C. B., Kirsch, P., Krach, S., Ma, Y., Scheele, D., Schurz, M., Schweinberger, S. R., Hoehl, S., &amp; Vrtička, P. (2025).</b> Relational neuroscience: Insights from hyperscanning research. <i>Neuroscience &amp; Biobehavioral Reviews</i>, 169, 105979.",
+      "why": "The current review of dual-brain work, and unusual in engaging the mechanism-versus-epiphenomenon question about inter-brain synchrony rather than cataloguing coherence findings. Reads mutual prediction and behavioural alignment through predictive-processing accounts, which is what makes it usable next to a computational model rather than parallel to one.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [
+        {
+          "label": "PDF",
+          "url": "https://repository.essex.ac.uk/39815/1/1-s2.0-S0149763424004482-main.pdf"
+        }
+      ],
+      "flags": [],
+      "thread": {
+        "key": "D",
+        "label": "D · joint action, shared agency, commitment, norms"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read"
+    },
+    {
+      "id": "2023-stacy-bayesian-theory-of-mind-cooperation-communication",
+      "authors_raw": "Stacy, S., Gong, S., Parab, A., Zhao, M., Jiang, K., &amp; Gao, T.",
+      "year": "2023",
+      "title": "A Bayesian theory of mind approach to modeling cooperation and communication",
+      "venue": "WIREs Computational Statistics, 16(1), e1631",
+      "citation_raw": "Stacy, S., Gong, S., Parab, A., Zhao, M., Jiang, K., &amp; Gao, T. (2023). A Bayesian theory of mind approach to modeling cooperation and communication. WIREs Computational Statistics, 16(1), e1631.",
+      "citation_html": "<b>Stacy, S., Gong, S., Parab, A., Zhao, M., Jiang, K., &amp; Gao, T. (2023).</b> A Bayesian theory of mind approach to modeling cooperation and communication. <i>WIREs Computational Statistics</i>, 16(1), e1631.",
+      "why": "The review-length statement of the Imagined We programme, and the best single place to see cooperation and communication derived from one framework rather than treated as separate problems. Signals are modelled as a species of rational action — chosen because of what they let a partner infer — and shared agency, rather than recursive individual reasoning, is what makes the inference tractable. Read this before the individual Imagined We papers; it supplies the scaffolding they assume.",
+      "tier": 1,
+      "est_hours": null,
+      "links": [
+        {
+          "label": "DOI",
+          "url": "https://doi.org/10.1002/wics.1631"
+        }
+      ],
+      "flags": [],
+      "thread": {
+        "key": "C",
+        "label": "C · computational theory of mind & inverse planning"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read"
     }
   ],
-  "note": "Curated reading list on joint planning and multi-agent coordination. Annotations are editorial judgments, not consensus positions."
+  "note": "Curated reading list on joint planning and multi-agent coordination. Annotations are editorial judgments, not consensus positions.",
+  "version": "1.1",
+  "updated": "2026-08-10"
 }
