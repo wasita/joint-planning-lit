@@ -1,0 +1,20 @@
+# ── private: personal strategy, career context, and infrastructure notes ──
+# These contain reader-specific framing (lab context, questions for a PI,
+# speculation about funding). Kept locally, never committed.
+reading-guide.html
+PLAN.md
+
+# Anything you don't want public goes here — the vault reads it, git doesn't.
+vault/private/
+
+# ── staging / scratch ──
+_to_delete/
+_stage/
+_incoming/
+.DS_Store
+
+# ── Obsidian workspace state (per-machine, not content) ──
+vault/.obsidian/workspace*.json
+vault/.obsidian/cache
+vault/.trash/
+scripts/extract_papers.py

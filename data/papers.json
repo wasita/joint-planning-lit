@@ -1,0 +1,2307 @@
+{
+  "schemaVersion": 1,
+  "source": "joint-planning-onboarding.html",
+  "count": 87,
+  "papers": [
+    {
+      "authors_raw": "Ho, Saxe & Cushman",
+      "year": "2022",
+      "title": "Planning with theory of mind",
+      "venue": "Trends in Cognitive Sciences, 26(11), 959–971",
+      "citation_raw": "Ho, Saxe & Cushman (2022). Planning with theory of mind. Trends in Cognitive Sciences, 26(11), 959–971.",
+      "citation_html": "<b>Ho, Saxe &amp; Cushman (2022).</b> Planning with theory of mind. <i>Trends in Cognitive Sciences</i>, 26(11), 959–971.",
+      "why": "Read this before anything technical. Ho's own framing of the multi-agent planning problem, and a serviceable MDP refresher — it reintroduces the planning formalism in 12 pages of prose rather than 200 of Sutton & Barto. Highest hours-saved-per-hour-spent item on the whole list.",
+      "tier": 1,
+      "est_hours": 1.5,
+      "links": [
+        {
+          "label": "PDF",
+          "url": "https://markkho.github.io/documents/HoSaxeCushman2022.pdf"
+        }
+      ],
+      "flags": [],
+      "thread": null,
+      "week": {
+        "n": 1,
+        "title": "foundations: planning, theory of mind, joint intention",
+        "dates": "Sep 1–7"
+      },
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2022-planning-with-theory-of-mind"
+    },
+    {
+      "authors_raw": "Ho, Abel, Correa, Littman, Cohen & Griffiths",
+      "year": "2022",
+      "title": "People construct simplified mental representations to plan",
+      "venue": "Nature, 606, 129–136",
+      "citation_raw": "Ho, Abel, Correa, Littman, Cohen & Griffiths (2022). People construct simplified mental representations to plan. Nature, 606, 129–136.",
+      "citation_html": "<b>Ho, Abel, Correa, Littman, Cohen &amp; Griffiths (2022).</b> People construct simplified mental representations to plan. <i>Nature</i>, 606, 129–136.",
+      "why": "The flagship. Figures-first is fine — the construct (value-guided construal: people build a simplified task representation before planning over it) matters more here than the methods. The open question worth turning over: what's the joint analogue of a construal? Do two people converge on a shared simplification, and does coordination succeed or fail on that convergence?",
+      "tier": 1,
+      "est_hours": 0.75,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2105.06948"
+        }
+      ],
+      "flags": [],
+      "thread": null,
+      "week": {
+        "n": 1,
+        "title": "foundations: planning, theory of mind, joint intention",
+        "dates": "Sep 1–7"
+      },
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2022-people-construct-simplified-mental-representations-to-p"
+    },
+    {
+      "authors_raw": "Kleiman-Weiner, Ho, Austerweil, Littman & Tenenbaum",
+      "year": "2016",
+      "title": "Coordinate to cooperate or compete: abstract goals and joint intentions in social interaction",
+      "venue": "Proc. 38th CogSci",
+      "citation_raw": "Kleiman-Weiner, Ho, Austerweil, Littman & Tenenbaum (2016). Coordinate to cooperate or compete: abstract goals and joint intentions in social interaction. Proc. 38th CogSci.",
+      "citation_html": "<b>Kleiman-Weiner, Ho, Austerweil, Littman &amp; Tenenbaum (2016).</b> Coordinate to cooperate or compete: abstract goals and joint intentions in social interaction. <i>Proc. 38th CogSci</i>.",
+      "why": "The cleanest statement of the hypothesis space this literature lives in: recursive best-response (each agent models the other modeling it) vs. joint intention / we-mode (agents adopt a shared abstract goal and plan from it). Nearly every model in the area is a variant of, or a hybrid between, these two.",
+      "tier": 1,
+      "est_hours": 1.0,
+      "links": [
+        {
+          "label": "PDF",
+          "url": "https://alab.psych.wisc.edu/papers/files/KW2016etal.pdf"
+        }
+      ],
+      "flags": [],
+      "thread": null,
+      "week": {
+        "n": 1,
+        "title": "foundations: planning, theory of mind, joint intention",
+        "dates": "Sep 1–7"
+      },
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2016-coordinate-to-cooperate-or-compete-abstract-goals-and-j"
+    },
+    {
+      "authors_raw": "Ho, MacGlashan, Greenwald, Littman, Hilliard, Trimbach, Brawner, Tenenbaum, Kleiman-Weiner & Austerweil",
+      "year": "2016",
+      "title": "Feature-based joint planning and norm learning in collaborative games",
+      "venue": "Proc. 38th CogSci, 1158–1163",
+      "citation_raw": "Ho, MacGlashan, Greenwald, Littman, Hilliard, Trimbach, Brawner, Tenenbaum, Kleiman-Weiner & Austerweil (2016). Feature-based joint planning and norm learning in collaborative games. Proc. 38th CogSci, 1158–1163.",
+      "citation_html": "<b>Ho, MacGlashan, Greenwald, Littman, Hilliard, Trimbach, Brawner, Tenenbaum, Kleiman-Weiner &amp; Austerweil (2016).</b> Feature-based joint planning and norm learning in collaborative games. <i>Proc. 38th CogSci</i>, 1158–1163.",
+      "why": "The closest antecedent to the joint-planning program this list circles — Ho's own two-player gridworld, joint planning model, best-response comparison, two experiments. Play the demo and read the repo, not just the paper; it shows what a task in this tradition looks like at the level of pixels and code.",
+      "tier": 1,
+      "est_hours": 1.25,
+      "links": [
+        {
+          "label": "PDF",
+          "url": "https://codec-lab.github.io/documents/ho_et_al_normlearning_2016.pdf"
+        },
+        {
+          "label": "code",
+          "url": "https://github.com/markkho/norms-cogsci2016"
+        },
+        {
+          "label": "demos",
+          "url": "https://markkho.github.io/pages/demos.html"
+        }
+      ],
+      "flags": [],
+      "thread": null,
+      "week": {
+        "n": 1,
+        "title": "foundations: planning, theory of mind, joint intention",
+        "dates": "Sep 1–7"
+      },
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2016-feature-based-joint-planning-and-norm-learning-in-colla"
+    },
+    {
+      "authors_raw": "Crawford, Costa-Gomes & Iriberri",
+      "year": "2013",
+      "title": "Structural models of nonequilibrium strategic thinking: theory, evidence, and applications",
+      "venue": "Journal of Economic Literature, 51(1), 5–62",
+      "citation_raw": "Crawford, Costa-Gomes & Iriberri (2013). Structural models of nonequilibrium strategic thinking: theory, evidence, and applications. Journal of Economic Literature, 51(1), 5–62.",
+      "citation_html": "<b>Crawford, Costa-Gomes &amp; Iriberri (2013).</b> Structural models of nonequilibrium strategic thinking: theory, evidence, and applications. <i>Journal of Economic Literature</i>, 51(1), 5–62.",
+      "why": "If only one item in this entire guide gets read, make it this. It converts “behavioral game theory” into “a model class with a writable likelihood” — identification, level-0 specification, structural estimation — which is the register Bayesian cognitive modelers already speak. It teaches the game theory as it goes. Read §1–4 and the coordination application; skip auctions and bilateral trade.",
+      "tier": 1,
+      "est_hours": 2.0,
+      "links": [
+        {
+          "label": "PDF",
+          "url": "https://econweb.ucsd.edu/~vcrawfor/CCGIJEL13.pdf"
+        }
+      ],
+      "flags": [],
+      "thread": null,
+      "week": {
+        "n": 2,
+        "title": "the behavioral-economics half",
+        "dates": "Sep 8–14"
+      },
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2013-structural-models-of-nonequilibrium-strategic-thinking"
+    },
+    {
+      "authors_raw": "Colman & Gold",
+      "year": "2018",
+      "title": "Team reasoning: solving the puzzle of coordination",
+      "venue": "Psychonomic Bulletin & Review, 25(5), 1770–1783",
+      "citation_raw": "Colman & Gold (2018). Team reasoning: solving the puzzle of coordination. Psychonomic Bulletin & Review, 25(5), 1770–1783.",
+      "citation_html": "<b>Colman &amp; Gold (2018).</b> Team reasoning: solving the puzzle of coordination. <i>Psychonomic Bulletin &amp; Review</i>, 25(5), 1770–1783.",
+      "why": "The entry point to team reasoning — written for psychologists, no game theory assumed. The economics-side cousin of the “joint intention” branch. Read it as: the same idea, thirty years earlier, in different notation. Noticing exactly these convergences is much of the payoff of reading across these traditions. (Skip Bacharach's book; read Gold & Sugden's intro to it for more.)",
+      "tier": 1,
+      "est_hours": 1.0,
+      "links": [],
+      "flags": [],
+      "thread": null,
+      "week": {
+        "n": 2,
+        "title": "the behavioral-economics half",
+        "dates": "Sep 8–14"
+      },
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2018-team-reasoning-solving-the-puzzle-of-coordination"
+    },
+    {
+      "authors_raw": "Misyak, Melkonyan, Zeitoun & Chater",
+      "year": "2014",
+      "title": "Unwritten rules: virtual bargaining underpins social interaction, culture, and society",
+      "venue": "TiCS, 18(10), 512–519",
+      "citation_raw": "Misyak, Melkonyan, Zeitoun & Chater (2014). Unwritten rules: virtual bargaining underpins social interaction, culture, and society. TiCS, 18(10), 512–519.",
+      "citation_html": "<b>Misyak, Melkonyan, Zeitoun &amp; Chater (2014).</b> Unwritten rules: virtual bargaining underpins social interaction, culture, and society. <i>TiCS</i>, 18(10), 512–519.",
+      "why": "The third live theory: people coordinate by simulating a negotiation they never actually have, then acting on its imagined outcome. Shortest, clearest statement. It matters disproportionately because it has the most active current modeling program attached (see Week 3).",
+      "tier": 1,
+      "est_hours": 0.5,
+      "links": [
+        {
+          "label": "PDF",
+          "url": "https://wrap.warwick.ac.uk/id/eprint/62151/3/WRAP_Chater_PIIS1364661314001314.pdf"
+        }
+      ],
+      "flags": [],
+      "thread": null,
+      "week": {
+        "n": 2,
+        "title": "the behavioral-economics half",
+        "dates": "Sep 8–14"
+      },
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2014-unwritten-rules-virtual-bargaining-underpins-social-int"
+    },
+    {
+      "authors_raw": "Camerer, Ho & Chong",
+      "year": "2004",
+      "title": "A cognitive hierarchy model of games",
+      "venue": "Quarterly Journal of Economics, 119(3), 861–898",
+      "citation_raw": "Camerer, Ho & Chong (2004). A cognitive hierarchy model of games. Quarterly Journal of Economics, 119(3), 861–898.",
+      "citation_html": "<b>Camerer, Ho &amp; Chong (2004).</b> A cognitive hierarchy model of games. <i>Quarterly Journal of Economics</i>, 119(3), 861–898.",
+      "why": "Skim for the model, not the applications — the Poisson-CH generative story is the payload, and it is typically the first baseline implemented in simulations of this kind. Pair it with the level-0 problem: what a level-0 agent does is a modeling choice that silently determines everything above it, and it's the most common way these models get quietly mis-specified.",
+      "tier": 2,
+      "est_hours": 0.5,
+      "links": [
+        {
+          "label": "PDF",
+          "url": "https://www.csc2.ncsu.edu/faculty/mpsingh/local/Social/f25/wrap/readings/Camerer+Ho+Chong-cognitive-hierarchy-of-games-2004.pdf"
+        }
+      ],
+      "flags": [],
+      "thread": null,
+      "week": {
+        "n": 2,
+        "title": "the behavioral-economics half",
+        "dates": "Sep 8–14"
+      },
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2004-a-cognitive-hierarchy-model-of-games"
+    },
+    {
+      "authors_raw": "Wu, Wang, Evans, Tenenbaum, Parkes & Kleiman-Weiner",
+      "year": "2021",
+      "title": "Too many cooks: Bayesian inference for coordinating multi-agent collaboration",
+      "venue": "Topics in Cognitive Science, 13(2), 414–432",
+      "citation_raw": "Wu, Wang, Evans, Tenenbaum, Parkes & Kleiman-Weiner (2021). Too many cooks: Bayesian inference for coordinating multi-agent collaboration. Topics in Cognitive Science, 13(2), 414–432.",
+      "citation_html": "<b>Wu, Wang, Evans, Tenenbaum, Parkes &amp; Kleiman-Weiner (2021).</b> Too many cooks: Bayesian inference for coordinating multi-agent collaboration. <i>Topics in Cognitive Science</i>, 13(2), 414–432.",
+      "why": "The algorithm to Kleiman-Weiner 2016's hypothesis: Bayesian delegation — agents hold a posterior over sub-task assignments and infer from a partner's behavior who is doing what. Plus human data. The closest thing to a template for both the model and the write-up in this genre.",
+      "tier": 1,
+      "est_hours": 1.5,
+      "links": [
+        {
+          "label": "PDF",
+          "url": "https://sarahawu.github.io/assets/papers/wu2021cooks.pdf"
+        }
+      ],
+      "flags": [
+        "cite the TopiCS version — arXiv / CogSci / AAMAS variants differ in title and author order"
+      ],
+      "thread": null,
+      "week": {
+        "n": 3,
+        "title": "models that actually run",
+        "dates": "Sep 15–21"
+      },
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2021-too-many-cooks-bayesian-inference-for-coordinating-mult"
+    },
+    {
+      "authors_raw": "Tang, Gong, Zhao, Zhou, Shen & Gao",
+      "year": "2025",
+      "title": "Joint commitment in human cooperative hunting through an “imagined we.” Proceedings of the Royal Society B, 292(2055), 20243070",
+      "venue": null,
+      "citation_raw": "Tang, Gong, Zhao, Zhou, Shen & Gao (2025). Joint commitment in human cooperative hunting through an “imagined we.” Proceedings of the Royal Society B, 292(2055), 20243070.",
+      "citation_html": "<b>Tang, Gong, Zhao, Zhou, Shen &amp; Gao (2025).</b> Joint commitment in human cooperative hunting through an “imagined we.” <i>Proceedings of the Royal Society B</i>, 292(2055), 20243070.",
+      "why": "The Imagined We model — each player infers the intention of a collective “we” agent rather than maximizing individual reward from a shared outcome. Beats reward-sharing models, and the gap widens as the number of possible targets grows. Currently the front-runner in this line of stag-hunt modeling. Cite this Proc B version, not the CogSci 2020/2022 precursors.",
+      "tier": 1,
+      "est_hours": 1.0,
+      "links": [
+        {
+          "label": "PDF",
+          "url": "https://taogao.comm.ucla.edu/static/pdf/Joint%20commitment_Tang%20Gong%20Zhao%20Zhou%20Shen%20Gao.pdf"
+        },
+        {
+          "label": "project",
+          "url": "https://taogao.comm.ucla.edu/project_JointCommitment.html"
+        }
+      ],
+      "flags": [],
+      "thread": null,
+      "week": {
+        "n": 3,
+        "title": "models that actually run",
+        "dates": "Sep 15–21"
+      },
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2025-joint-commitment-in-human-cooperative-hunting-through-a"
+    },
+    {
+      "authors_raw": "Le Pargneux, Zeitoun, Konstantinidis & Chater",
+      "year": "2024",
+      "title": "Coordination in dynamic interactions by converging on tacitly agreed joint plans",
+      "venue": "Proc. 46th CogSci",
+      "citation_raw": "Le Pargneux, Zeitoun, Konstantinidis & Chater (2024). Coordination in dynamic interactions by converging on tacitly agreed joint plans. Proc. 46th CogSci.",
+      "citation_html": "<b>Le Pargneux, Zeitoun, Konstantinidis &amp; Chater (2024).</b> Coordination in dynamic interactions by converging on tacitly agreed joint plans. <i>Proc. 46th CogSci</i>.",
+      "why": "Read early and carefully: the nearest published work to the problem this list circles. A virtual-bargaining model of joint plans in dynamic coordination, model-compared against alternatives, two experiments. Knowing precisely what it already covers is how a new project in this space avoids rediscovering it.",
+      "tier": 1,
+      "est_hours": 1.0,
+      "links": [
+        {
+          "label": "PDF",
+          "url": "https://escholarship.org/uc/item/5tg7135f"
+        }
+      ],
+      "flags": [],
+      "thread": null,
+      "week": {
+        "n": 3,
+        "title": "models that actually run",
+        "dates": "Sep 15–21"
+      },
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2024-coordination-in-dynamic-interactions-by-converging-on-t"
+    },
+    {
+      "authors_raw": "Kuang, Brockbank, Bicchieri & Hawkins",
+      "year": "2026",
+      "title": "Inferring joint commitment from observed coordination",
+      "venue": "Proc. 48th CogSci",
+      "citation_raw": "Kuang, Brockbank, Bicchieri & Hawkins (2026). Inferring joint commitment from observed coordination. Proc. 48th CogSci.",
+      "citation_html": "<b>Kuang, Brockbank, Bicchieri &amp; Hawkins (2026).</b> Inferring joint commitment from observed coordination. <i>Proc. 48th CogSci</i>.",
+      "why": "Hawkins again. Two experiments, N = 785, gridworld farm with an explicit stag hunt payoff structure (solo harvest of the center tree yields 1 berry, joint harvest 8). The model is Bayesian ToM over a latent commitment parameter θ ∈ [0,1] that interpolates between individual and collective expected utility — turning we-mode-vs-I-mode from a discrete model comparison into a fitted continuous dial. That single move is the most useful idea on this whole list.",
+      "tier": 1,
+      "est_hours": 1.0,
+      "links": [
+        {
+          "label": "PDF",
+          "url": "https://escholarship.org/content/qt210800gr/qt210800gr.pdf"
+        }
+      ],
+      "flags": [
+        "not dyadic — third-party observers rating pre-generated stimuli, N = 785 individuals",
+        "for commitment ratings the null model slightly beat the full model; only agreement ratings fit well (r = .90)"
+      ],
+      "thread": null,
+      "week": {
+        "n": 3,
+        "title": "models that actually run",
+        "dates": "Sep 15–21"
+      },
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2026-inferring-joint-commitment-from-observed-coordination"
+    },
+    {
+      "authors_raw": "Baker, Jara-Ettinger, Saxe & Tenenbaum",
+      "year": "2017",
+      "title": "Rational quantitative attribution of beliefs, desires and percepts in human mentalizing",
+      "venue": "Nature Human Behaviour, 1, 0064",
+      "citation_raw": "Baker, Jara-Ettinger, Saxe & Tenenbaum (2017). Rational quantitative attribution of beliefs, desires and percepts in human mentalizing. Nature Human Behaviour, 1, 0064.",
+      "citation_html": "<b>Baker, Jara-Ettinger, Saxe &amp; Tenenbaum (2017).</b> Rational quantitative attribution of beliefs, desires and percepts in human mentalizing. <i>Nature Human Behaviour</i>, 1, 0064.",
+      "why": "Canonical Bayesian theory of mind — familiar inference machinery pointed at a different generative model. This is the one to drop if the week runs long: Kuang et al. above applies BToM directly to the construct at issue, which matters more than the canonical demonstration. For the cheap version instead, see Jara-Ettinger et al. (2016), The naïve utility calculus, TiCS 20(8) — same vocabulary, half the math.",
+      "tier": 2,
+      "est_hours": 1.0,
+      "links": [
+        {
+          "label": "journal",
+          "url": "https://www.nature.com/articles/s41562-017-0064"
+        }
+      ],
+      "flags": [],
+      "thread": null,
+      "week": {
+        "n": 3,
+        "title": "models that actually run",
+        "dates": "Sep 15–21"
+      },
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2017-rational-quantitative-attribution-of-beliefs-desires-an"
+    },
+    {
+      "authors_raw": "Albrecht, Christianos & Schäfer",
+      "year": "2024",
+      "title": "Multi-Agent Reinforcement Learning: Foundations and Modern Approaches",
+      "venue": "MIT Press. — Ch. 3 and 4 only",
+      "citation_raw": "Albrecht, Christianos & Schäfer (2024). Multi-Agent Reinforcement Learning: Foundations and Modern Approaches. MIT Press. — Ch. 3 and 4 only.",
+      "citation_html": "<b>Albrecht, Christianos &amp; Schäfer (2024).</b> <i>Multi-Agent Reinforcement Learning: Foundations and Modern Approaches</i>. MIT Press. — <b>Ch. 3 and 4 only.</b>",
+      "why": "Free, CC-licensed, solves two problems at once. Ch. 3 walks the exact ladder — normal-form → repeated → stochastic (Markov) games → POSGs. Ch. 4 is a compact game-theory bootstrap (best response, Nash, correlated equilibrium, Pareto optimality) without a semester of micro. Read it as a notation dictionary, not a textbook. Skip Ch. 5+; nothing in the joint-planning program here needs deep RL.",
+      "tier": 1,
+      "est_hours": 2.0,
+      "links": [
+        {
+          "label": "free book",
+          "url": "https://www.marl-book.com/"
+        }
+      ],
+      "flags": [],
+      "thread": null,
+      "week": {
+        "n": 4,
+        "title": "formalism, one hard constraint, one paradigm",
+        "dates": "Sep 22–28"
+      },
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2024-multi-agent-reinforcement-learning-foundations-and-mode"
+    },
+    {
+      "authors_raw": "Thomas, DeScioli, Haque & Pinker",
+      "year": "2014",
+      "title": "The psychology of coordination and common knowledge",
+      "venue": "JPSP, 107(4), 657–676",
+      "citation_raw": "Thomas, DeScioli, Haque & Pinker (2014). The psychology of coordination and common knowledge. JPSP, 107(4), 657–676.",
+      "citation_html": "<b>Thomas, DeScioli, Haque &amp; Pinker (2014).</b> The psychology of coordination and common knowledge. <i>JPSP</i>, 107(4), 657–676.",
+      "why": "One paper, one finding, and it constrains the model class before a line of it is written: people treat common knowledge as a categorical state, not a point on a probability continuum. That rules out an entire family of graded-higher-order-belief models that would otherwise be tempting to write down. Cheap insurance.",
+      "tier": 1,
+      "est_hours": 1.0,
+      "links": [
+        {
+          "label": "PDF",
+          "url": "https://pdescioli.com/papers/thomas.etal.common.knowledge.jpsp14.pdf"
+        }
+      ],
+      "flags": [],
+      "thread": null,
+      "week": {
+        "n": 4,
+        "title": "formalism, one hard constraint, one paradigm",
+        "dates": "Sep 22–28"
+      },
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2014-the-psychology-of-coordination-and-common-knowledge"
+    },
+    {
+      "authors_raw": "Wu, Deffner, Kahl, Meder, Ho & Kurvers",
+      "year": "2025",
+      "title": "Adaptive mechanisms of social and asocial learning in immersive collective foraging",
+      "venue": "Nature Communications, 16, 3539",
+      "citation_raw": "Wu, Deffner, Kahl, Meder, Ho & Kurvers (2025). Adaptive mechanisms of social and asocial learning in immersive collective foraging. Nature Communications, 16, 3539.",
+      "citation_html": "<b>Wu, Deffner, Kahl, Meder, Ho &amp; Kurvers (2025).</b> Adaptive mechanisms of social and asocial learning in immersive collective foraging. <i>Nature Communications</i>, 16, 3539.",
+      "why": "Ho is a co-author, and this is the best methodological template available for building a real-time task. It solves the three hard problems: how to define a discrete decision event inside continuous movement, how to reconstruct what each agent could actually see of the other (automated visual-field transcription — essential for conditioning a model on observability), and how to fit a time-varying-weight choice model to trajectory data. Public data on Zenodo. Read the methods, not just the results.",
+      "tier": 1,
+      "est_hours": 1.5,
+      "links": [
+        {
+          "label": "open access",
+          "url": "https://www.nature.com/articles/s41467-025-58365-6"
+        },
+        {
+          "label": "data",
+          "url": "https://zenodo.org/records/14979323"
+        }
+      ],
+      "flags": [
+        "an Author Correction exists — \"Mark K. Ho\" was printed as \"Mark H. Ho\"; cite the corrected form"
+      ],
+      "thread": {
+        "key": "H",
+        "label": "H · collective intelligence & social learning — Wu, Vélez"
+      },
+      "week": {
+        "n": 4,
+        "title": "formalism, one hard constraint, one paradigm",
+        "dates": "Sep 22–28"
+      },
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2025-adaptive-mechanisms-of-social-and-asocial-learning-in-i"
+    },
+    {
+      "authors_raw": "Bardsley, Mehta, Starmer & Sugden",
+      "year": "2010",
+      "title": "Explaining focal points: cognitive hierarchy theory versus team reasoning",
+      "venue": "Economic Journal, 120(543), 40–79",
+      "citation_raw": "Bardsley, Mehta, Starmer & Sugden (2010). Explaining focal points: cognitive hierarchy theory versus team reasoning. Economic Journal, 120(543), 40–79.",
+      "citation_html": "<b>Bardsley, Mehta, Starmer &amp; Sugden (2010).</b> Explaining focal points: cognitive hierarchy theory versus team reasoning. <i>Economic Journal</i>, 120(543), 40–79.",
+      "why": "The horse-race paper — two of the three main model families fit to the same data. If a fifth hour turns up in a week, spend it here.",
+      "tier": 1,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "A",
+        "label": "A · behavioral game theory & coordination"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2010-explaining-focal-points-cognitive-hierarchy-theory-vers"
+    },
+    {
+      "authors_raw": "Schelling",
+      "year": "1960",
+      "title": "The Strategy of Conflict, Ch. 3–4 + the tacit-coordination appendix",
+      "venue": null,
+      "citation_raw": "Schelling (1960). The Strategy of Conflict, Ch. 3–4 + the tacit-coordination appendix.",
+      "citation_html": "<b>Schelling (1960).</b> <i>The Strategy of Conflict</i>, Ch. 3–4 + the tacit-coordination appendix.",
+      "why": "Where focal points come from. ~50pp, still the best writing in the field.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "A",
+        "label": "A · behavioral game theory & coordination"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "1960-the-strategy-of-conflict-ch-3-4-the-tacit-coordination"
+    },
+    {
+      "authors_raw": "Mehta, Starmer & Sugden",
+      "year": "1994",
+      "title": "The nature of salience: an experimental investigation of pure coordination games",
+      "venue": "AER, 84(3), 658–673",
+      "citation_raw": "Mehta, Starmer & Sugden (1994). The nature of salience: an experimental investigation of pure coordination games. AER, 84(3), 658–673.",
+      "citation_html": "<b>Mehta, Starmer &amp; Sugden (1994).</b> The nature of salience: an experimental investigation of pure coordination games. <i>AER</i>, 84(3), 658–673.",
+      "why": null,
+      "tier": 2,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "A",
+        "label": "A · behavioral game theory & coordination"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "1994-the-nature-of-salience-an-experimental-investigation-of"
+    },
+    {
+      "authors_raw": "Crawford",
+      "year": "2016",
+      "title": "New directions for modelling strategic behavior",
+      "venue": "Journal of Economic Perspectives, 30(4), 131–150",
+      "citation_raw": "Crawford (2016). New directions for modelling strategic behavior. Journal of Economic Perspectives, 30(4), 131–150.",
+      "citation_html": "<b>Crawford (2016).</b> New directions for modelling strategic behavior. <i>Journal of Economic Perspectives</i>, 30(4), 131–150.",
+      "why": "20pp, non-technical, links structured thinking to coordination and communication.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "A",
+        "label": "A · behavioral game theory & coordination"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2016-new-directions-for-modelling-strategic-behavior"
+    },
+    {
+      "authors_raw": "Van Huyck, Battalio & Beil",
+      "year": "1990",
+      "title": "Tacit coordination games, strategic uncertainty, and coordination failure",
+      "venue": "AER, 80(1), 234–248",
+      "citation_raw": "Van Huyck, Battalio & Beil (1990). Tacit coordination games, strategic uncertainty, and coordination failure. AER, 80(1), 234–248.",
+      "citation_html": "<b>Van Huyck, Battalio &amp; Beil (1990).</b> Tacit coordination games, strategic uncertainty, and coordination failure. <i>AER</i>, 80(1), 234–248.",
+      "why": "15pp founding weakest-link result; the empirical bedrock of coordination failure.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "A",
+        "label": "A · behavioral game theory & coordination"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "1990-tacit-coordination-games-strategic-uncertainty-and-coor"
+    },
+    {
+      "authors_raw": "Devetag & Ortmann",
+      "year": "2007",
+      "title": "When and why? A critical survey on coordination failure in the laboratory",
+      "venue": "Experimental Economics, 10(3), 331–344",
+      "citation_raw": "Devetag & Ortmann (2007). When and why? A critical survey on coordination failure in the laboratory. Experimental Economics, 10(3), 331–344.",
+      "citation_html": "<b>Devetag &amp; Ortmann (2007).</b> When and why? A critical survey on coordination failure in the laboratory. <i>Experimental Economics</i>, 10(3), 331–344.",
+      "why": "Fastest 15pp route to “what actually makes coordination succeed or fail in a lab.”",
+      "tier": 2,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "A",
+        "label": "A · behavioral game theory & coordination"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2007-when-and-why-a-critical-survey-on-coordination-failure"
+    },
+    {
+      "authors_raw": "Farrell & Rabin",
+      "year": "1996",
+      "title": "Cheap talk",
+      "venue": "JEP, 10(3), 103–118",
+      "citation_raw": "Farrell & Rabin (1996). Cheap talk. JEP, 10(3), 103–118.",
+      "citation_html": "<b>Farrell &amp; Rabin (1996).</b> Cheap talk. <i>JEP</i>, 10(3), 103–118.",
+      "why": "15pp, no math. Read before adding a chat box to a task.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "A",
+        "label": "A · behavioral game theory & coordination"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "1996-cheap-talk"
+    },
+    {
+      "authors_raw": "Cooper, DeJong, Forsythe & Ross",
+      "year": "1992",
+      "title": "Communication in coordination games",
+      "venue": "QJE, 107(2), 739–771",
+      "citation_raw": "Cooper, DeJong, Forsythe & Ross (1992). Communication in coordination games. QJE, 107(2), 739–771.",
+      "citation_html": "<b>Cooper, DeJong, Forsythe &amp; Ross (1992).</b> Communication in coordination games. <i>QJE</i>, 107(2), 739–771.",
+      "why": "The canonical one-way vs. two-way cheap-talk experiment.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "A",
+        "label": "A · behavioral game theory & coordination"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "1992-communication-in-coordination-games"
+    },
+    {
+      "authors_raw": null,
+      "year": null,
+      "title": "Perea. Epistemic game theory (chapter for the Handbook of Rationality).",
+      "venue": null,
+      "citation_raw": "Perea. Epistemic game theory (chapter for the Handbook of Rationality).",
+      "citation_html": "<b>Perea.</b> Epistemic game theory (chapter for the <i>Handbook of Rationality</i>).",
+      "why": "Free, chapter-length, written for non-game-theorists. The right entry point for epistemic foundations — not the books.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [
+        {
+          "label": "PDF",
+          "url": "https://epicenter.name/Perea/Papers/EGT.pdf"
+        }
+      ],
+      "flags": [],
+      "thread": {
+        "key": "A",
+        "label": "A · behavioral game theory & coordination"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "perea-epistemic-game-theory-chapter-for-the-handbook-of-rati"
+    },
+    {
+      "authors_raw": "Lewis",
+      "year": "1969",
+      "title": "Convention: A Philosophical Study, Ch. 1–2",
+      "venue": null,
+      "citation_raw": "Lewis (1969). Convention: A Philosophical Study, Ch. 1–2.",
+      "citation_html": "<b>Lewis (1969).</b> <i>Convention: A Philosophical Study</i>, Ch. 1–2.",
+      "why": "Origin of both common knowledge and salience-as-coordination-device. Readable prose.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "A",
+        "label": "A · behavioral game theory & coordination"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "1969-convention-a-philosophical-study-ch-1-2"
+    },
+    {
+      "authors_raw": "Nash",
+      "year": "1950",
+      "title": "The bargaining problem",
+      "venue": "Econometrica, 18(2), 155–162",
+      "citation_raw": "Nash (1950). The bargaining problem. Econometrica, 18(2), 155–162.",
+      "citation_html": "<b>Nash (1950).</b> The bargaining problem. <i>Econometrica</i>, 18(2), 155–162.",
+      "why": "Eight pages, and the Nash product is the objective function most likely to end up written down for a joint plan.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [
+        {
+          "label": "PDF",
+          "url": "https://jmvidal.cse.sc.edu/library/nash50a.pdf"
+        }
+      ],
+      "flags": [],
+      "thread": {
+        "key": "A",
+        "label": "A · behavioral game theory & coordination"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "1950-the-bargaining-problem"
+    },
+    {
+      "authors_raw": "Wright & Leyton-Brown",
+      "year": "2019",
+      "title": "Level-0 models for predicting human behavior in games",
+      "venue": "JAIR, 64, 357–383",
+      "citation_raw": "Wright & Leyton-Brown (2019). Level-0 models for predicting human behavior in games. JAIR, 64, 357–383.",
+      "citation_html": "<b>Wright &amp; Leyton-Brown (2019).</b> Level-0 models for predicting human behavior in games. <i>JAIR</i>, 64, 357–383.",
+      "why": "The level-0 specification problem is the modeling trap. Read before committing to a level-k baseline.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "A",
+        "label": "A · behavioral game theory & coordination"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2019-level-0-models-for-predicting-human-behavior-in-games"
+    },
+    {
+      "authors_raw": "Morris & Shin",
+      "year": "2003",
+      "title": "Global games: theory and applications. §1–2 only",
+      "venue": null,
+      "citation_raw": "Morris & Shin (2003). Global games: theory and applications. §1–2 only.",
+      "citation_html": "<b>Morris &amp; Shin (2003).</b> Global games: theory and applications. §1–2 only.",
+      "why": "Where higher-order beliefs get quantitative: vanishing signal noise selects an equilibrium rather than stipulating one. Worth the skim for that one idea; skip the proofs.",
+      "tier": 3,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "A",
+        "label": "A · behavioral game theory & coordination"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2003-global-games-theory-and-applications-1-2-only"
+    },
+    {
+      "authors_raw": "Camerer",
+      "year": "2003",
+      "title": "Behavioral Game Theory",
+      "venue": "Ch. 1, 5, 7",
+      "citation_raw": "Camerer (2003). Behavioral Game Theory. Ch. 1, 5, 7.",
+      "citation_html": "<b>Camerer (2003).</b> <i>Behavioral Game Theory</i>. Ch. 1, 5, 7.",
+      "why": "Reference volume. Do not read cover to cover.",
+      "tier": 3,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "A",
+        "label": "A · behavioral game theory & coordination"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2003-behavioral-game-theory"
+    },
+    {
+      "authors_raw": "Trujillo, Zhang, Zhi-Xuan, Tenenbaum & Levine",
+      "year": "2025",
+      "title": "Resource-rational virtual bargaining for moral judgment: toward a probabilistic cognitive model",
+      "venue": "Topics in Cognitive Science",
+      "citation_raw": "Trujillo, Zhang, Zhi-Xuan, Tenenbaum & Levine (2025). Resource-rational virtual bargaining for moral judgment: toward a probabilistic cognitive model. Topics in Cognitive Science.",
+      "citation_html": "<b>Trujillo, Zhang, Zhi-Xuan, Tenenbaum &amp; Levine (2025).</b> Resource-rational virtual bargaining for moral judgment: toward a probabilistic cognitive model. <i>Topics in Cognitive Science</i>.",
+      "why": "A runnable probabilistic virtual-bargaining model. Note the phrase “resource-rational” — Ho's framework colliding with Chater's, which is more or less the intersection this list is organized around.",
+      "tier": 1,
+      "est_hours": null,
+      "links": [
+        {
+          "label": "PDF",
+          "url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/tops.12781"
+        }
+      ],
+      "flags": [],
+      "thread": {
+        "key": "B",
+        "label": "B · virtual bargaining & the current synthesis frontier"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2025-resource-rational-virtual-bargaining-for-moral-judgment"
+    },
+    {
+      "authors_raw": "Kleiman-Weiner, Vientós, Rand & Tenenbaum",
+      "year": "2025",
+      "title": "Evolving general cooperation with a Bayesian theory of mind",
+      "venue": "PNAS, 122(25), e2400993122",
+      "citation_raw": "Kleiman-Weiner, Vientós, Rand & Tenenbaum (2025). Evolving general cooperation with a Bayesian theory of mind. PNAS, 122(25), e2400993122.",
+      "citation_html": "<b>Kleiman-Weiner, Vientós, Rand &amp; Tenenbaum (2025).</b> Evolving general cooperation with a Bayesian theory of mind. <i>PNAS</i>, 122(25), e2400993122.",
+      "why": "Recursive belief-tracking that dodges infinite regress via common-knowledge assumptions. Reusable machinery, and the best current example of “simulation experiment” in the evolutionary sense.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [
+        {
+          "label": "PDF",
+          "url": "https://compminds.uw.edu/pdfs/kleiman-weiner-et-al-2025-evolving-general-cooperation-with-a-bayesian-theory-of-mind.pdf"
+        }
+      ],
+      "flags": [],
+      "thread": {
+        "key": "B",
+        "label": "B · virtual bargaining & the current synthesis frontier"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2025-evolving-general-cooperation-with-a-bayesian-theory-of"
+    },
+    {
+      "authors_raw": "Levine, Chater, Tenenbaum & Cushman",
+      "year": "2024/2026",
+      "title": "Resource-rational contractualism: a triple theory of moral cognition",
+      "venue": "BBS, 49, e133",
+      "citation_raw": "Levine, Chater, Tenenbaum & Cushman (2024/2026). Resource-rational contractualism: a triple theory of moral cognition. BBS, 49, e133.",
+      "citation_html": "<b>Levine, Chater, Tenenbaum &amp; Cushman (2024/2026).</b> Resource-rational contractualism: a triple theory of moral cognition. <i>BBS</i>, 49, e133.",
+      "why": "Target article plus open peer commentary — the commentaries are a free map of every objection a resource-rational-bargaining framework will face.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "B",
+        "label": "B · virtual bargaining & the current synthesis frontier"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2024-2026-resource-rational-contractualism-a-triple-theory-o"
+    },
+    {
+      "authors_raw": "Misyak, Noguchi & Chater",
+      "year": "2016",
+      "title": "Instantaneous conventions: the emergence of flexible communicative signals",
+      "venue": "Psychological Science, 27(12), 1550–1561",
+      "citation_raw": "Misyak, Noguchi & Chater (2016). Instantaneous conventions: the emergence of flexible communicative signals. Psychological Science, 27(12), 1550–1561.",
+      "citation_html": "<b>Misyak, Noguchi &amp; Chater (2016).</b> Instantaneous conventions: the emergence of flexible communicative signals. <i>Psychological Science</i>, 27(12), 1550–1561.",
+      "why": "Cleanest empirical test of virtual bargaining; data on OSF. A good task-design reference too.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "B",
+        "label": "B · virtual bargaining & the current synthesis frontier"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2016-instantaneous-conventions-the-emergence-of-flexible-com"
+    },
+    {
+      "authors_raw": "Melkonyan, Zeitoun & Chater",
+      "year": "2021",
+      "title": "The cognitive foundations of tacit commitments: a virtual bargaining model of dynamic interactions",
+      "venue": "J. Mathematical Psychology, 105, 102600",
+      "citation_raw": "Melkonyan, Zeitoun & Chater (2021). The cognitive foundations of tacit commitments: a virtual bargaining model of dynamic interactions. J. Mathematical Psychology, 105, 102600.",
+      "citation_html": "<b>Melkonyan, Zeitoun &amp; Chater (2021).</b> The cognitive foundations of tacit commitments: a virtual bargaining model of dynamic interactions. <i>J. Mathematical Psychology</i>, 105, 102600.",
+      "why": "The sequential/dynamic extension — the version closest to joint planning rather than one-shot coordination.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "B",
+        "label": "B · virtual bargaining & the current synthesis frontier"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2021-the-cognitive-foundations-of-tacit-commitments-a-virtua"
+    },
+    {
+      "authors_raw": "Le Pargneux & Cushman",
+      "year": "2025",
+      "title": "Moral judgment is sensitive to bargaining power",
+      "venue": "JEP: General, 154(1), 263–278",
+      "citation_raw": "Le Pargneux & Cushman (2025). Moral judgment is sensitive to bargaining power. JEP: General, 154(1), 263–278.",
+      "citation_html": "<b>Le Pargneux &amp; Cushman (2025).</b> Moral judgment is sensitive to bargaining power. <i>JEP: General</i>, 154(1), 263–278.",
+      "why": "Bargaining-theoretic constructs (outside options, disagreement points) predicting human judgments about joint action.",
+      "tier": 3,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "B",
+        "label": "B · virtual bargaining & the current synthesis frontier"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2025-moral-judgment-is-sensitive-to-bargaining-power"
+    },
+    {
+      "authors_raw": "Wang, Davis & Jara-Ettinger",
+      "year": "2025",
+      "title": "Modeling other minds: a computational account of social cognition and its development",
+      "venue": "Annual Review of Developmental Psychology, 7",
+      "citation_raw": "Wang, Davis & Jara-Ettinger (2025). Modeling other minds: a computational account of social cognition and its development. Annual Review of Developmental Psychology, 7.",
+      "citation_html": "<b>Wang, Davis &amp; Jara-Ettinger (2025).</b> Modeling other minds: a computational account of social cognition and its development. <i>Annual Review of Developmental Psychology</i>, 7.",
+      "why": "One of the most important bridges on this page. Its central construct — “restricted scope models,” context-specific simplifications that make social reasoning tractable — is the direct social-cognition analogue of Ho's simplified task representations. An open direction sits somewhere in that overlap.",
+      "tier": 1,
+      "est_hours": null,
+      "links": [
+        {
+          "label": "PDF",
+          "url": "https://compdevlab.yale.edu/docs/2025/annurev-devpsych-111323-112016.pdf"
+        }
+      ],
+      "flags": [],
+      "thread": {
+        "key": "C",
+        "label": "C · computational theory of mind & inverse planning"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2025-modeling-other-minds-a-computational-account-of-social"
+    },
+    {
+      "authors_raw": "Jara-Ettinger, Gweon, Schulz & Tenenbaum",
+      "year": "2016",
+      "title": "The naïve utility calculus",
+      "venue": "TiCS, 20(8), 589–604",
+      "citation_raw": "Jara-Ettinger, Gweon, Schulz & Tenenbaum (2016). The naïve utility calculus. TiCS, 20(8), 589–604.",
+      "citation_html": "<b>Jara-Ettinger, Gweon, Schulz &amp; Tenenbaum (2016).</b> The naïve utility calculus. <i>TiCS</i>, 20(8), 589–604.",
+      "why": "Conceptual, low math load, and it's the vocabulary (“costs and rewards”) everyone in this literature uses.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "C",
+        "label": "C · computational theory of mind & inverse planning"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2016-the-na-ve-utility-calculus"
+    },
+    {
+      "authors_raw": "Baker, Saxe & Tenenbaum",
+      "year": "2009",
+      "title": "Action understanding as inverse planning",
+      "venue": "Cognition, 113(3), 329–349",
+      "citation_raw": "Baker, Saxe & Tenenbaum (2009). Action understanding as inverse planning. Cognition, 113(3), 329–349.",
+      "citation_html": "<b>Baker, Saxe &amp; Tenenbaum (2009).</b> Action understanding as inverse planning. <i>Cognition</i>, 113(3), 329–349.",
+      "why": null,
+      "tier": 2,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "C",
+        "label": "C · computational theory of mind & inverse planning"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2009-action-understanding-as-inverse-planning"
+    },
+    {
+      "authors_raw": "Banerjee, Cornelisse, Gopinath, Sumner, DeCastro, Rosman, Vinitsky & Ho",
+      "year": "2025",
+      "title": "Estimating cognitive biases with attention-aware inverse planning",
+      "venue": "NeurIPS 38 (Spotlight)",
+      "citation_raw": "Banerjee, Cornelisse, Gopinath, Sumner, DeCastro, Rosman, Vinitsky & Ho (2025). Estimating cognitive biases with attention-aware inverse planning. NeurIPS 38 (Spotlight).",
+      "citation_html": "<b>Banerjee, Cornelisse, Gopinath, Sumner, DeCastro, Rosman, Vinitsky &amp; Ho (2025).</b> Estimating cognitive biases with attention-aware inverse planning. <i>NeurIPS 38</i> (Spotlight).",
+      "why": "Inverse planning where the inferred quantity is the partner's attentional and representational limits. One of the most recent entries in this line, and among the nearest published work to the problems this list circles. Worth reading early.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "C",
+        "label": "C · computational theory of mind & inverse planning"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2025-estimating-cognitive-biases-with-attention-aware-invers"
+    },
+    {
+      "authors_raw": "Devaine, Hollard & Daunizeau",
+      "year": "2014",
+      "title": "The social Bayesian brain: does mentalizing make a difference when we learn? PLOS Comp Bio, 10(12), e1003992",
+      "venue": null,
+      "citation_raw": "Devaine, Hollard & Daunizeau (2014). The social Bayesian brain: does mentalizing make a difference when we learn? PLOS Comp Bio, 10(12), e1003992.",
+      "citation_html": "<b>Devaine, Hollard &amp; Daunizeau (2014).</b> The social Bayesian brain: does mentalizing make a difference when we learn? <i>PLOS Comp Bio</i>, 10(12), e1003992.",
+      "why": "A working k-ToM recursive-belief implementation, fit to human data. The one to build on for a recursive account.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "C",
+        "label": "C · computational theory of mind & inverse planning"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2014-the-social-bayesian-brain-does-mentalizing-make-a-diffe"
+    },
+    {
+      "authors_raw": "Gmytrasiewicz & Doshi",
+      "year": "2005",
+      "title": "A framework for sequential planning in multi-agent settings (I-POMDPs)",
+      "venue": "JAIR, 24, 49–79",
+      "citation_raw": "Gmytrasiewicz & Doshi (2005). A framework for sequential planning in multi-agent settings (I-POMDPs). JAIR, 24, 49–79.",
+      "citation_html": "<b>Gmytrasiewicz &amp; Doshi (2005).</b> A framework for sequential planning in multi-agent settings (I-POMDPs). <i>JAIR</i>, 24, 49–79.",
+      "why": "The formal home of nested belief modeling. Know it exists; reach for it when a reviewer asks.",
+      "tier": 3,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "C",
+        "label": "C · computational theory of mind & inverse planning"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2005-a-framework-for-sequential-planning-in-multi-agent-sett"
+    },
+    {
+      "authors_raw": "Zhi-Xuan, Ying, Mansinghka & Tenenbaum",
+      "year": "2024",
+      "title": "Pragmatic instruction following and goal assistance via cooperative language-guided inverse planning",
+      "venue": "AAMAS 2024",
+      "citation_raw": "Zhi-Xuan, Ying, Mansinghka & Tenenbaum (2024). Pragmatic instruction following and goal assistance via cooperative language-guided inverse planning. AAMAS 2024.",
+      "citation_html": "<b>Zhi-Xuan, Ying, Mansinghka &amp; Tenenbaum (2024).</b> Pragmatic instruction following and goal assistance via cooperative language-guided inverse planning. <i>AAMAS 2024</i>.",
+      "why": null,
+      "tier": 3,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "C",
+        "label": "C · computational theory of mind & inverse planning"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2024-pragmatic-instruction-following-and-goal-assistance-via"
+    },
+    {
+      "authors_raw": null,
+      "year": null,
+      "title": "The commitment-cues cluster — Michael & Pacherie (2015) on prior interaction history and effortfulness; Bonalumi et al. (2019, 2022); Siposova, Tomasello & Carpenter (2018) and Bangerter et al. (2022) on communicative signals, eye contact and gesture; Michael et al. (2016) on social dependency between agents.",
+      "venue": null,
+      "citation_raw": "The commitment-cues cluster — Michael & Pacherie (2015) on prior interaction history and effortfulness; Bonalumi et al. (2019, 2022); Siposova, Tomasello & Carpenter (2018) and Bangerter et al. (2022) on communicative signals, eye contact and gesture; Michael et al. (2016) on social dependency between agents.",
+      "citation_html": "<b>The commitment-cues cluster</b> — Michael & Pacherie (2015) on prior interaction history and effortfulness; Bonalumi et al. (2019, 2022); Siposova, Tomasello & Carpenter (2018) and Bangerter et al. (2022) on communicative signals, eye contact and gesture; Michael et al. (2016) on social dependency between agents.",
+      "why": "An easily missed literature, and Kuang et al. is the door into it — these are precisely the works it positions against, on the grounds that they identify commitment cues descriptively without formalizing the inference. That gap is an opening. Pull the exact citations from Kuang et al.'s reference list rather than from this entry; the ones here are second-hand.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "D",
+        "label": "D · joint action, shared agency, commitment, norms"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "the-commitment-cues-cluster-michael-pacherie-2015-on-prior-i"
+    },
+    {
+      "authors_raw": "Gilbert (1999) on joint commitment and plural subjects · Searle (1990) on collective intentions · Bacharach",
+      "year": "2006",
+      "title": "",
+      "venue": null,
+      "citation_raw": "Gilbert (1999) on joint commitment and plural subjects · Searle (1990) on collective intentions · Bacharach (2006).",
+      "citation_html": "<b>Gilbert (1999)</b> on joint commitment and plural subjects · <b>Searle (1990)</b> on collective intentions · <b>Bacharach (2006)</b>.",
+      "why": "The philosophical backdrop Kuang et al. builds on. Worth knowing the positions; reading them in full is not urgent. Gilbert in particular is the source of “joint commitment” as a technical term, and her account is notably stronger than Bratman's — obligations that can't be unilaterally rescinded — which matters for modeling the normative reactions (anger, guilt) that Kuang et al. measure.",
+      "tier": 3,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "D",
+        "label": "D · joint action, shared agency, commitment, norms"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2006"
+    },
+    {
+      "authors_raw": "Tomasello",
+      "year": "2025",
+      "title": "Shared intentionality",
+      "venue": "In Open Encyclopedia of Cognitive Science, MIT Press. + Sebanz & Knoblich (2021). Progress in joint-action research. Current Directions in Psychological Science, 30(2), 138–143",
+      "citation_raw": "Tomasello (2025). Shared intentionality. In Open Encyclopedia of Cognitive Science, MIT Press. + Sebanz & Knoblich (2021). Progress in joint-action research. Current Directions in Psychological Science, 30(2), 138–143.",
+      "citation_html": "<b>Tomasello (2025).</b> Shared intentionality. In <i>Open Encyclopedia of Cognitive Science</i>, MIT Press. + <b>Sebanz &amp; Knoblich (2021).</b> Progress in joint-action research. <i>Current Directions in Psychological Science</i>, 30(2), 138–143.",
+      "why": "Read together — ~20 minutes and ~10 pages total, and they cover this entire literature at the cost of one coffee. Tomasello's own summary of his program plus Sebanz & Knoblich's own update on the empirical side.",
+      "tier": 1,
+      "est_hours": null,
+      "links": [
+        {
+          "label": "OECS",
+          "url": "https://oecs.mit.edu/pub/sep9e3c2"
+        }
+      ],
+      "flags": [],
+      "thread": {
+        "key": "D",
+        "label": "D · joint action, shared agency, commitment, norms"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2025-shared-intentionality"
+    },
+    {
+      "authors_raw": "Vesper, Butterfill, Knoblich & Sebanz",
+      "year": "2010",
+      "title": "A minimal architecture for joint action",
+      "venue": "Neural Networks, 23(8–9), 998–1003",
+      "citation_raw": "Vesper, Butterfill, Knoblich & Sebanz (2010). A minimal architecture for joint action. Neural Networks, 23(8–9), 998–1003.",
+      "citation_html": "<b>Vesper, Butterfill, Knoblich &amp; Sebanz (2010).</b> A minimal architecture for joint action. <i>Neural Networks</i>, 23(8–9), 998–1003.",
+      "why": "The most computationally legible piece of the joint-action literature, and the one most likely to appear in a modeling paper's intro.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "D",
+        "label": "D · joint action, shared agency, commitment, norms"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2010-a-minimal-architecture-for-joint-action"
+    },
+    {
+      "authors_raw": "Bratman",
+      "year": "1992",
+      "title": "Shared cooperative activity",
+      "venue": "The Philosophical Review, 101(2), 327–341",
+      "citation_raw": "Bratman (1992). Shared cooperative activity. The Philosophical Review, 101(2), 327–341.",
+      "citation_html": "<b>Bratman (1992).</b> Shared cooperative activity. <i>The Philosophical Review</i>, 101(2), 327–341.",
+      "why": "The actual conditions on shared cooperative activity — what “joint intention” in the computational papers is gesturing at. Read the paper, not the 2014 book.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "D",
+        "label": "D · joint action, shared agency, commitment, norms"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "1992-shared-cooperative-activity"
+    },
+    {
+      "authors_raw": "Sebanz, Bekkering & Knoblich",
+      "year": "2006",
+      "title": "Joint action: bodies and minds moving together",
+      "venue": "TiCS, 10(2), 70–76",
+      "citation_raw": "Sebanz, Bekkering & Knoblich (2006). Joint action: bodies and minds moving together. TiCS, 10(2), 70–76.",
+      "citation_html": "<b>Sebanz, Bekkering &amp; Knoblich (2006).</b> Joint action: bodies and minds moving together. <i>TiCS</i>, 10(2), 70–76.",
+      "why": null,
+      "tier": 2,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "D",
+        "label": "D · joint action, shared agency, commitment, norms"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2006-joint-action-bodies-and-minds-moving-together"
+    },
+    {
+      "authors_raw": "Oldenburg & Zhi-Xuan",
+      "year": "2024",
+      "title": "Learning and sustaining shared normative systems via Bayesian rule induction in Markov games",
+      "venue": "AAMAS 2024",
+      "citation_raw": "Oldenburg & Zhi-Xuan (2024). Learning and sustaining shared normative systems via Bayesian rule induction in Markov games. AAMAS 2024.",
+      "citation_html": "<b>Oldenburg &amp; Zhi-Xuan (2024).</b> Learning and sustaining shared normative systems via Bayesian rule induction in Markov games. <i>AAMAS 2024</i>.",
+      "why": "The cleanest current bridge from inverse planning to normative systems — a direct descendant of Ho's 2016 norm-learning paper.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "D",
+        "label": "D · joint action, shared agency, commitment, norms"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2024-learning-and-sustaining-shared-normative-systems-via-ba"
+    },
+    {
+      "authors_raw": "Ho, Cushman, Littman & Austerweil",
+      "year": "2021",
+      "title": "Communication in action: planning and interpreting communicative demonstrations",
+      "venue": "JEP: General",
+      "citation_raw": "Ho, Cushman, Littman & Austerweil (2021). Communication in action: planning and interpreting communicative demonstrations. JEP: General.",
+      "citation_html": "<b>Ho, Cushman, Littman &amp; Austerweil (2021).</b> Communication in action: planning and interpreting communicative demonstrations. <i>JEP: General</i>.",
+      "why": "Ho's communication line. Relevant the moment a task lets partners signal.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "D",
+        "label": "D · joint action, shared agency, commitment, norms"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2021-communication-in-action-planning-and-interpreting-commu"
+    },
+    {
+      "authors_raw": "Stacy, Zhao, Zhao & Gao",
+      "year": "2020",
+      "title": "Intuitive signaling through an “imagined we.” Proc. 42nd CogSci",
+      "venue": null,
+      "citation_raw": "Stacy, Zhao, Zhao & Gao (2020). Intuitive signaling through an “imagined we.” Proc. 42nd CogSci.",
+      "citation_html": "<b>Stacy, Zhao, Zhao &amp; Gao (2020).</b> Intuitive signaling through an “imagined we.” <i>Proc. 42nd CogSci</i>.",
+      "why": null,
+      "tier": 3,
+      "est_hours": null,
+      "links": [],
+      "flags": [
+        "2020, not 2021 — commonly miscited"
+      ],
+      "thread": {
+        "key": "D",
+        "label": "D · joint action, shared agency, commitment, norms"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2020-intuitive-signaling-through-an-imagined-we-proc-42nd-co"
+    },
+    {
+      "authors_raw": "Correa, Ho, Callaway, Daw & Griffiths",
+      "year": "2023",
+      "title": "Humans decompose tasks by trading off utility and computational cost",
+      "venue": "PLOS Comp Bio, 19(6)",
+      "citation_raw": "Correa, Ho, Callaway, Daw & Griffiths (2023). Humans decompose tasks by trading off utility and computational cost. PLOS Comp Bio, 19(6).",
+      "citation_html": "<b>Correa, Ho, Callaway, Daw &amp; Griffiths (2023).</b> Humans decompose tasks by trading off utility and computational cost. <i>PLOS Comp Bio</i>, 19(6).",
+      "why": "Subgoal decomposition as a cost–benefit computation. Open access.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "E",
+        "label": "E · resource-rational & hierarchical planning — the lab's home turf"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2023-humans-decompose-tasks-by-trading-off-utility-and-compu"
+    },
+    {
+      "authors_raw": "Correa, Sanborn, Ho, Callaway, Daw & Griffiths",
+      "year": "2025",
+      "title": "Exploring the hierarchical structure of human plans via program generation",
+      "venue": "Cognition, 105990",
+      "citation_raw": "Correa, Sanborn, Ho, Callaway, Daw & Griffiths (2025). Exploring the hierarchical structure of human plans via program generation. Cognition, 105990.",
+      "citation_html": "<b>Correa, Sanborn, Ho, Callaway, Daw &amp; Griffiths (2025).</b> Exploring the hierarchical structure of human plans via program generation. <i>Cognition</i>, 105990.",
+      "why": "Operationalizes “hierarchical plan” as program structure — the natural formal substrate on which a joint hierarchical plan would be built. “Program-structured plans × joint intentions” is a defensible and currently open direction at this intersection.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "E",
+        "label": "E · resource-rational & hierarchical planning — the lab's home turf"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2025-exploring-the-hierarchical-structure-of-human-plans-via"
+    },
+    {
+      "authors_raw": "Chater, Griffiths & Ho",
+      "year": "2024",
+      "title": "From probabilities to actions (Ch. 7)",
+      "venue": "In Griffiths, Chater & Tenenbaum (Eds.), Bayesian Models of Cognition: Reverse Engineering the Mind. MIT Press",
+      "citation_raw": "Chater, Griffiths & Ho (2024). From probabilities to actions (Ch. 7). In Griffiths, Chater & Tenenbaum (Eds.), Bayesian Models of Cognition: Reverse Engineering the Mind. MIT Press.",
+      "citation_html": "<b>Chater, Griffiths &amp; Ho (2024).</b> From probabilities to actions (Ch. 7). In Griffiths, Chater & Tenenbaum (Eds.), <i>Bayesian Models of Cognition: Reverse Engineering the Mind</i>. MIT Press.",
+      "why": "Written for precisely one profile — fluent in Bayesian cognitive modeling, needing the bridge into sequential decision-making — and co-authored by Ho. For readers who can get hold of the book, this may beat Sutton & Barto as a refresher.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "E",
+        "label": "E · resource-rational & hierarchical planning — the lab's home turf"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2024-from-probabilities-to-actions-ch-7"
+    },
+    {
+      "authors_raw": "Ho, Cohen & Griffiths",
+      "year": "2023",
+      "title": "Rational simplification and rigidity in human planning",
+      "venue": "Psychological Science",
+      "citation_raw": "Ho, Cohen & Griffiths (2023). Rational simplification and rigidity in human planning. Psychological Science.",
+      "citation_html": "<b>Ho, Cohen &amp; Griffiths (2023).</b> Rational simplification and rigidity in human planning. <i>Psychological Science</i>.",
+      "why": null,
+      "tier": 2,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "E",
+        "label": "E · resource-rational & hierarchical planning — the lab's home turf"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2023-rational-simplification-and-rigidity-in-human-planning"
+    },
+    {
+      "authors_raw": "Callaway, van Opheusden, Gul, Das, Krueger, Griffiths & Lieder",
+      "year": "2022",
+      "title": "Rational use of cognitive resources in human planning",
+      "venue": "Nature Human Behaviour, 6, 1112–1125",
+      "citation_raw": "Callaway, van Opheusden, Gul, Das, Krueger, Griffiths & Lieder (2022). Rational use of cognitive resources in human planning. Nature Human Behaviour, 6, 1112–1125.",
+      "citation_html": "<b>Callaway, van Opheusden, Gul, Das, Krueger, Griffiths &amp; Lieder (2022).</b> Rational use of cognitive resources in human planning. <i>Nature Human Behaviour</i>, 6, 1112–1125.",
+      "why": null,
+      "tier": 2,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "E",
+        "label": "E · resource-rational & hierarchical planning — the lab's home turf"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2022-rational-use-of-cognitive-resources-in-human-planning"
+    },
+    {
+      "authors_raw": "Lieder & Griffiths",
+      "year": "2020",
+      "title": "Resource-rational analysis",
+      "venue": "BBS, 43, e1 — target article, first 15pp only",
+      "citation_raw": "Lieder & Griffiths (2020). Resource-rational analysis. BBS, 43, e1 — target article, first 15pp only.",
+      "citation_html": "<b>Lieder &amp; Griffiths (2020).</b> Resource-rational analysis. <i>BBS</i>, 43, e1 — <b>target article, first 15pp only.</b>",
+      "why": "Deliberately down-tiered. Everything essential is compressed into the opening and restated in the papers above. Not worth five hours plus commentaries.",
+      "tier": 3,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "E",
+        "label": "E · resource-rational & hierarchical planning — the lab's home turf"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2020-resource-rational-analysis"
+    },
+    {
+      "authors_raw": "Carroll, Shah, Ho, Griffiths, Seshia, Abbeel & Dragan",
+      "year": "2019",
+      "title": "On the utility of learning about humans for human-AI coordination",
+      "venue": "NeurIPS 32",
+      "citation_raw": "Carroll, Shah, Ho, Griffiths, Seshia, Abbeel & Dragan (2019). On the utility of learning about humans for human-AI coordination. NeurIPS 32.",
+      "citation_html": "<b>Carroll, Shah, Ho, Griffiths, Seshia, Abbeel &amp; Dragan (2019).</b> On the utility of learning about humans for human-AI coordination. <i>NeurIPS 32</i>.",
+      "why": "Ho is third author; introduces Overcooked-AI. The finding that matters: agents trained in self-play coordinate beautifully with copies of themselves and catastrophically with humans. It is the reason cross-play evaluation exists.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [
+        {
+          "label": "PDF",
+          "url": "https://proceedings.neurips.cc/paper_files/paper/2019/file/f5b1b89d98b7286673128a5fb112cb9a-Paper.pdf"
+        }
+      ],
+      "flags": [],
+      "thread": {
+        "key": "F",
+        "label": "F · multi-agent AI & cooperative AI"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2019-on-the-utility-of-learning-about-humans-for-human-ai-co"
+    },
+    {
+      "authors_raw": "Mon-Williams, Taylor-Davies, Mieczkowski, Vélez, Bramley, Wang, Griffiths & Lucas",
+      "year": "2025",
+      "title": "Partner modelling emerges in recurrent agents (but only when it matters)",
+      "venue": "NeurIPS 2025",
+      "citation_raw": "Mon-Williams, Taylor-Davies, Mieczkowski, Vélez, Bramley, Wang, Griffiths & Lucas (2025). Partner modelling emerges in recurrent agents (but only when it matters). NeurIPS 2025.",
+      "citation_html": "<b>Mon-Williams, Taylor-Davies, Mieczkowski, Vélez, Bramley, Wang, Griffiths &amp; Lucas (2025).</b> Partner modelling emerges in recurrent agents (but only when it matters). <i>NeurIPS 2025</i>.",
+      "why": "Recurrent RL agents in Overcooked develop internal partner models — only when task structure makes partner-modeling instrumentally necessary. Read as an adversarial check on the obvious claims: an argument that human stag-hunt behavior requires recursive partner modeling has to clear what a non-recursive baseline already achieves. The null hypothesis, pre-built.",
+      "tier": 1,
+      "est_hours": null,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2505.17323"
+        }
+      ],
+      "flags": [],
+      "thread": {
+        "key": "F",
+        "label": "F · multi-agent AI & cooperative AI"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2025-partner-modelling-emerges-in-recurrent-agents-but-only"
+    },
+    {
+      "authors_raw": "Mieczkowski, Mon-Williams, Bramley, Lucas, Vélez & Griffiths",
+      "year": "2025",
+      "title": "Predicting multi-agent specialization via task parallelizability. arXiv:2503.15703",
+      "venue": null,
+      "citation_raw": "Mieczkowski, Mon-Williams, Bramley, Lucas, Vélez & Griffiths (2025). Predicting multi-agent specialization via task parallelizability. arXiv:2503.15703.",
+      "citation_html": "<b>Mieczkowski, Mon-Williams, Bramley, Lucas, Vélez &amp; Griffiths (2025).</b> Predicting multi-agent specialization via task parallelizability. arXiv:2503.15703.",
+      "why": "An Amdahl's-Law account of when multi-agent systems should specialize vs. generalize, validated across SMAC, MPE and Overcooked. Note the boundary case: a stag hunt has parallelizability ≈ 0, since the whole point is that the stag requires simultaneous joint action. Useful as a theoretical foil rather than a direct tool — and it's a clean example of a simulation-experiment paper.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2503.15703"
+        }
+      ],
+      "flags": [],
+      "thread": {
+        "key": "F",
+        "label": "F · multi-agent AI & cooperative AI"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2025-predicting-multi-agent-specialization-via-task-parallel"
+    },
+    {
+      "authors_raw": "Dafoe, Bachrach, Hadfield, Horvitz, Larson & Graepel",
+      "year": "2021",
+      "title": "Cooperative AI: machines must learn to find common ground",
+      "venue": "Nature, 593, 33–36",
+      "citation_raw": "Dafoe, Bachrach, Hadfield, Horvitz, Larson & Graepel (2021). Cooperative AI: machines must learn to find common ground. Nature, 593, 33–36.",
+      "citation_html": "<b>Dafoe, Bachrach, Hadfield, Horvitz, Larson &amp; Graepel (2021).</b> Cooperative AI: machines must learn to find common ground. <i>Nature</i>, 593, 33–36.",
+      "why": "Four pages of framing. Read it for the vocabulary the AI side of this audience uses.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "F",
+        "label": "F · multi-agent AI & cooperative AI"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2021-cooperative-ai-machines-must-learn-to-find-common-groun"
+    },
+    {
+      "authors_raw": "Hu, Lerer, Peysakhovich & Foerster",
+      "year": "2020",
+      "title": "“Other-Play” for zero-shot coordination",
+      "venue": "ICML 2020",
+      "citation_raw": "Hu, Lerer, Peysakhovich & Foerster (2020). “Other-Play” for zero-shot coordination. ICML 2020.",
+      "citation_html": "<b>Hu, Lerer, Peysakhovich &amp; Foerster (2020).</b> “Other-Play” for zero-shot coordination. <i>ICML 2020</i>.",
+      "why": "The best computational formalization of Schelling salience — symmetry-breaking and label-invariance. A rare case where an AI paper is the clearest statement of a cognitive-science idea.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [
+        {
+          "label": "PDF",
+          "url": "https://proceedings.mlr.press/v119/hu20a/hu20a.pdf"
+        }
+      ],
+      "flags": [],
+      "thread": {
+        "key": "F",
+        "label": "F · multi-agent AI & cooperative AI"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2020-other-play-for-zero-shot-coordination"
+    },
+    {
+      "authors_raw": "Bard et al",
+      "year": "2020",
+      "title": "The Hanabi challenge: a new frontier for AI research",
+      "venue": "Artificial Intelligence, 280, 103216 — §1–3 only",
+      "citation_raw": "Bard et al. (2020). The Hanabi challenge: a new frontier for AI research. Artificial Intelligence, 280, 103216 — §1–3 only.",
+      "citation_html": "<b>Bard et al. (2020).</b> The Hanabi challenge: a new frontier for AI research. <i>Artificial Intelligence</i>, 280, 103216 — §1–3 only.",
+      "why": "The canonical theory-of-mind-under-partial-observability benchmark.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "F",
+        "label": "F · multi-agent AI & cooperative AI"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2020-the-hanabi-challenge-a-new-frontier-for-ai-research"
+    },
+    {
+      "authors_raw": "Jha, Carvalho, Liang, Du, Kleiman-Weiner & Jaques",
+      "year": "2025",
+      "title": "Cross-environment cooperation enables zero-shot multi-agent coordination",
+      "venue": "ICML 2025 (Oral)",
+      "citation_raw": "Jha, Carvalho, Liang, Du, Kleiman-Weiner & Jaques (2025). Cross-environment cooperation enables zero-shot multi-agent coordination. ICML 2025 (Oral).",
+      "citation_html": "<b>Jha, Carvalho, Liang, Du, Kleiman-Weiner &amp; Jaques (2025).</b> Cross-environment cooperation enables zero-shot multi-agent coordination. <i>ICML 2025</i> (Oral).",
+      "why": "The field's current answer: training across many environments, not clever equilibrium selection, is what produces partners humans can work with.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "F",
+        "label": "F · multi-agent AI & cooperative AI"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2025-cross-environment-cooperation-enables-zero-shot-multi-a"
+    },
+    {
+      "authors_raw": "Oliehoek & Amato",
+      "year": "2016",
+      "title": "A Concise Introduction to Decentralized POMDPs",
+      "venue": "Springer — Ch. 1–2",
+      "citation_raw": "Oliehoek & Amato (2016). A Concise Introduction to Decentralized POMDPs. Springer — Ch. 1–2.",
+      "citation_html": "<b>Oliehoek &amp; Amato (2016).</b> <i>A Concise Introduction to Decentralized POMDPs</i>. Springer — Ch. 1–2.",
+      "why": "Redundant for anyone doing the MARL book in Week 4. Keep as reference for Dec-POMDP specifics. “Concise” is relative.",
+      "tier": 3,
+      "est_hours": null,
+      "links": [
+        {
+          "label": "PDF",
+          "url": "https://www.fransoliehoek.net/docs/OliehoekAmato16book.pdf"
+        }
+      ],
+      "flags": [],
+      "thread": {
+        "key": "F",
+        "label": "F · multi-agent AI & cooperative AI"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2016-a-concise-introduction-to-decentralized-pomdps"
+    },
+    {
+      "authors_raw": "Hawkins & Goldstone",
+      "year": "2016",
+      "title": "The formation of social conventions in real-time environments",
+      "venue": "PLOS ONE, 11(3), e0151670",
+      "citation_raw": "Hawkins & Goldstone (2016). The formation of social conventions in real-time environments. PLOS ONE, 11(3), e0151670.",
+      "citation_html": "<b>Hawkins &amp; Goldstone (2016).</b> The formation of social conventions in real-time environments. <i>PLOS ONE</i>, 11(3), e0151670.",
+      "why": "The one new item to read in Week 4 if nothing else. Real-time interaction produces more efficient and fairer conventions than simultaneous decisions, and high stakes amplify the effect. The methodological point is the one to steal: fine-grained movement trajectories reveal a continuous negotiation process that is completely invisible in discrete-choice data. An argument for continuous time as a measurement instrument, not a design flourish — and it's by a Ho co-author.",
+      "tier": 1,
+      "est_hours": null,
+      "links": [
+        {
+          "label": "open access",
+          "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0151670"
+        }
+      ],
+      "flags": [],
+      "thread": {
+        "key": "G",
+        "label": "G · continuous-time & real-time spatial coordination"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2016-the-formation-of-social-conventions-in-real-time-enviro"
+    },
+    {
+      "authors_raw": "Skyrms",
+      "year": "2004",
+      "title": "The Stag Hunt and the Evolution of Social Structure",
+      "venue": "Cambridge University Press",
+      "citation_raw": "Skyrms (2004). The Stag Hunt and the Evolution of Social Structure. Cambridge University Press.",
+      "citation_html": "<b>Skyrms (2004).</b> <i>The Stag Hunt and the Evolution of Social Structure</i>. Cambridge University Press.",
+      "why": "The modern theoretical treatment: risk-dominant (hare) vs. payoff-dominant (stag), and how network structure and signaling shift which one obtains. Where the paradigm is a stag hunt, this is the framing document. Chapters, not cover-to-cover.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "G",
+        "label": "G · continuous-time & real-time spatial coordination"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2004-the-stag-hunt-and-the-evolution-of-social-structure"
+    },
+    {
+      "authors_raw": "Zhao, S",
+      "year": "2020",
+      "title": "Coordination games in continuous time",
+      "venue": "SSRN working paper",
+      "citation_raw": "Zhao, S. (2020). Coordination games in continuous time. SSRN working paper.",
+      "citation_html": "<b>Zhao, S. (2020).</b> Coordination games in continuous time. SSRN working paper.",
+      "why": "The direct empirical case for continuous time: subjects coordinate significantly better, and reach the payoff-dominant equilibrium more often, than in discrete time — driven by faster within-round learning. Design evidence, to read before committing to a design.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "G",
+        "label": "G · continuous-time & real-time spatial coordination"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2020-coordination-games-in-continuous-time"
+    },
+    {
+      "authors_raw": "Deng, … Garg & Mobbs",
+      "year": "2026",
+      "title": "Linking compromise and responsibility attribution to risky decision-making in dyadic foraging",
+      "venue": "PNAS. doi:10.1073/pnas.2602570123",
+      "citation_raw": "Deng, … Garg & Mobbs (2026). Linking compromise and responsibility attribution to risky decision-making in dyadic foraging. PNAS. doi:10.1073/pnas.2602570123",
+      "citation_html": "<b>Deng, … Garg &amp; Mobbs (2026).</b> Linking compromise and responsibility attribution to risky decision-making in dyadic foraging. <i>PNAS</i>. doi:10.1073/pnas.2602570123",
+      "why": "Arguably the closest paradigm match to a spatial stag hunt anywhere: 120 solo trials calibrating individual risk tolerance under predation, then 60 rounds of dyadic play where the avatar moves to the midpoint between both players' choices — a literal continuous compromise mechanism — plus post-hoc credit/blame attribution. Self-serving responsibility asymmetry predicts reduced willingness to compromise.",
+      "tier": 1,
+      "est_hours": null,
+      "links": [],
+      "flags": [
+        "partially verified — PNAS blocked direct fetch; confirm the full author list from the DOI before citing"
+      ],
+      "thread": {
+        "key": "G",
+        "label": "G · continuous-time & real-time spatial coordination"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2026-linking-compromise-and-responsibility-attribution-to-ri"
+    },
+    {
+      "authors_raw": "Nalepka, Kallen, Chemero, Saltzman & Richardson",
+      "year": "2017",
+      "title": "Herd those sheep: emergent multiagent coordination and behavioral-mode switching",
+      "venue": "Psychological Science, 28(5), 630–650",
+      "citation_raw": "Nalepka, Kallen, Chemero, Saltzman & Richardson (2017). Herd those sheep: emergent multiagent coordination and behavioral-mode switching. Psychological Science, 28(5), 630–650.",
+      "citation_html": "<b>Nalepka, Kallen, Chemero, Saltzman &amp; Richardson (2017).</b> Herd those sheep: emergent multiagent coordination and behavioral-mode switching. <i>Psychological Science</i>, 28(5), 630–650.",
+      "why": "Continuous spatial shepherding. All pairs start with divided-labor “search-and-recover”; a subset spontaneously discover a synchronized oscillatory mode. An entirely different theoretical vocabulary — dynamical systems, attractors, relative phase, HKB — describing the same phenomenon the Bayesian models describe. Read it precisely because it doesn't share their assumptions.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "G",
+        "label": "G · continuous-time & real-time spatial coordination"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2017-herd-those-sheep-emergent-multiagent-coordination-and-b"
+    },
+    {
+      "authors_raw": "Nalepka, Lamb, Kallen, Shockley, Chemero, Saltzman & Richardson",
+      "year": "2019",
+      "title": "Human social motor solutions for human–machine interaction in dynamical task contexts",
+      "venue": "PNAS, 116(4), 1437–1446",
+      "citation_raw": "Nalepka, Lamb, Kallen, Shockley, Chemero, Saltzman & Richardson (2019). Human social motor solutions for human–machine interaction in dynamical task contexts. PNAS, 116(4), 1437–1446.",
+      "citation_html": "<b>Nalepka, Lamb, Kallen, Shockley, Chemero, Saltzman &amp; Richardson (2019).</b> Human social motor solutions for human–machine interaction in dynamical task contexts. <i>PNAS</i>, 116(4), 1437–1446.",
+      "why": "Dynamical-motor-primitive agents coordinate as well as humans and pass a Turing-like test. Relevant twice over: as a partner model for cross-play simulation, and as a bot fallback for unmatched participants.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "G",
+        "label": "G · continuous-time & real-time spatial coordination"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2019-human-social-motor-solutions-for-human-machine-interact"
+    },
+    {
+      "authors_raw": "Zhao, Tang, Dahmani, Perry, Zhu, Rossano & Gao",
+      "year": "2021",
+      "title": "Sharing is not needed: modeling animal coordinated hunting with reinforcement learning",
+      "venue": "Proc. 43rd CogSci",
+      "citation_raw": "Zhao, Tang, Dahmani, Perry, Zhu, Rossano & Gao (2021). Sharing is not needed: modeling animal coordinated hunting with reinforcement learning. Proc. 43rd CogSci.",
+      "citation_html": "<b>Zhao, Tang, Dahmani, Perry, Zhu, Rossano &amp; Gao (2021).</b> Sharing is not needed: modeling animal coordinated hunting with reinforcement learning. <i>Proc. 43rd CogSci</i>.",
+      "why": "The negative control for Imagined We: individually rewarded agents outperform reward-sharing agents, most strongly when hunting is hard and groups large. Read alongside Tang et al. — together a clean example of the model-comparison logic this literature runs on.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "G",
+        "label": "G · continuous-time & real-time spatial coordination"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2021-sharing-is-not-needed-modeling-animal-coordinated-hunti"
+    },
+    {
+      "authors_raw": "Battalio, Samuelson & Van Huyck",
+      "year": "2001",
+      "title": "Optimization incentives and coordination failure in laboratory stag hunt games",
+      "venue": "Econometrica, 69(3), 749–764",
+      "citation_raw": "Battalio, Samuelson & Van Huyck (2001). Optimization incentives and coordination failure in laboratory stag hunt games. Econometrica, 69(3), 749–764.",
+      "citation_html": "<b>Battalio, Samuelson &amp; Van Huyck (2001).</b> Optimization incentives and coordination failure in laboratory stag hunt games. <i>Econometrica</i>, 69(3), 749–764.",
+      "why": "The “optimization premium” result: risk dominance alone doesn't predict behavior. Payoff details easily mistaken for arbitrary drive equilibrium selection — meaning the payoff matrix is a substantive theoretical commitment, not a parameter.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "G",
+        "label": "G · continuous-time & real-time spatial coordination"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2001-optimization-incentives-and-coordination-failure-in-lab"
+    },
+    {
+      "authors_raw": "Schmidt, Shupp, Walker & Ostrom",
+      "year": "2003",
+      "title": "Playing safe in coordination games: the roles of risk dominance, payoff dominance, and history of play",
+      "venue": "GEB, 42(2), 281–299",
+      "citation_raw": "Schmidt, Shupp, Walker & Ostrom (2003). Playing safe in coordination games: the roles of risk dominance, payoff dominance, and history of play. GEB, 42(2), 281–299.",
+      "citation_html": "<b>Schmidt, Shupp, Walker &amp; Ostrom (2003).</b> Playing safe in coordination games: the roles of risk dominance, payoff dominance, and history of play. <i>GEB</i>, 42(2), 281–299.",
+      "why": "History of play strongly predicts future coordination, and fixed pairing beats random rematching. A direct design constraint: whether partners are stable across trials is a first-order manipulation, not a logistical detail.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "G",
+        "label": "G · continuous-time & real-time spatial coordination"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2003-playing-safe-in-coordination-games-the-roles-of-risk-do"
+    },
+    {
+      "authors_raw": "Rankin, Van Huyck & Battalio",
+      "year": "2000",
+      "title": "Strategic similarity and emergent conventions: evidence from similar stag hunt games",
+      "venue": "GEB, 32(2), 315–337",
+      "citation_raw": "Rankin, Van Huyck & Battalio (2000). Strategic similarity and emergent conventions: evidence from similar stag hunt games. GEB, 32(2), 315–337.",
+      "citation_html": "<b>Rankin, Van Huyck &amp; Battalio (2000).</b> Strategic similarity and emergent conventions: evidence from similar stag hunt games. <i>GEB</i>, 32(2), 315–337.",
+      "why": "Conventions emerge in half of cohorts even with payoffs and labels scrambled every round — and when they do, they track efficiency rather than security or risk dominance. Evidence that people abstract strategic structure across surface variation, i.e. the “abstract goals” claim arriving from the economics side.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "G",
+        "label": "G · continuous-time & real-time spatial coordination"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2000-strategic-similarity-and-emergent-conventions-evidence"
+    },
+    {
+      "authors_raw": "Hallers-Haalboom, De Jaegher, Sterck, Brosnan & Vermande",
+      "year": "2025",
+      "title": "Communication increases cooperation among students in a coordination game",
+      "venue": "PNAS, 122(35), e2517669122",
+      "citation_raw": "Hallers-Haalboom, De Jaegher, Sterck, Brosnan & Vermande (2025). Communication increases cooperation among students in a coordination game. PNAS, 122(35), e2517669122.",
+      "citation_html": "<b>Hallers-Haalboom, De Jaegher, Sterck, Brosnan &amp; Vermande (2025).</b> Communication increases cooperation among students in a coordination game. <i>PNAS</i>, 122(35), e2517669122.",
+      "why": "127 dyads, 40 rounds of online stag hunt, payoffs not disclosed. Communication drives both information discovery and coordination. A useful precedent for online dyadic stag hunt at scale.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "G",
+        "label": "G · continuous-time & real-time spatial coordination"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2025-communication-increases-cooperation-among-students-in-a"
+    },
+    {
+      "authors_raw": "Möller, Unakafov, Fischer, Gail, Treue & Kagan",
+      "year": "2023",
+      "title": "Human and macaque pairs employ different coordination strategies in a transparent decision game. eLife, 12, e80943",
+      "venue": null,
+      "citation_raw": "Möller, Unakafov, Fischer, Gail, Treue & Kagan (2023). Human and macaque pairs employ different coordination strategies in a transparent decision game. eLife, 12, e80943.",
+      "citation_html": "<b>Möller, Unakafov, Fischer, Gail, Treue &amp; Kagan (2023).</b> Human and macaque pairs employ different coordination strategies in a transparent decision game. <i>eLife</i>, 12, e80943.",
+      "why": "Transparency — mutual real-time observation of the partner's action — is what enables human coordination, and macaques largely don't exploit it. Directly relevant to any task that manipulates what partners see of each other, which most such tasks probably should.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "G",
+        "label": "G · continuous-time & real-time spatial coordination"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2023-human-and-macaque-pairs-employ-different-coordination-s"
+    },
+    {
+      "authors_raw": "Painter, Kim, Renton & Mattingley",
+      "year": "2021",
+      "title": "Joint control of visually guided actions involves concordant increases in behavioural and neural coupling",
+      "venue": "Communications Biology, 4(1), 816",
+      "citation_raw": "Painter, Kim, Renton & Mattingley (2021). Joint control of visually guided actions involves concordant increases in behavioural and neural coupling. Communications Biology, 4(1), 816.",
+      "citation_html": "<b>Painter, Kim, Renton &amp; Mattingley (2021).</b> Joint control of visually guided actions involves concordant increases in behavioural and neural coupling. <i>Communications Biology</i>, 4(1), 816.",
+      "why": "Dual-EEG during joint cursor control, each partner controlling one dimension. The obvious bridge to the neuroscience side — this is what a neural measure of real-time coordination looks like.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "G",
+        "label": "G · continuous-time & real-time spatial coordination"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2021-joint-control-of-visually-guided-actions-involves-conco"
+    },
+    {
+      "authors_raw": "Tsutsui, Shinya, Kudo, Müller & Lehmann",
+      "year": "2024",
+      "title": "Collaborative hunting in artificial agents with deep reinforcement learning. eLife, 13, e85694",
+      "venue": null,
+      "citation_raw": "Tsutsui, Shinya, Kudo, Müller & Lehmann (2024). Collaborative hunting in artificial agents with deep reinforcement learning. eLife, 13, e85694.",
+      "citation_html": "<b>Tsutsui, Shinya, Kudo, Müller &amp; Lehmann (2024).</b> Collaborative hunting in artificial agents with deep reinforcement learning. <i>eLife</i>, 13, e85694.",
+      "why": "Role differentiation (chaser, blocker, ambusher) emerges from plain multi-agent deep RL with no theory-of-mind machinery. The deflationary alternative that has to be ruled out — cheap sophistication that looks like joint commitment.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "G",
+        "label": "G · continuous-time & real-time spatial coordination"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2024-collaborative-hunting-in-artificial-agents-with-deep-re"
+    },
+    {
+      "authors_raw": null,
+      "year": null,
+      "title": "Gao, Newman & Scholl (2009) on the psychophysics of chasing · Keller, Novembre & Hove (2014) on rhythm in joint action · Konvalinka et al. (2010) on continuous mutual adaptation in joint tapping · Boesch & Boesch (1989) and Samuni et al. (2018) on chimpanzee cooperative hunting.",
+      "venue": null,
+      "citation_raw": "Gao, Newman & Scholl (2009) on the psychophysics of chasing · Keller, Novembre & Hove (2014) on rhythm in joint action · Konvalinka et al. (2010) on continuous mutual adaptation in joint tapping · Boesch & Boesch (1989) and Samuni et al. (2018) on chimpanzee cooperative hunting.",
+      "citation_html": "<b>Gao, Newman &amp; Scholl (2009)</b> on the psychophysics of chasing · <b>Keller, Novembre &amp; Hove (2014)</b> on rhythm in joint action · <b>Konvalinka et al. (2010)</b> on continuous mutual adaptation in joint tapping · <b>Boesch &amp; Boesch (1989)</b> and <b>Samuni et al. (2018)</b> on chimpanzee cooperative hunting.",
+      "why": "Background depth. The Gao one earns its place: people detect chasing rapidly and automatically from motion alone, so in a continuous spatial task partners are reading intentions off trajectories perceptually, below anything that would count as inference. Worth knowing before attributing all of it to a model.",
+      "tier": 3,
+      "est_hours": null,
+      "links": [],
+      "flags": [],
+      "thread": {
+        "key": "G",
+        "label": "G · continuous-time & real-time spatial coordination"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "gao-newman-scholl-2009-on-the-psychophysics-of-chasing-kelle"
+    },
+    {
+      "authors_raw": "Deffner, Mezey, Kahl, Schakowski, Romanczuk, Wu & Kurvers",
+      "year": "2024",
+      "title": "Collective incentives reduce over-exploitation of social information in unconstrained human groups",
+      "venue": "Nature Communications, 15, 2683",
+      "citation_raw": "Deffner, Mezey, Kahl, Schakowski, Romanczuk, Wu & Kurvers (2024). Collective incentives reduce over-exploitation of social information in unconstrained human groups. Nature Communications, 15, 2683.",
+      "citation_html": "<b>Deffner, Mezey, Kahl, Schakowski, Romanczuk, Wu &amp; Kurvers (2024).</b> Collective incentives reduce over-exploitation of social information in unconstrained human groups. <i>Nature Communications</i>, 15, 2683.",
+      "why": "The closest thing in either corpus to a payoff-structure manipulation in a real-time spatial task — the structural logic of a stag hunt (individual-safe vs. jointly-optimal) instantiated spatially and continuously. Individually-adaptive social information use turns out to be collectively harmful in concentrated environments; group-level incentives realign them. Also: 90m × 90m arena, restricted first-person FOV (108° × 76°), 25 Hz tracking of movement, proximity and visual attention. Copy that instrumentation spec.",
+      "tier": 1,
+      "est_hours": null,
+      "links": [
+        {
+          "label": "open access",
+          "url": "https://www.nature.com/articles/s41467-024-47010-3"
+        }
+      ],
+      "flags": [],
+      "thread": {
+        "key": "H",
+        "label": "H · collective intelligence & social learning — Wu, Vélez"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2024-collective-incentives-reduce-over-exploitation-of-socia"
+    },
+    {
+      "authors_raw": "Wu, Dale & Hawkins",
+      "year": "2024",
+      "title": "Group coordination catalyzes individual and cultural intelligence",
+      "venue": "Open Mind, 8, 1037–1057",
+      "citation_raw": "Wu, Dale & Hawkins (2024). Group coordination catalyzes individual and cultural intelligence. Open Mind, 8, 1037–1057.",
+      "citation_html": "<b>Wu, Dale &amp; Hawkins (2024).</b> Group coordination catalyzes individual and cultural intelligence. <i>Open Mind</i>, 8, 1037–1057.",
+      "why": "Wu's actual collective-intelligence position piece — and note the Hawkins co-authorship again. Argues the ad hoc interacting group is a distinct explanatory level between individual cognition and cumulative culture. This is the cleanest available statement of why dyad and small-group coordination is not just small-scale collective behavior, which is exactly the framing distinction this literature needs.",
+      "tier": 1,
+      "est_hours": null,
+      "links": [
+        {
+          "label": "PDF",
+          "url": "https://charleywu.github.io/downloads/wu2024group.pdf"
+        }
+      ],
+      "flags": [],
+      "thread": {
+        "key": "H",
+        "label": "H · collective intelligence & social learning — Wu, Vélez"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2024-group-coordination-catalyzes-individual-and-cultural-in"
+    },
+    {
+      "authors_raw": "Witt, Toyokawa, Lala, Gaissmaier & Wu",
+      "year": "2024",
+      "title": "Humans flexibly integrate social information despite interindividual differences in reward",
+      "venue": "PNAS, 121(39), e2404928121",
+      "citation_raw": "Witt, Toyokawa, Lala, Gaissmaier & Wu (2024). Humans flexibly integrate social information despite interindividual differences in reward. PNAS, 121(39), e2404928121.",
+      "citation_html": "<b>Witt, Toyokawa, Lala, Gaissmaier &amp; Wu (2024).</b> Humans flexibly integrate social information despite interindividual differences in reward. <i>PNAS</i>, 121(39), e2404928121.",
+      "why": "The formal-framework paper for the synthesis bullet. Four competing model families — asocial GP-UCB, Decision Biasing, Value Shaping, Social Generalization — arbitrated by exceedance probability. SG wins. The DB/VS/SG trichotomy maps directly onto the policy-level vs. value-level vs. belief-level places a partner can be inserted into a joint-planning model. A genuinely useful carve-up of the model space.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [
+        {
+          "label": "PDF",
+          "url": "https://charleywu.github.io/downloads/witt2024humans.pdf"
+        }
+      ],
+      "flags": [],
+      "thread": {
+        "key": "H",
+        "label": "H · collective intelligence & social learning — Wu, Vélez"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2024-humans-flexibly-integrate-social-information-despite-in"
+    },
+    {
+      "authors_raw": "Xiang, Vélez & Gershman",
+      "year": "2023",
+      "title": "Collaborative decision making is grounded in representations of other people's competence and effort",
+      "venue": "JEP: General, 152, 1565–1579",
+      "citation_raw": "Xiang, Vélez & Gershman (2023). Collaborative decision making is grounded in representations of other people's competence and effort. JEP: General, 152, 1565–1579.",
+      "citation_html": "<b>Xiang, Vélez &amp; Gershman (2023).</b> Collaborative decision making is grounded in representations of other people's competence and effort. <i>JEP: General</i>, 152, 1565–1579.",
+      "why": "Vélez's most dyadic work, and the closest she gets to joint planning. In a stag hunt, “will my partner commit?” decomposes into exactly competence (can they?) and effort (will they bother?). The inference structure ports over. Caveat: turn-based offline-judgment tasks, not real-time — relevant model structure, irrelevant paradigm.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [
+        {
+          "label": "PDF",
+          "url": "https://gershmanlab.com/pubs/Xiang23.pdf"
+        }
+      ],
+      "flags": [],
+      "thread": {
+        "key": "H",
+        "label": "H · collective intelligence & social learning — Wu, Vélez"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2023-collaborative-decision-making-is-grounded-in-representa"
+    },
+    {
+      "authors_raw": "Vélez, Christian, Hardy, Thompson & Griffiths",
+      "year": "2023",
+      "title": "How do humans overcome individual computational limitations by working together? Cognitive Science, 47, e13232",
+      "venue": null,
+      "citation_raw": "Vélez, Christian, Hardy, Thompson & Griffiths (2023). How do humans overcome individual computational limitations by working together? Cognitive Science, 47, e13232.",
+      "citation_html": "<b>Vélez, Christian, Hardy, Thompson &amp; Griffiths (2023).</b> How do humans overcome individual computational limitations by working together? <i>Cognitive Science</i>, 47, e13232.",
+      "why": "Her best short piece for the synthesis bullet — reframes human cognition as a distributed computing system, with a particle-filtering model of populations approximating Bayesian inference via cultural accumulation. Read for framing, not for a fittable model: it's a population/multigenerational argument, not a dyadic one.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [
+        {
+          "label": "PDF",
+          "url": "https://cocosci.princeton.edu/papers/velez2023overcome.pdf"
+        }
+      ],
+      "flags": [],
+      "thread": {
+        "key": "H",
+        "label": "H · collective intelligence & social learning — Wu, Vélez"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2023-how-do-humans-overcome-individual-computational-limitat"
+    },
+    {
+      "authors_raw": "Vélez & Gweon",
+      "year": "2021",
+      "title": "Learning from other minds: an optimistic critique of reinforcement learning models of social learning",
+      "venue": "Current Opinion in Behavioral Sciences, 38, 110–115",
+      "citation_raw": "Vélez & Gweon (2021). Learning from other minds: an optimistic critique of reinforcement learning models of social learning. Current Opinion in Behavioral Sciences, 38, 110–115.",
+      "citation_html": "<b>Vélez &amp; Gweon (2021).</b> Learning from other minds: an optimistic critique of reinforcement learning models of social learning. <i>Current Opinion in Behavioral Sciences</i>, 38, 110–115.",
+      "why": "Six pages, high value-per-minute. Argues RL models of social learning oversimplify by treating social information as a lean reward-predictive cue when humans instead infer latent goals, beliefs and strategies; advocates hybrid Bayesian-ToM + RL. That is the argumentative bridge between the economics/RL framing and the cogsci-ToM framing this list sets out to synthesize.",
+      "tier": 2,
+      "est_hours": null,
+      "links": [
+        {
+          "label": "PDF",
+          "url": "https://sll.stanford.edu/docs/2021_Velez_Gweon_Current_Opinions.pdf"
+        }
+      ],
+      "flags": [],
+      "thread": {
+        "key": "H",
+        "label": "H · collective intelligence & social learning — Wu, Vélez"
+      },
+      "week": null,
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2021-learning-from-other-minds-an-optimistic-critique-of-rei"
+    }
+  ],
+  "note": "Curated reading list on joint planning and multi-agent coordination. Annotations are editorial judgments, not consensus positions."
+}

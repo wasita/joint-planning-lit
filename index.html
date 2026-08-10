@@ -1,0 +1,799 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Joint planning &amp; coordination — an annotated reading list</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400;1,9..40,500&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+<style>
+@font-face{
+  font-family:"Monas";
+  src:url("data:font/woff2;base64,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") format("woff2");
+  font-weight:400; font-style:normal; font-display:swap;
+}
+
+:root{
+  --paper:#fafaf7;
+  --paper-deep:#f0efea;
+  --ink:#1a1614;
+  --ink-soft:#4a423c;
+  --ink-faint:#8a7f74;
+  --accent:#c794d2;
+  --accent-soft:#d8b1de;
+  --accent-rgb:199,148,210;
+  --caption-ink:#6b6fd9;
+  --rule:rgba(26,22,20,0.18);
+  --grain:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.045 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  --star:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path d='M 8 0 Q 8.6 6 16 8 Q 8.6 10 8 16 Q 7.4 10 0 8 Q 7.4 6 8 0 Z' fill='%23c794d2'/></svg>");
+  --ease-out:cubic-bezier(0.16,1,0.3,1);
+  --ease-spring:cubic-bezier(0.34,1.56,0.64,1);
+  --r:12px;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#0a0807;
+    --paper-deep:#050403;
+    --ink:#ffffff;
+    --ink-soft:#ece4d3;
+    --ink-faint:#b8ad9a;
+    --accent:#cfb5ec;
+    --accent-soft:#b89cd8;
+    --accent-rgb:207,181,236;
+    --caption-ink:#b8bdee;
+    --rule:rgba(237,230,214,0.18);
+    --grain:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.04 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    --star:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path d='M 8 0 Q 8.6 6 16 8 Q 8.6 10 8 16 Q 7.4 10 0 8 Q 7.4 6 8 0 Z' fill='%23cfb5ec'/></svg>");
+  }
+}
+*{box-sizing:border-box}
+html{font-size:17px}
+body{
+  margin:0; color:var(--ink); background:var(--paper); background-image:var(--grain);
+  font-family:"DM Sans",ui-sans-serif,system-ui,sans-serif; font-weight:400; line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:960px;margin:0 auto;padding:56px 26px 120px}
+
+/* ── type ───────────────────────────────────────── */
+h1,h2{
+  font-family:"Monas",ui-serif,Georgia,serif; font-weight:400; letter-spacing:0;
+  line-height:0.98; font-kerning:none; color:var(--ink); margin:0;
+}
+h1{font-size:clamp(38px,6.4vw,64px)}
+h2{font-size:clamp(27px,3.8vw,36px); margin:76px 0 10px}
+h3,h4{
+  font-family:"DM Sans",ui-sans-serif,system-ui,sans-serif; font-weight:700;
+  letter-spacing:-0.01em; line-height:1.05; color:var(--ink);
+}
+h3{font-size:20px;margin:30px 0 8px}
+h4{font-size:16px;margin:0 0 6px}
+p{margin:0 0 15px}
+em{font-style:italic}
+.label{
+  font-family:"Helvetica Neue",Helvetica,Arial,ui-sans-serif,system-ui,sans-serif;
+  font-weight:700; letter-spacing:0.08em; text-transform:uppercase;
+  font-feature-settings:"tnum"; font-size:11px;
+}
+.marker{font-family:"Caveat","Comic Sans MS",cursive; font-size:1.28em; line-height:1.25}
+.quote{font-weight:500; font-style:italic}
+.faint{color:var(--ink-faint)}
+.soft{color:var(--ink-soft)}
+code{
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:0.855em;
+  background:rgba(var(--accent-rgb),0.15); padding:1.5px 5px; border-radius:5px;
+}
+mark{background:rgba(var(--accent-rgb),0.3); color:inherit; padding:0 3px; border-radius:3px}
+
+/* ── links: hand-drawn underline + sparkles ──────── */
+a{
+  color:var(--ink); text-decoration:none;
+  background-image:linear-gradient(var(--accent),var(--accent));
+  background-repeat:no-repeat; background-position:0 100%; background-size:100% 1px;
+  transition:background-size .25s var(--ease-out), color .25s var(--ease-out);
+}
+a:hover{color:var(--accent); background-size:100% 2px}
+a.plain{background-image:none}
+a:not(.plain)::before,a:not(.plain)::after{
+  content:""; display:inline-block; width:0; height:0.6em;
+  background-image:var(--star); background-repeat:no-repeat;
+  background-size:contain; background-position:center;
+  opacity:0; pointer-events:none; vertical-align:middle;
+  transition:opacity .25s ease,width .25s ease,margin-left .25s ease,margin-right .25s ease;
+}
+a:not(.plain):hover::before{opacity:1;width:.6em;margin-right:.25em;animation:pop-l .55s var(--ease-spring)}
+a:not(.plain):hover::after{opacity:1;width:.6em;margin-left:.25em;animation:pop-r .55s var(--ease-spring) .05s}
+@keyframes pop-l{0%{transform:scale(.3) rotate(30deg)}60%{transform:scale(1.25) rotate(-15deg)}100%{transform:scale(1) rotate(0)}}
+@keyframes pop-r{0%{transform:scale(.3) rotate(-30deg)}60%{transform:scale(1.25) rotate(15deg)}100%{transform:scale(1) rotate(0)}}
+
+/* ── header ─────────────────────────────────────── */
+header.top{padding-bottom:26px; margin-bottom:8px}
+.eyebrow{color:var(--caption-ink); margin:0 0 16px}
+.dek{font-size:19px; color:var(--ink-soft); max-width:60ch; margin:16px 0 0}
+.rule{height:1px;background:var(--rule);border:0;margin:34px 0}
+
+/* ── section headers ────────────────────────────── */
+.sec{display:flex;align-items:flex-end;gap:14px;margin:76px 0 10px}
+.sec h2{margin:0}
+.sec .num{
+  font-family:"Monas",ui-serif,Georgia,serif; font-size:46px; line-height:.8;
+  color:var(--accent); font-kerning:none; flex:none;
+}
+.sec-note{color:var(--ink-faint);font-size:15px;margin:0 0 22px;max-width:66ch}
+
+/* ── zine callouts: taped card ──────────────────── */
+.taped{
+  position:relative; background:var(--paper); border-radius:var(--r);
+  padding:24px 28px; margin:30px 0 34px;
+  box-shadow:0 4px 14px rgba(0,0,0,.10), 0 1px 2px rgba(0,0,0,.07);
+  transform:rotate(-0.5deg); transition:transform .3s ease;
+}
+@media(prefers-color-scheme:dark){
+  .taped{background:var(--paper-deep);box-shadow:0 4px 14px rgba(0,0,0,.5),0 1px 2px rgba(0,0,0,.3)}
+}
+.taped:hover{transform:rotate(0deg)}
+.taped::before,.taped::after{
+  content:""; position:absolute; width:88px; height:22px; top:-11px;
+  background:rgba(var(--accent-rgb),0.34);
+  box-shadow:0 1px 3px rgba(0,0,0,.10);
+}
+.taped::before{left:22px; transform:rotate(-4deg)}
+.taped::after{right:22px; transform:rotate(3.5deg)}
+.taped.alt{transform:rotate(0.4deg)}
+.taped.alt::before{background:rgba(107,111,217,0.26)}
+.taped.alt::after{background:rgba(107,111,217,0.26)}
+.taped p:last-child{margin-bottom:0}
+.taped .label{color:var(--caption-ink);display:block;margin-bottom:8px}
+
+/* ── weeks ──────────────────────────────────────── */
+.week{border-top:1px solid var(--rule); padding:26px 0 6px}
+.week-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:13px;margin-bottom:3px}
+.week-num{
+  font-family:"Monas",ui-serif,Georgia,serif; font-size:31px; line-height:1;
+  color:var(--accent); font-kerning:none;
+}
+.week-title{font-family:"DM Sans",sans-serif;font-weight:700;font-size:20px;letter-spacing:-.01em}
+.week-dates{color:var(--ink-faint)}
+.count{margin-left:auto;color:var(--caption-ink)}
+.week-goal{color:var(--ink-soft);font-style:italic;margin:8px 0 18px;max-width:68ch}
+
+.item{display:flex;gap:14px;padding:15px 0;border-top:1px dotted var(--rule)}
+.item:first-of-type{border-top:none}
+.item input{
+  appearance:none;width:20px;height:20px;margin:5px 0 0;flex:none;cursor:pointer;
+  border:1.5px solid var(--ink-faint);border-radius:6px;background:transparent;position:relative;
+  transition:all .2s var(--ease-out);
+}
+.item input:hover{border-color:var(--accent)}
+.item input:checked{background:var(--accent);border-color:var(--accent)}
+.item input:checked::after{
+  content:"";position:absolute;inset:0;background-image:var(--star);
+  background-size:78%;background-repeat:no-repeat;background-position:center;
+  filter:brightness(0) invert(1);animation:pop-r .5s var(--ease-spring);
+}
+@media(prefers-color-scheme:dark){.item input:checked::after{filter:brightness(0)}}
+.item.done .cite,.item.done .why{opacity:.42}
+.item.done .cite{text-decoration:line-through;text-decoration-thickness:1px;text-decoration-color:var(--ink-faint)}
+.body{flex:1;min-width:0}
+.cite{margin:0 0 4px;line-height:1.5}
+.cite b{font-weight:700}
+.why{color:var(--ink-soft);font-size:15px;margin:0}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:9px;align-items:center}
+.tag{
+  font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:700;font-size:10px;
+  letter-spacing:.08em;text-transform:uppercase;padding:4px 8px;border-radius:6px;
+  border:1px solid var(--rule);color:var(--ink-faint);
+}
+.tag.t1{color:var(--paper);background:var(--accent);border-color:var(--accent)}
+.tag.t2{color:var(--caption-ink);border-color:var(--caption-ink)}
+.tag.hrs{background:rgba(var(--accent-rgb),.15);border-color:transparent;color:var(--ink-soft)}
+a.tag{background-image:none;color:var(--caption-ink);border-color:var(--caption-ink)}
+a.tag:hover{background:var(--caption-ink);color:var(--paper)}
+.tag.warn{background:rgba(var(--accent-rgb),.22);border-color:transparent;color:var(--ink);text-transform:none;letter-spacing:.02em;font-weight:500;font-family:"DM Sans",sans-serif;font-size:12px}
+
+/* ── library ────────────────────────────────────── */
+details.thread{border-top:1px solid var(--rule);padding:0}
+details.thread summary{
+  cursor:pointer;padding:19px 0;list-style:none;display:flex;align-items:baseline;gap:12px;
+  font-weight:700;font-size:17.5px;letter-spacing:-.01em;
+}
+details.thread summary::-webkit-details-marker{display:none}
+details.thread summary::before{content:"→";color:var(--accent);transition:transform .2s var(--ease-out);flex:none}
+details.thread[open] summary::before{transform:rotate(90deg)}
+details.thread summary:hover{color:var(--accent)}
+details.thread summary .cnt{margin-left:auto;color:var(--ink-faint);font-weight:400;font-size:13px;letter-spacing:0}
+.inner{padding:0 0 22px 26px}
+.lib{padding:13px 0;border-top:1px dotted var(--rule)}
+.lib:first-child{border-top:none}
+.lead-in{color:var(--ink-soft);font-size:15.5px;padding:2px 0 12px;max-width:70ch}
+
+/* ── lists, tables, cards ───────────────────────── */
+ul.pins{list-style:none;margin:0 0 16px;padding:0}
+ul.pins li{position:relative;padding-left:26px;margin-bottom:10px}
+ul.pins li::before{
+  content:"";position:absolute;left:0;top:.5em;width:12px;height:12px;
+  background-image:var(--star);background-size:contain;background-repeat:no-repeat;
+}
+ol.pins{margin:0 0 16px;padding-left:22px}
+ol.pins li{margin-bottom:11px;padding-left:4px}
+ol.pins li::marker{color:var(--accent);font-weight:700}
+table{width:100%;border-collapse:collapse;font-size:15px;margin:18px 0}
+th,td{text-align:left;padding:11px 12px 11px 0;border-bottom:1px solid var(--rule);vertical-align:top}
+th{color:var(--caption-ink);font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:700;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase}
+td:first-child{width:23%}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:20px 0}
+@media(max-width:700px){.grid{grid-template-columns:1fr} td:first-child{width:auto}}
+.card{border:1px solid var(--rule);border-radius:var(--r);padding:18px 20px}
+.card p{font-size:14.5px;color:var(--ink-soft);margin:0}
+.pull{
+  border-left:3px solid var(--accent);padding:4px 0 4px 22px;margin:26px 0;
+  font-weight:500;font-style:italic;font-size:18px;color:var(--ink);max-width:64ch;
+}
+.foot{margin-top:80px;padding-top:24px;border-top:1px solid var(--rule);color:var(--ink-faint);font-size:14px}
+.scribble{
+  background-image:linear-gradient(var(--accent),var(--accent));
+  background-repeat:no-repeat;background-position:0 100%;background-size:100% 2px;
+}
+</style>
+</head><body><div class="wrap">
+<header class="top">
+<p class="eyebrow label">annotated reading list · 87 papers · 8 threads</p>
+<h1>joint planning &amp;<br>coordination</h1>
+<p class="dek">Where computational cognitive science, behavioral game theory, and multi-agent AI meet on the problem of two or more agents forming and acting on a shared plan. Every entry carries a tier, a note on why it earns its place, and — where relevant — a flag for a common citation trap.</p>
+</header>
+<div class="taped"><span class="label">how to read the tiers</span>
+<p><b>Tier 1</b> (23 papers) — read in full. <b>Tier 2</b> — skim the introduction and discussion. <b>Tier 3</b> — know it exists, cite when relevant. Tiers reflect value to someone building computational models of coordination, not the importance of the work in its own field; several Tier 3 entries are classics that simply are not the fastest route in.</p>
+<p>The threads are not mutually exclusive and the boundaries are arguable — thread <b>G</b> in particular cuts across <b>A</b> and <b>D</b> on the axis of continuous versus discrete time, which turns out to matter more than the disciplinary split.</p></div>
+<div class="sec"><span class="num">01</span><h2>a four-week path</h2></div>
+<p class="sec-note">Sixteen of the papers below, sequenced as roughly four hours a week for a month. The social and joint-planning material comes first deliberately: the single-agent resource-rational work is easier to absorb later, whereas these shape which questions look worth asking.</p>
+<div class="week"><div class="week-head"><span class="week-num">01</span><span class="week-title">foundations: planning, theory of mind, joint intention</span><span class="count label">4 papers · ~4.5 h</span></div>
+<div class="lib">
+<p class="cite"><b>Ho, Saxe &amp; Cushman (2022).</b> Planning with theory of mind. <i>Trends in Cognitive Sciences</i>, 26(11), 959–971.</p>
+<p class="why">Read this before anything technical. Ho's own framing of the multi-agent planning problem, and a serviceable MDP refresher — it reintroduces the planning formalism in 12 pages of prose rather than 200 of Sutton &amp; Barto. Highest hours-saved-per-hour-spent item on the whole list.</p>
+<div class="meta"><span class="tag t1">Tier 1</span><span class="tag hrs">1.5 h</span><a class="tag" href="https://markkho.github.io/documents/HoSaxeCushman2022.pdf" target="_blank" rel="noopener">PDF</a></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Ho, Abel, Correa, Littman, Cohen &amp; Griffiths (2022).</b> People construct simplified mental representations to plan. <i>Nature</i>, 606, 129–136.</p>
+<p class="why">The flagship. Figures-first is fine — the construct (value-guided construal: people build a simplified task representation before planning over it) matters more here than the methods. The open question worth turning over: what's the joint analogue of a construal? Do two people converge on a shared simplification, and does coordination succeed or fail on that convergence?</p>
+<div class="meta"><span class="tag t1">Tier 1</span><span class="tag hrs">0.75 h</span><a class="tag" href="https://arxiv.org/abs/2105.06948" target="_blank" rel="noopener">arXiv</a></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Kleiman-Weiner, Ho, Austerweil, Littman &amp; Tenenbaum (2016).</b> Coordinate to cooperate or compete: abstract goals and joint intentions in social interaction. <i>Proc. 38th CogSci</i>.</p>
+<p class="why">The cleanest statement of the hypothesis space this literature lives in: recursive best-response (each agent models the other modeling it) vs. joint intention / we-mode (agents adopt a shared abstract goal and plan from it). Nearly every model in the area is a variant of, or a hybrid between, these two.</p>
+<div class="meta"><span class="tag t1">Tier 1</span><span class="tag hrs">1 h</span><a class="tag" href="https://alab.psych.wisc.edu/papers/files/KW2016etal.pdf" target="_blank" rel="noopener">PDF</a></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Ho, MacGlashan, Greenwald, Littman, Hilliard, Trimbach, Brawner, Tenenbaum, Kleiman-Weiner &amp; Austerweil (2016).</b> Feature-based joint planning and norm learning in collaborative games. <i>Proc. 38th CogSci</i>, 1158–1163.</p>
+<p class="why">The closest antecedent to the joint-planning program this list circles — Ho's own two-player gridworld, joint planning model, best-response comparison, two experiments. Play the demo and read the repo, not just the paper; it shows what a task in this tradition looks like at the level of pixels and code.</p>
+<div class="meta"><span class="tag t1">Tier 1</span><span class="tag hrs">1.25 h</span><a class="tag" href="https://codec-lab.github.io/documents/ho_et_al_normlearning_2016.pdf" target="_blank" rel="noopener">PDF</a><a class="tag" href="https://github.com/markkho/norms-cogsci2016" target="_blank" rel="noopener">code</a><a class="tag" href="https://markkho.github.io/pages/demos.html" target="_blank" rel="noopener">demos</a></div>
+</div>
+</div>
+<div class="week"><div class="week-head"><span class="week-num">02</span><span class="week-title">the behavioral-economics half</span><span class="count label">4 papers · ~4 h</span></div>
+<div class="lib">
+<p class="cite"><b>Crawford, Costa-Gomes &amp; Iriberri (2013).</b> Structural models of nonequilibrium strategic thinking: theory, evidence, and applications. <i>Journal of Economic Literature</i>, 51(1), 5–62.</p>
+<p class="why">If only one item in this entire guide gets read, make it this. It converts “behavioral game theory” into “a model class with a writable likelihood” — identification, level-0 specification, structural estimation — which is the register Bayesian cognitive modelers already speak. It teaches the game theory as it goes. Read §1–4 and the coordination application; skip auctions and bilateral trade.</p>
+<div class="meta"><span class="tag t1">Tier 1</span><span class="tag hrs">2 h</span><a class="tag" href="https://econweb.ucsd.edu/~vcrawfor/CCGIJEL13.pdf" target="_blank" rel="noopener">PDF</a></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Colman &amp; Gold (2018).</b> Team reasoning: solving the puzzle of coordination. <i>Psychonomic Bulletin &amp; Review</i>, 25(5), 1770–1783.</p>
+<p class="why">The entry point to team reasoning — written for psychologists, no game theory assumed. The economics-side cousin of the “joint intention” branch. Read it as: the same idea, thirty years earlier, in different notation. Noticing exactly these convergences is much of the payoff of reading across these traditions. (Skip Bacharach's book; read Gold &amp; Sugden's intro to it for more.)</p>
+<div class="meta"><span class="tag t1">Tier 1</span><span class="tag hrs">1 h</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Misyak, Melkonyan, Zeitoun &amp; Chater (2014).</b> Unwritten rules: virtual bargaining underpins social interaction, culture, and society. <i>TiCS</i>, 18(10), 512–519.</p>
+<p class="why">The third live theory: people coordinate by simulating a negotiation they never actually have, then acting on its imagined outcome. Shortest, clearest statement. It matters disproportionately because it has the most active current modeling program attached (see Week 3).</p>
+<div class="meta"><span class="tag t1">Tier 1</span><span class="tag hrs">0.5 h</span><a class="tag" href="https://wrap.warwick.ac.uk/id/eprint/62151/3/WRAP_Chater_PIIS1364661314001314.pdf" target="_blank" rel="noopener">PDF</a></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Camerer, Ho &amp; Chong (2004).</b> A cognitive hierarchy model of games. <i>Quarterly Journal of Economics</i>, 119(3), 861–898.</p>
+<p class="why">Skim for the model, not the applications — the Poisson-CH generative story is the payload, and it is typically the first baseline implemented in simulations of this kind. Pair it with the level-0 problem: what a level-0 agent does is a modeling choice that silently determines everything above it, and it's the most common way these models get quietly mis-specified.</p>
+<div class="meta"><span class="tag t2">Tier 2</span><span class="tag hrs">0.5 h</span><a class="tag" href="https://www.csc2.ncsu.edu/faculty/mpsingh/local/Social/f25/wrap/readings/Camerer+Ho+Chong-cognitive-hierarchy-of-games-2004.pdf" target="_blank" rel="noopener">PDF</a></div>
+</div>
+</div>
+<div class="week"><div class="week-head"><span class="week-num">03</span><span class="week-title">models that actually run</span><span class="count label">5 papers · ~5.5 h</span></div>
+<div class="lib">
+<p class="cite"><b>Wu, Wang, Evans, Tenenbaum, Parkes &amp; Kleiman-Weiner (2021).</b> Too many cooks: Bayesian inference for coordinating multi-agent collaboration. <i>Topics in Cognitive Science</i>, 13(2), 414–432.</p>
+<p class="why">The algorithm to Kleiman-Weiner 2016's hypothesis: Bayesian delegation — agents hold a posterior over sub-task assignments and infer from a partner's behavior who is doing what. Plus human data. The closest thing to a template for both the model and the write-up in this genre.</p>
+<div class="meta"><span class="tag t1">Tier 1</span><span class="tag hrs">1.5 h</span><a class="tag" href="https://sarahawu.github.io/assets/papers/wu2021cooks.pdf" target="_blank" rel="noopener">PDF</a><span class="tag warn">cite the TopiCS version — arXiv / CogSci / AAMAS variants differ in title and author order</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Tang, Gong, Zhao, Zhou, Shen &amp; Gao (2025).</b> Joint commitment in human cooperative hunting through an “imagined we.” <i>Proceedings of the Royal Society B</i>, 292(2055), 20243070.</p>
+<p class="why">The Imagined We model — each player infers the intention of a collective “we” agent rather than maximizing individual reward from a shared outcome. Beats reward-sharing models, and the gap widens as the number of possible targets grows. Currently the front-runner in this line of stag-hunt modeling. Cite this Proc B version, not the CogSci 2020/2022 precursors.</p>
+<div class="meta"><span class="tag t1">Tier 1</span><span class="tag hrs">1 h</span><a class="tag" href="https://taogao.comm.ucla.edu/static/pdf/Joint%20commitment_Tang%20Gong%20Zhao%20Zhou%20Shen%20Gao.pdf" target="_blank" rel="noopener">PDF</a><a class="tag" href="https://taogao.comm.ucla.edu/project_JointCommitment.html" target="_blank" rel="noopener">project</a></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Le Pargneux, Zeitoun, Konstantinidis &amp; Chater (2024).</b> Coordination in dynamic interactions by converging on tacitly agreed joint plans. <i>Proc. 46th CogSci</i>.</p>
+<p class="why">Read early and carefully: the nearest published work to the problem this list circles. A virtual-bargaining model of joint plans in dynamic coordination, model-compared against alternatives, two experiments. Knowing precisely what it already covers is how a new project in this space avoids rediscovering it.</p>
+<div class="meta"><span class="tag t1">Tier 1</span><span class="tag hrs">1 h</span><a class="tag" href="https://escholarship.org/uc/item/5tg7135f" target="_blank" rel="noopener">PDF</a></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Kuang, Brockbank, Bicchieri &amp; Hawkins (2026).</b> Inferring joint commitment from observed coordination. <i>Proc. 48th CogSci</i>.</p>
+<p class="why">Hawkins again. Two experiments, N = 785, gridworld farm with an explicit stag hunt payoff structure (solo harvest of the center tree yields 1 berry, joint harvest 8). The model is Bayesian ToM over a latent commitment parameter θ ∈ [0,1] that interpolates between individual and collective expected utility — turning we-mode-vs-I-mode from a discrete model comparison into a fitted continuous dial. That single move is the most useful idea on this whole list.</p>
+<div class="meta"><span class="tag t1">Tier 1</span><span class="tag hrs">1 h</span><a class="tag" href="https://escholarship.org/content/qt210800gr/qt210800gr.pdf" target="_blank" rel="noopener">PDF</a><span class="tag warn">not dyadic — third-party observers rating pre-generated stimuli, N = 785 individuals</span><span class="tag warn">for commitment ratings the null model slightly beat the full model; only agreement ratings fit well (r = .90)</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Baker, Jara-Ettinger, Saxe &amp; Tenenbaum (2017).</b> Rational quantitative attribution of beliefs, desires and percepts in human mentalizing. <i>Nature Human Behaviour</i>, 1, 0064.</p>
+<p class="why">Canonical Bayesian theory of mind — familiar inference machinery pointed at a different generative model. This is the one to drop if the week runs long: Kuang et al. above applies BToM directly to the construct at issue, which matters more than the canonical demonstration. For the cheap version instead, see Jara-Ettinger et al. (2016), The naïve utility calculus, TiCS 20(8) — same vocabulary, half the math.</p>
+<div class="meta"><span class="tag t2">Tier 2</span><span class="tag hrs">1 h</span><a class="tag" href="https://www.nature.com/articles/s41562-017-0064" target="_blank" rel="noopener">journal</a></div>
+</div>
+</div>
+<div class="week"><div class="week-head"><span class="week-num">04</span><span class="week-title">formalism, one hard constraint, one paradigm</span><span class="count label">3 papers · ~4.5 h</span></div>
+<div class="lib">
+<p class="cite"><b>Albrecht, Christianos &amp; Schäfer (2024).</b> <i>Multi-Agent Reinforcement Learning: Foundations and Modern Approaches</i>. MIT Press. — <b>Ch. 3 and 4 only.</b></p>
+<p class="why">Free, CC-licensed, solves two problems at once. Ch. 3 walks the exact ladder — normal-form → repeated → stochastic (Markov) games → POSGs. Ch. 4 is a compact game-theory bootstrap (best response, Nash, correlated equilibrium, Pareto optimality) without a semester of micro. Read it as a notation dictionary, not a textbook. Skip Ch. 5+; nothing in the joint-planning program here needs deep RL.</p>
+<div class="meta"><span class="tag t1">Tier 1</span><span class="tag hrs">2 h</span><a class="tag" href="https://www.marl-book.com/" target="_blank" rel="noopener">free book</a></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Thomas, DeScioli, Haque &amp; Pinker (2014).</b> The psychology of coordination and common knowledge. <i>JPSP</i>, 107(4), 657–676.</p>
+<p class="why">One paper, one finding, and it constrains the model class before a line of it is written: people treat common knowledge as a categorical state, not a point on a probability continuum. That rules out an entire family of graded-higher-order-belief models that would otherwise be tempting to write down. Cheap insurance.</p>
+<div class="meta"><span class="tag t1">Tier 1</span><span class="tag hrs">1 h</span><a class="tag" href="https://pdescioli.com/papers/thomas.etal.common.knowledge.jpsp14.pdf" target="_blank" rel="noopener">PDF</a></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Wu, Deffner, Kahl, Meder, Ho &amp; Kurvers (2025).</b> Adaptive mechanisms of social and asocial learning in immersive collective foraging. <i>Nature Communications</i>, 16, 3539.</p>
+<p class="why">Ho is a co-author, and this is the best methodological template available for building a real-time task. It solves the three hard problems: how to define a discrete decision event inside continuous movement, how to reconstruct what each agent could actually see of the other (automated visual-field transcription — essential for conditioning a model on observability), and how to fit a time-varying-weight choice model to trajectory data. Public data on Zenodo. Read the methods, not just the results.</p>
+<div class="meta"><span class="tag t1">Tier 1</span><span class="tag hrs">1.5 h</span><a class="tag" href="https://www.nature.com/articles/s41467-025-58365-6" target="_blank" rel="noopener">open access</a><a class="tag" href="https://zenodo.org/records/14979323" target="_blank" rel="noopener">data</a><span class="tag warn">an Author Correction exists — "Mark K. Ho" was printed as "Mark H. Ho"; cite the corrected form</span></div>
+</div>
+</div>
+<div class="sec"><span class="num">02</span><h2>the library, by thread</h2></div>
+<details class="thread"><summary>A · behavioral game theory &amp; coordination<span class="cnt">14 items</span></summary><div class="inner">
+<div class="lib">
+<p class="cite"><b>Bardsley, Mehta, Starmer &amp; Sugden (2010).</b> Explaining focal points: cognitive hierarchy theory versus team reasoning. <i>Economic Journal</i>, 120(543), 40–79.</p>
+<p class="why">The horse-race paper — two of the three main model families fit to the same data. If a fifth hour turns up in a week, spend it here.</p>
+<div class="meta"><span class="tag t1">Tier 1</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Wright &amp; Leyton-Brown (2019).</b> Level-0 models for predicting human behavior in games. <i>JAIR</i>, 64, 357–383.</p>
+<p class="why">The level-0 specification problem is the modeling trap. Read before committing to a level-k baseline.</p>
+<div class="meta"><span class="tag t2">Tier 2</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Crawford (2016).</b> New directions for modelling strategic behavior. <i>Journal of Economic Perspectives</i>, 30(4), 131–150.</p>
+<p class="why">20pp, non-technical, links structured thinking to coordination and communication.</p>
+<div class="meta"><span class="tag t2">Tier 2</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Devetag &amp; Ortmann (2007).</b> When and why? A critical survey on coordination failure in the laboratory. <i>Experimental Economics</i>, 10(3), 331–344.</p>
+<p class="why">Fastest 15pp route to “what actually makes coordination succeed or fail in a lab.”</p>
+<div class="meta"><span class="tag t2">Tier 2</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Farrell &amp; Rabin (1996).</b> Cheap talk. <i>JEP</i>, 10(3), 103–118.</p>
+<p class="why">15pp, no math. Read before adding a chat box to a task.</p>
+<div class="meta"><span class="tag t2">Tier 2</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Mehta, Starmer &amp; Sugden (1994).</b> The nature of salience: an experimental investigation of pure coordination games. <i>AER</i>, 84(3), 658–673.</p>
+<div class="meta"><span class="tag t2">Tier 2</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Cooper, DeJong, Forsythe &amp; Ross (1992).</b> Communication in coordination games. <i>QJE</i>, 107(2), 739–771.</p>
+<p class="why">The canonical one-way vs. two-way cheap-talk experiment.</p>
+<div class="meta"><span class="tag t2">Tier 2</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Van Huyck, Battalio &amp; Beil (1990).</b> Tacit coordination games, strategic uncertainty, and coordination failure. <i>AER</i>, 80(1), 234–248.</p>
+<p class="why">15pp founding weakest-link result; the empirical bedrock of coordination failure.</p>
+<div class="meta"><span class="tag t2">Tier 2</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Lewis (1969).</b> <i>Convention: A Philosophical Study</i>, Ch. 1–2.</p>
+<p class="why">Origin of both common knowledge and salience-as-coordination-device. Readable prose.</p>
+<div class="meta"><span class="tag t2">Tier 2</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Schelling (1960).</b> <i>The Strategy of Conflict</i>, Ch. 3–4 + the tacit-coordination appendix.</p>
+<p class="why">Where focal points come from. ~50pp, still the best writing in the field.</p>
+<div class="meta"><span class="tag t2">Tier 2</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Nash (1950).</b> The bargaining problem. <i>Econometrica</i>, 18(2), 155–162.</p>
+<p class="why">Eight pages, and the Nash product is the objective function most likely to end up written down for a joint plan.</p>
+<div class="meta"><span class="tag t2">Tier 2</span><a class="tag" href="https://jmvidal.cse.sc.edu/library/nash50a.pdf" target="_blank" rel="noopener">PDF</a></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Perea.</b> Epistemic game theory (chapter for the <i>Handbook of Rationality</i>).</p>
+<p class="why">Free, chapter-length, written for non-game-theorists. The right entry point for epistemic foundations — not the books.</p>
+<div class="meta"><span class="tag t2">Tier 2</span><a class="tag" href="https://epicenter.name/Perea/Papers/EGT.pdf" target="_blank" rel="noopener">PDF</a></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Morris &amp; Shin (2003).</b> Global games: theory and applications. §1–2 only.</p>
+<p class="why">Where higher-order beliefs get quantitative: vanishing signal noise selects an equilibrium rather than stipulating one. Worth the skim for that one idea; skip the proofs.</p>
+<div class="meta"><span class="tag">Tier 3</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Camerer (2003).</b> <i>Behavioral Game Theory</i>. Ch. 1, 5, 7.</p>
+<p class="why">Reference volume. Do not read cover to cover.</p>
+<div class="meta"><span class="tag">Tier 3</span></div>
+</div>
+</div></details>
+<details class="thread"><summary>B · virtual bargaining &amp; the current synthesis frontier<span class="cnt">6 items</span></summary><div class="inner">
+<div class="lib">
+<p class="cite"><b>Trujillo, Zhang, Zhi-Xuan, Tenenbaum &amp; Levine (2025).</b> Resource-rational virtual bargaining for moral judgment: toward a probabilistic cognitive model. <i>Topics in Cognitive Science</i>.</p>
+<p class="why">A runnable probabilistic virtual-bargaining model. Note the phrase “resource-rational” — Ho's framework colliding with Chater's, which is more or less the intersection this list is organized around.</p>
+<div class="meta"><span class="tag t1">Tier 1</span><a class="tag" href="https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/tops.12781" target="_blank" rel="noopener">PDF</a></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Kleiman-Weiner, Vientós, Rand &amp; Tenenbaum (2025).</b> Evolving general cooperation with a Bayesian theory of mind. <i>PNAS</i>, 122(25), e2400993122.</p>
+<p class="why">Recursive belief-tracking that dodges infinite regress via common-knowledge assumptions. Reusable machinery, and the best current example of “simulation experiment” in the evolutionary sense.</p>
+<div class="meta"><span class="tag t2">Tier 2</span><a class="tag" href="https://compminds.uw.edu/pdfs/kleiman-weiner-et-al-2025-evolving-general-cooperation-with-a-bayesian-theory-of-mind.pdf" target="_blank" rel="noopener">PDF</a></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Levine, Chater, Tenenbaum &amp; Cushman (2024/2026).</b> Resource-rational contractualism: a triple theory of moral cognition. <i>BBS</i>, 49, e133.</p>
+<p class="why">Target article plus open peer commentary — the commentaries are a free map of every objection a resource-rational-bargaining framework will face.</p>
+<div class="meta"><span class="tag t2">Tier 2</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Melkonyan, Zeitoun &amp; Chater (2021).</b> The cognitive foundations of tacit commitments: a virtual bargaining model of dynamic interactions. <i>J. Mathematical Psychology</i>, 105, 102600.</p>
+<p class="why">The sequential/dynamic extension — the version closest to joint planning rather than one-shot coordination.</p>
+<div class="meta"><span class="tag t2">Tier 2</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Misyak, Noguchi &amp; Chater (2016).</b> Instantaneous conventions: the emergence of flexible communicative signals. <i>Psychological Science</i>, 27(12), 1550–1561.</p>
+<p class="why">Cleanest empirical test of virtual bargaining; data on OSF. A good task-design reference too.</p>
+<div class="meta"><span class="tag t2">Tier 2</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Le Pargneux &amp; Cushman (2025).</b> Moral judgment is sensitive to bargaining power. <i>JEP: General</i>, 154(1), 263–278.</p>
+<p class="why">Bargaining-theoretic constructs (outside options, disagreement points) predicting human judgments about joint action.</p>
+<div class="meta"><span class="tag">Tier 3</span></div>
+</div>
+</div></details>
+<details class="thread"><summary>C · computational theory of mind &amp; inverse planning<span class="cnt">7 items</span></summary><div class="inner">
+<div class="lib">
+<p class="cite"><b>Wang, Davis &amp; Jara-Ettinger (2025).</b> Modeling other minds: a computational account of social cognition and its development. <i>Annual Review of Developmental Psychology</i>, 7.</p>
+<p class="why">One of the most important bridges on this page. Its central construct — “restricted scope models,” context-specific simplifications that make social reasoning tractable — is the direct social-cognition analogue of Ho's simplified task representations. An open direction sits somewhere in that overlap.</p>
+<div class="meta"><span class="tag t1">Tier 1</span><a class="tag" href="https://compdevlab.yale.edu/docs/2025/annurev-devpsych-111323-112016.pdf" target="_blank" rel="noopener">PDF</a></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Banerjee, Cornelisse, Gopinath, Sumner, DeCastro, Rosman, Vinitsky &amp; Ho (2025).</b> Estimating cognitive biases with attention-aware inverse planning. <i>NeurIPS 38</i> (Spotlight).</p>
+<p class="why">Inverse planning where the inferred quantity is the partner's attentional and representational limits. One of the most recent entries in this line, and among the nearest published work to the problems this list circles. Worth reading early.</p>
+<div class="meta"><span class="tag t2">Tier 2</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Jara-Ettinger, Gweon, Schulz &amp; Tenenbaum (2016).</b> The naïve utility calculus. <i>TiCS</i>, 20(8), 589–604.</p>
+<p class="why">Conceptual, low math load, and it's the vocabulary (“costs and rewards”) everyone in this literature uses.</p>
+<div class="meta"><span class="tag t2">Tier 2</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Devaine, Hollard &amp; Daunizeau (2014).</b> The social Bayesian brain: does mentalizing make a difference when we learn? <i>PLOS Comp Bio</i>, 10(12), e1003992.</p>
+<p class="why">A working k-ToM recursive-belief implementation, fit to human data. The one to build on for a recursive account.</p>
+<div class="meta"><span class="tag t2">Tier 2</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Baker, Saxe &amp; Tenenbaum (2009).</b> Action understanding as inverse planning. <i>Cognition</i>, 113(3), 329–349.</p>
+<div class="meta"><span class="tag t2">Tier 2</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Zhi-Xuan, Ying, Mansinghka &amp; Tenenbaum (2024).</b> Pragmatic instruction following and goal assistance via cooperative language-guided inverse planning. <i>AAMAS 2024</i>.</p>
+<div class="meta"><span class="tag">Tier 3</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Gmytrasiewicz &amp; Doshi (2005).</b> A framework for sequential planning in multi-agent settings (I-POMDPs). <i>JAIR</i>, 24, 49–79.</p>
+<p class="why">The formal home of nested belief modeling. Know it exists; reach for it when a reviewer asks.</p>
+<div class="meta"><span class="tag">Tier 3</span></div>
+</div>
+</div></details>
+<details class="thread"><summary>D · joint action, shared agency, commitment, norms<span class="cnt">9 items</span></summary><div class="inner">
+<div class="lib">
+<p class="cite"><b>Tomasello (2025).</b> Shared intentionality. In <i>Open Encyclopedia of Cognitive Science</i>, MIT Press. + <b>Sebanz &amp; Knoblich (2021).</b> Progress in joint-action research. <i>Current Directions in Psychological Science</i>, 30(2), 138–143.</p>
+<p class="why">Read together — ~20 minutes and ~10 pages total, and they cover this entire literature at the cost of one coffee. Tomasello's own summary of his program plus Sebanz &amp; Knoblich's own update on the empirical side.</p>
+<div class="meta"><span class="tag t1">Tier 1</span><a class="tag" href="https://oecs.mit.edu/pub/sep9e3c2" target="_blank" rel="noopener">OECS</a></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Oldenburg &amp; Zhi-Xuan (2024).</b> Learning and sustaining shared normative systems via Bayesian rule induction in Markov games. <i>AAMAS 2024</i>.</p>
+<p class="why">The cleanest current bridge from inverse planning to normative systems — a direct descendant of Ho's 2016 norm-learning paper.</p>
+<div class="meta"><span class="tag t2">Tier 2</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Ho, Cushman, Littman &amp; Austerweil (2021).</b> Communication in action: planning and interpreting communicative demonstrations. <i>JEP: General</i>.</p>
+<p class="why">Ho's communication line. Relevant the moment a task lets partners signal.</p>
+<div class="meta"><span class="tag t2">Tier 2</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Vesper, Butterfill, Knoblich &amp; Sebanz (2010).</b> A minimal architecture for joint action. <i>Neural Networks</i>, 23(8–9), 998–1003.</p>
+<p class="why">The most computationally legible piece of the joint-action literature, and the one most likely to appear in a modeling paper's intro.</p>
+<div class="meta"><span class="tag t2">Tier 2</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Sebanz, Bekkering &amp; Knoblich (2006).</b> Joint action: bodies and minds moving together. <i>TiCS</i>, 10(2), 70–76.</p>
+<div class="meta"><span class="tag t2">Tier 2</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Bratman (1992).</b> Shared cooperative activity. <i>The Philosophical Review</i>, 101(2), 327–341.</p>
+<p class="why">The actual conditions on shared cooperative activity — what “joint intention” in the computational papers is gesturing at. Read the paper, not the 2014 book.</p>
+<div class="meta"><span class="tag t2">Tier 2</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>The commitment-cues cluster</b> — Michael & Pacherie (2015) on prior interaction history and effortfulness; Bonalumi et al. (2019, 2022); Siposova, Tomasello & Carpenter (2018) and Bangerter et al. (2022) on communicative signals, eye contact and gesture; Michael et al. (2016) on social dependency between agents.</p>
+<p class="why">An easily missed literature, and Kuang et al. is the door into it — these are precisely the works it positions against, on the grounds that they identify commitment cues descriptively without formalizing the inference. That gap is an opening. Pull the exact citations from Kuang et al.'s reference list rather than from this entry; the ones here are second-hand.</p>
+<div class="meta"><span class="tag t2">Tier 2</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Stacy, Zhao, Zhao &amp; Gao (2020).</b> Intuitive signaling through an “imagined we.” <i>Proc. 42nd CogSci</i>.</p>
+<div class="meta"><span class="tag">Tier 3</span><span class="tag warn">2020, not 2021 — commonly miscited</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Gilbert (1999)</b> on joint commitment and plural subjects · <b>Searle (1990)</b> on collective intentions · <b>Bacharach (2006)</b>.</p>
+<p class="why">The philosophical backdrop Kuang et al. builds on. Worth knowing the positions; reading them in full is not urgent. Gilbert in particular is the source of “joint commitment” as a technical term, and her account is notably stronger than Bratman's — obligations that can't be unilaterally rescinded — which matters for modeling the normative reactions (anger, guilt) that Kuang et al. measure.</p>
+<div class="meta"><span class="tag">Tier 3</span></div>
+</div>
+</div></details>
+<details class="thread"><summary>E · resource-rational &amp; hierarchical planning — the lab's home turf<span class="cnt">6 items</span></summary><div class="inner">
+<div class="lib">
+<p class="cite"><b>Correa, Sanborn, Ho, Callaway, Daw &amp; Griffiths (2025).</b> Exploring the hierarchical structure of human plans via program generation. <i>Cognition</i>, 105990.</p>
+<p class="why">Operationalizes “hierarchical plan” as program structure — the natural formal substrate on which a joint hierarchical plan would be built. “Program-structured plans × joint intentions” is a defensible and currently open direction at this intersection.</p>
+<div class="meta"><span class="tag t2">Tier 2</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Chater, Griffiths &amp; Ho (2024).</b> From probabilities to actions (Ch. 7). In Griffiths, Chater & Tenenbaum (Eds.), <i>Bayesian Models of Cognition: Reverse Engineering the Mind</i>. MIT Press.</p>
+<p class="why">Written for precisely one profile — fluent in Bayesian cognitive modeling, needing the bridge into sequential decision-making — and co-authored by Ho. For readers who can get hold of the book, this may beat Sutton &amp; Barto as a refresher.</p>
+<div class="meta"><span class="tag t2">Tier 2</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Correa, Ho, Callaway, Daw &amp; Griffiths (2023).</b> Humans decompose tasks by trading off utility and computational cost. <i>PLOS Comp Bio</i>, 19(6).</p>
+<p class="why">Subgoal decomposition as a cost–benefit computation. Open access.</p>
+<div class="meta"><span class="tag t2">Tier 2</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Ho, Cohen &amp; Griffiths (2023).</b> Rational simplification and rigidity in human planning. <i>Psychological Science</i>.</p>
+<div class="meta"><span class="tag t2">Tier 2</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Callaway, van Opheusden, Gul, Das, Krueger, Griffiths &amp; Lieder (2022).</b> Rational use of cognitive resources in human planning. <i>Nature Human Behaviour</i>, 6, 1112–1125.</p>
+<div class="meta"><span class="tag t2">Tier 2</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Lieder &amp; Griffiths (2020).</b> Resource-rational analysis. <i>BBS</i>, 43, e1 — <b>target article, first 15pp only.</b></p>
+<p class="why">Deliberately down-tiered. Everything essential is compressed into the opening and restated in the papers above. Not worth five hours plus commentaries.</p>
+<div class="meta"><span class="tag">Tier 3</span></div>
+</div>
+</div></details>
+<details class="thread"><summary>F · multi-agent AI &amp; cooperative AI<span class="cnt">8 items</span></summary><div class="inner">
+<div class="lib">
+<p class="cite"><b>Mon-Williams, Taylor-Davies, Mieczkowski, Vélez, Bramley, Wang, Griffiths &amp; Lucas (2025).</b> Partner modelling emerges in recurrent agents (but only when it matters). <i>NeurIPS 2025</i>.</p>
+<p class="why">Recurrent RL agents in Overcooked develop internal partner models — only when task structure makes partner-modeling instrumentally necessary. Read as an adversarial check on the obvious claims: an argument that human stag-hunt behavior requires recursive partner modeling has to clear what a non-recursive baseline already achieves. The null hypothesis, pre-built.</p>
+<div class="meta"><span class="tag t1">Tier 1</span><a class="tag" href="https://arxiv.org/abs/2505.17323" target="_blank" rel="noopener">arXiv</a></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Mieczkowski, Mon-Williams, Bramley, Lucas, Vélez &amp; Griffiths (2025).</b> Predicting multi-agent specialization via task parallelizability. arXiv:2503.15703.</p>
+<p class="why">An Amdahl's-Law account of when multi-agent systems should specialize vs. generalize, validated across SMAC, MPE and Overcooked. Note the boundary case: a stag hunt has parallelizability ≈ 0, since the whole point is that the stag requires simultaneous joint action. Useful as a theoretical foil rather than a direct tool — and it's a clean example of a simulation-experiment paper.</p>
+<div class="meta"><span class="tag t2">Tier 2</span><a class="tag" href="https://arxiv.org/abs/2503.15703" target="_blank" rel="noopener">arXiv</a></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Jha, Carvalho, Liang, Du, Kleiman-Weiner &amp; Jaques (2025).</b> Cross-environment cooperation enables zero-shot multi-agent coordination. <i>ICML 2025</i> (Oral).</p>
+<p class="why">The field's current answer: training across many environments, not clever equilibrium selection, is what produces partners humans can work with.</p>
+<div class="meta"><span class="tag t2">Tier 2</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Dafoe, Bachrach, Hadfield, Horvitz, Larson &amp; Graepel (2021).</b> Cooperative AI: machines must learn to find common ground. <i>Nature</i>, 593, 33–36.</p>
+<p class="why">Four pages of framing. Read it for the vocabulary the AI side of this audience uses.</p>
+<div class="meta"><span class="tag t2">Tier 2</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Hu, Lerer, Peysakhovich &amp; Foerster (2020).</b> “Other-Play” for zero-shot coordination. <i>ICML 2020</i>.</p>
+<p class="why">The best computational formalization of Schelling salience — symmetry-breaking and label-invariance. A rare case where an AI paper is the clearest statement of a cognitive-science idea.</p>
+<div class="meta"><span class="tag t2">Tier 2</span><a class="tag" href="https://proceedings.mlr.press/v119/hu20a/hu20a.pdf" target="_blank" rel="noopener">PDF</a></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Bard et al. (2020).</b> The Hanabi challenge: a new frontier for AI research. <i>Artificial Intelligence</i>, 280, 103216 — §1–3 only.</p>
+<p class="why">The canonical theory-of-mind-under-partial-observability benchmark.</p>
+<div class="meta"><span class="tag t2">Tier 2</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Carroll, Shah, Ho, Griffiths, Seshia, Abbeel &amp; Dragan (2019).</b> On the utility of learning about humans for human-AI coordination. <i>NeurIPS 32</i>.</p>
+<p class="why">Ho is third author; introduces Overcooked-AI. The finding that matters: agents trained in self-play coordinate beautifully with copies of themselves and catastrophically with humans. It is the reason cross-play evaluation exists.</p>
+<div class="meta"><span class="tag t2">Tier 2</span><a class="tag" href="https://proceedings.neurips.cc/paper_files/paper/2019/file/f5b1b89d98b7286673128a5fb112cb9a-Paper.pdf" target="_blank" rel="noopener">PDF</a></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Oliehoek &amp; Amato (2016).</b> <i>A Concise Introduction to Decentralized POMDPs</i>. Springer — Ch. 1–2.</p>
+<p class="why">Redundant for anyone doing the MARL book in Week 4. Keep as reference for Dec-POMDP specifics. “Concise” is relative.</p>
+<div class="meta"><span class="tag">Tier 3</span><a class="tag" href="https://www.fransoliehoek.net/docs/OliehoekAmato16book.pdf" target="_blank" rel="noopener">PDF</a></div>
+</div>
+</div></details>
+<details class="thread" open><summary>G · continuous-time &amp; real-time spatial coordination<span class="cnt">15 items</span></summary><div class="inner">
+<p class="lead-in">Nearly everything in threads A–F is <b>discrete and turn-based</b>: one simultaneous move, or a step through a gridworld. This thread is <b>continuous-time and spatial</b> — agents move freely, watch each other move, and commitment emerges over a trajectory rather than in a single choice. The distinction is not cosmetic. It changes which equilibrium gets selected, which models are even expressible, and what a task has to log in order to measure anything.</p>
+<div class="lib">
+<p class="cite"><b>Deng, … Garg &amp; Mobbs (2026).</b> Linking compromise and responsibility attribution to risky decision-making in dyadic foraging. <i>PNAS</i>. doi:10.1073/pnas.2602570123</p>
+<p class="why">Arguably the closest paradigm match to a spatial stag hunt anywhere: 120 solo trials calibrating individual risk tolerance under predation, then 60 rounds of dyadic play where the avatar moves to the midpoint between both players' choices — a literal continuous compromise mechanism — plus post-hoc credit/blame attribution. Self-serving responsibility asymmetry predicts reduced willingness to compromise.</p>
+<div class="meta"><span class="tag t1">Tier 1</span><span class="tag warn">partially verified — PNAS blocked direct fetch; confirm the full author list from the DOI before citing</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Hawkins &amp; Goldstone (2016).</b> The formation of social conventions in real-time environments. <i>PLOS ONE</i>, 11(3), e0151670.</p>
+<p class="why">The one new item to read in Week 4 if nothing else. Real-time interaction produces more efficient and fairer conventions than simultaneous decisions, and high stakes amplify the effect. The methodological point is the one to steal: fine-grained movement trajectories reveal a continuous negotiation process that is completely invisible in discrete-choice data. An argument for continuous time as a measurement instrument, not a design flourish — and it's by a Ho co-author.</p>
+<div class="meta"><span class="tag t1">Tier 1</span><a class="tag" href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0151670" target="_blank" rel="noopener">open access</a></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Hallers-Haalboom, De Jaegher, Sterck, Brosnan &amp; Vermande (2025).</b> Communication increases cooperation among students in a coordination game. <i>PNAS</i>, 122(35), e2517669122.</p>
+<p class="why">127 dyads, 40 rounds of online stag hunt, payoffs not disclosed. Communication drives both information discovery and coordination. A useful precedent for online dyadic stag hunt at scale.</p>
+<div class="meta"><span class="tag t2">Tier 2</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Tsutsui, Shinya, Kudo, Müller &amp; Lehmann (2024).</b> Collaborative hunting in artificial agents with deep reinforcement learning. <i>eLife</i>, 13, e85694.</p>
+<p class="why">Role differentiation (chaser, blocker, ambusher) emerges from plain multi-agent deep RL with no theory-of-mind machinery. The deflationary alternative that has to be ruled out — cheap sophistication that looks like joint commitment.</p>
+<div class="meta"><span class="tag t2">Tier 2</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Möller, Unakafov, Fischer, Gail, Treue &amp; Kagan (2023).</b> Human and macaque pairs employ different coordination strategies in a transparent decision game. <i>eLife</i>, 12, e80943.</p>
+<p class="why">Transparency — mutual real-time observation of the partner's action — is what enables human coordination, and macaques largely don't exploit it. Directly relevant to any task that manipulates what partners see of each other, which most such tasks probably should.</p>
+<div class="meta"><span class="tag t2">Tier 2</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Zhao, Tang, Dahmani, Perry, Zhu, Rossano &amp; Gao (2021).</b> Sharing is not needed: modeling animal coordinated hunting with reinforcement learning. <i>Proc. 43rd CogSci</i>.</p>
+<p class="why">The negative control for Imagined We: individually rewarded agents outperform reward-sharing agents, most strongly when hunting is hard and groups large. Read alongside Tang et al. — together a clean example of the model-comparison logic this literature runs on.</p>
+<div class="meta"><span class="tag t2">Tier 2</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Painter, Kim, Renton &amp; Mattingley (2021).</b> Joint control of visually guided actions involves concordant increases in behavioural and neural coupling. <i>Communications Biology</i>, 4(1), 816.</p>
+<p class="why">Dual-EEG during joint cursor control, each partner controlling one dimension. The obvious bridge to the neuroscience side — this is what a neural measure of real-time coordination looks like.</p>
+<div class="meta"><span class="tag t2">Tier 2</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Zhao, S. (2020).</b> Coordination games in continuous time. SSRN working paper.</p>
+<p class="why">The direct empirical case for continuous time: subjects coordinate significantly better, and reach the payoff-dominant equilibrium more often, than in discrete time — driven by faster within-round learning. Design evidence, to read before committing to a design.</p>
+<div class="meta"><span class="tag t2">Tier 2</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Nalepka, Lamb, Kallen, Shockley, Chemero, Saltzman &amp; Richardson (2019).</b> Human social motor solutions for human–machine interaction in dynamical task contexts. <i>PNAS</i>, 116(4), 1437–1446.</p>
+<p class="why">Dynamical-motor-primitive agents coordinate as well as humans and pass a Turing-like test. Relevant twice over: as a partner model for cross-play simulation, and as a bot fallback for unmatched participants.</p>
+<div class="meta"><span class="tag t2">Tier 2</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Nalepka, Kallen, Chemero, Saltzman &amp; Richardson (2017).</b> Herd those sheep: emergent multiagent coordination and behavioral-mode switching. <i>Psychological Science</i>, 28(5), 630–650.</p>
+<p class="why">Continuous spatial shepherding. All pairs start with divided-labor “search-and-recover”; a subset spontaneously discover a synchronized oscillatory mode. An entirely different theoretical vocabulary — dynamical systems, attractors, relative phase, HKB — describing the same phenomenon the Bayesian models describe. Read it precisely because it doesn't share their assumptions.</p>
+<div class="meta"><span class="tag t2">Tier 2</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Skyrms (2004).</b> <i>The Stag Hunt and the Evolution of Social Structure</i>. Cambridge University Press.</p>
+<p class="why">The modern theoretical treatment: risk-dominant (hare) vs. payoff-dominant (stag), and how network structure and signaling shift which one obtains. Where the paradigm is a stag hunt, this is the framing document. Chapters, not cover-to-cover.</p>
+<div class="meta"><span class="tag t2">Tier 2</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Schmidt, Shupp, Walker &amp; Ostrom (2003).</b> Playing safe in coordination games: the roles of risk dominance, payoff dominance, and history of play. <i>GEB</i>, 42(2), 281–299.</p>
+<p class="why">History of play strongly predicts future coordination, and fixed pairing beats random rematching. A direct design constraint: whether partners are stable across trials is a first-order manipulation, not a logistical detail.</p>
+<div class="meta"><span class="tag t2">Tier 2</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Battalio, Samuelson &amp; Van Huyck (2001).</b> Optimization incentives and coordination failure in laboratory stag hunt games. <i>Econometrica</i>, 69(3), 749–764.</p>
+<p class="why">The “optimization premium” result: risk dominance alone doesn't predict behavior. Payoff details easily mistaken for arbitrary drive equilibrium selection — meaning the payoff matrix is a substantive theoretical commitment, not a parameter.</p>
+<div class="meta"><span class="tag t2">Tier 2</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Rankin, Van Huyck &amp; Battalio (2000).</b> Strategic similarity and emergent conventions: evidence from similar stag hunt games. <i>GEB</i>, 32(2), 315–337.</p>
+<p class="why">Conventions emerge in half of cohorts even with payoffs and labels scrambled every round — and when they do, they track efficiency rather than security or risk dominance. Evidence that people abstract strategic structure across surface variation, i.e. the “abstract goals” claim arriving from the economics side.</p>
+<div class="meta"><span class="tag t2">Tier 2</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Gao, Newman &amp; Scholl (2009)</b> on the psychophysics of chasing · <b>Keller, Novembre &amp; Hove (2014)</b> on rhythm in joint action · <b>Konvalinka et al. (2010)</b> on continuous mutual adaptation in joint tapping · <b>Boesch &amp; Boesch (1989)</b> and <b>Samuni et al. (2018)</b> on chimpanzee cooperative hunting.</p>
+<p class="why">Background depth. The Gao one earns its place: people detect chasing rapidly and automatically from motion alone, so in a continuous spatial task partners are reading intentions off trajectories perceptually, below anything that would count as inference. Worth knowing before attributing all of it to a model.</p>
+<div class="meta"><span class="tag">Tier 3</span></div>
+</div>
+</div></details>
+<details class="thread" open><summary>H · collective intelligence &amp; social learning — Wu, Vélez<span class="cnt">7 items</span></summary><div class="inner">
+<p class="lead-in">Adjacent rather than central, and worth being precise about why. This work models <em>social learning</em> — extracting information from others — rather than <em>joint planning</em>, reasoning about a partner's plan toward a shared goal. The foraging paradigms here are congestion problems: peers are simultaneously information sources and competitors for the same resource, with no payoff-dominant joint equilibrium to coordinate onto. That mutual-expectation problem is the entire content of a stag hunt. What this thread does supply, and supplies better than anything in A–G, is the methodological craft for running and fitting real-time multi-agent tasks.</p>
+<div class="lib">
+<p class="cite"><b>Wu, Deffner, Kahl, Meder, Ho &amp; Kurvers (2025).</b> Adaptive mechanisms of social and asocial learning in immersive collective foraging. <i>Nature Communications</i>, 16, 3539.</p>
+<p class="why">Ho is a co-author, and this is the best methodological template available for building a real-time task. It solves the three hard problems: how to define a discrete decision event inside continuous movement, how to reconstruct what each agent could actually see of the other (automated visual-field transcription — essential for conditioning a model on observability), and how to fit a time-varying-weight choice model to trajectory data. Public data on Zenodo. Read the methods, not just the results.</p>
+<div class="meta"><span class="tag t1">Tier 1</span><span class="tag hrs">1.5 h</span><a class="tag" href="https://www.nature.com/articles/s41467-025-58365-6" target="_blank" rel="noopener">open access</a><a class="tag" href="https://zenodo.org/records/14979323" target="_blank" rel="noopener">data</a><span class="tag warn">an Author Correction exists — "Mark K. Ho" was printed as "Mark H. Ho"; cite the corrected form</span></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Deffner, Mezey, Kahl, Schakowski, Romanczuk, Wu &amp; Kurvers (2024).</b> Collective incentives reduce over-exploitation of social information in unconstrained human groups. <i>Nature Communications</i>, 15, 2683.</p>
+<p class="why">The closest thing in either corpus to a payoff-structure manipulation in a real-time spatial task — the structural logic of a stag hunt (individual-safe vs. jointly-optimal) instantiated spatially and continuously. Individually-adaptive social information use turns out to be collectively harmful in concentrated environments; group-level incentives realign them. Also: 90m × 90m arena, restricted first-person FOV (108° × 76°), 25 Hz tracking of movement, proximity and visual attention. Copy that instrumentation spec.</p>
+<div class="meta"><span class="tag t1">Tier 1</span><a class="tag" href="https://www.nature.com/articles/s41467-024-47010-3" target="_blank" rel="noopener">open access</a></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Wu, Dale &amp; Hawkins (2024).</b> Group coordination catalyzes individual and cultural intelligence. <i>Open Mind</i>, 8, 1037–1057.</p>
+<p class="why">Wu's actual collective-intelligence position piece — and note the Hawkins co-authorship again. Argues the ad hoc interacting group is a distinct explanatory level between individual cognition and cumulative culture. This is the cleanest available statement of why dyad and small-group coordination is not just small-scale collective behavior, which is exactly the framing distinction this literature needs.</p>
+<div class="meta"><span class="tag t1">Tier 1</span><a class="tag" href="https://charleywu.github.io/downloads/wu2024group.pdf" target="_blank" rel="noopener">PDF</a></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Witt, Toyokawa, Lala, Gaissmaier &amp; Wu (2024).</b> Humans flexibly integrate social information despite interindividual differences in reward. <i>PNAS</i>, 121(39), e2404928121.</p>
+<p class="why">The formal-framework paper for the synthesis bullet. Four competing model families — asocial GP-UCB, Decision Biasing, Value Shaping, Social Generalization — arbitrated by exceedance probability. SG wins. The DB/VS/SG trichotomy maps directly onto the policy-level vs. value-level vs. belief-level places a partner can be inserted into a joint-planning model. A genuinely useful carve-up of the model space.</p>
+<div class="meta"><span class="tag t2">Tier 2</span><a class="tag" href="https://charleywu.github.io/downloads/witt2024humans.pdf" target="_blank" rel="noopener">PDF</a></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Xiang, Vélez &amp; Gershman (2023).</b> Collaborative decision making is grounded in representations of other people's competence and effort. <i>JEP: General</i>, 152, 1565–1579.</p>
+<p class="why">Vélez's most dyadic work, and the closest she gets to joint planning. In a stag hunt, “will my partner commit?” decomposes into exactly competence (can they?) and effort (will they bother?). The inference structure ports over. Caveat: turn-based offline-judgment tasks, not real-time — relevant model structure, irrelevant paradigm.</p>
+<div class="meta"><span class="tag t2">Tier 2</span><a class="tag" href="https://gershmanlab.com/pubs/Xiang23.pdf" target="_blank" rel="noopener">PDF</a></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Vélez, Christian, Hardy, Thompson &amp; Griffiths (2023).</b> How do humans overcome individual computational limitations by working together? <i>Cognitive Science</i>, 47, e13232.</p>
+<p class="why">Her best short piece for the synthesis bullet — reframes human cognition as a distributed computing system, with a particle-filtering model of populations approximating Bayesian inference via cultural accumulation. Read for framing, not for a fittable model: it's a population/multigenerational argument, not a dyadic one.</p>
+<div class="meta"><span class="tag t2">Tier 2</span><a class="tag" href="https://cocosci.princeton.edu/papers/velez2023overcome.pdf" target="_blank" rel="noopener">PDF</a></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Vélez &amp; Gweon (2021).</b> Learning from other minds: an optimistic critique of reinforcement learning models of social learning. <i>Current Opinion in Behavioral Sciences</i>, 38, 110–115.</p>
+<p class="why">Six pages, high value-per-minute. Argues RL models of social learning oversimplify by treating social information as a lean reward-predictive cue when humans instead infer latent goals, beliefs and strategies; advocates hybrid Bayesian-ToM + RL. That is the argumentative bridge between the economics/RL framing and the cogsci-ToM framing this list sets out to synthesize.</p>
+<div class="meta"><span class="tag t2">Tier 2</span><a class="tag" href="https://sll.stanford.edu/docs/2021_Velez_Gweon_Current_Opinions.pdf" target="_blank" rel="noopener">PDF</a></div>
+</div>
+</div></details>
+<div class="sec"><span class="num">03</span><h2>on &ldquo;simulation experiments&rdquo;</h2></div>
+
+<p>Papers in this list are frequently described as running &ldquo;simulation experiments&rdquo; to
+compare models of coordination. The phrase covers at least five distinct activities, and
+conflating them is a common source of confusion.</p>
+
+<h3>1 · Forward simulation — do the models even differ?</h3>
+<p>Implement three or four competing accounts — level-k / cognitive hierarchy, joint-intention
+planning, virtual bargaining, plain best-response — run them as agents in a candidate
+environment, and look at what comes out. The first question is basic and constantly skipped:
+<em>do these models produce different behavior at all?</em> In many environments, level-2
+reasoning and team reasoning prescribe the same action, and the equations alone will not
+reveal it.</p>
+
+<h3>2 · Model recovery</h3>
+<p>Simulate a dataset from Model A, then fit <em>every</em> model to that synthetic dataset and
+see which wins. Repeat with B as generator, then C, then D. The result is a confusion matrix:
+generating model × recovered model. If A's data is best fit by B, <b>the models are not
+identifiable in that task</b>, and no quantity of human data will fix it. The same exercise at
+the parameter level asks whether known parameters can be recovered from the number of trials a
+single participant realistically produces.</p>
+
+<h3>3 · Design optimization</h3>
+<p>Once models can be simulated and recovered, the environment becomes something to search over.
+Sweep layouts, payoff structures, visibility conditions, time pressure; score each candidate by
+how far apart the models' predictions fall, or by expected information gain about which model is
+true. This is optimal experimental design, and it is why simulation properly precedes task
+construction rather than following it.</p>
+
+<h3>4 · Cross-play</h3>
+<p>The genuinely multi-agent part. In single-agent modeling, simulating a model means running one
+agent; here behavior is a joint product of <em>two</em> policies, which changes the object being
+evaluated. What is needed is an N×N pairing matrix — A with A, A with B, B with A. Self-play is
+famously misleading: the Overcooked result is precisely that an agent optimized in self-play can
+be near-useless with a partner it was not trained against. Human data is <em>always</em>
+cross-play, since people are never paired with copies of themselves. A related decision silently
+breaks model fits if left implicit: <b>when fitting one participant's choices, what is assumed
+about their partner?</b> Fitting each person as though their partner were optimal will
+systematically mis-attribute coordination failures to the wrong parameter.</p>
+
+<h3>5 · Power analysis</h3>
+<p>Simulate N participants × T trials, run the planned model-comparison analysis on the synthetic
+data, and count how often it selects the true model. That curve over N is a sample-size
+justification that can be preregistered. It matters more here than in a typical study because
+synchronous two-player recruitment is lossy — a meaningful fraction of recruited participants
+produce no usable data.</p>
+
+<h3>A second sense of the phrase</h3>
+<p>&ldquo;Simulation experiments&rdquo; sometimes instead means agent-based or evolutionary
+simulation, where the question is not <em>which model fits humans</em> but <em>which coordination
+mechanism is stable, learnable, or evolvable</em>. Kleiman-Weiner et al. (2025, <i>PNAS</i>) is
+the current exemplar. That is a legitimate research program in its own right and requires no
+human data at all.</p>
+
+<div class="sec"><span class="num">04</span><h2>where this work lives</h2></div>
+<p class="sec-note">Groups whose output this list draws on most heavily. Useful as a set of standing alerts.</p>
+<table><thead><tr><th>group</th><th>focus</th><th>note</th></tr></thead><tbody>
+<tr><td><b>Nick Chater</b><br><span class="faint">Warwick, with Melkonyan &amp; Zeitoun</span></td><td>Virtual bargaining, tacit commitments, instantaneous conventions</td><td>The longest-running formal program on tacitly agreed joint plans, and still active.</td></tr>
+<tr><td><b>Arthur Le Pargneux</b><br><span class="faint">Harvard (with Cushman), prev. Warwick</span></td><td>Joint plans in dynamic coordination; precedent vs. mutual benefit; bargaining power</td><td>Several 2025–26 items are not yet indexed; the author's own page is ahead of the databases.</td></tr>
+<tr><td><b>Fiery Cushman</b><br><span class="faint">Harvard, with Sydney Levine</span></td><td>Resource-rational contractualism</td><td>Where the bargaining tradition and resource-rationality have already met.</td></tr>
+<tr><td><b>Max Kleiman-Weiner</b><br><span class="faint">University of Washington</span></td><td>Joint intentions, Bayesian delegation, evolving cooperation, minds-as-code</td><td>The through-line of computational joint planning from 2016 to the present runs through here.</td></tr>
+<tr><td><b>Robert Hawkins</b><br><span class="faint">Stanford Linguistics (&amp; Psychology), with Erik Brockbank</span></td><td>Real-time convention formation; commitment inference; continuous-time stag hunt</td><td>Three of the most on-point items on this list. The 2016 PLOS ONE paper is the methodological precedent for treating movement trajectories as coordination data.</td></tr>
+<tr><td><b>Tao Gao &amp; Ning Tang</b><br><span class="faint">UCLA</span></td><td>&ldquo;Imagined We,&rdquo; joint commitment, cooperative hunting, psychophysics of animacy</td><td>The formalization of shared intentionality currently winning model comparisons in continuous-time coordination.</td></tr>
+<tr><td><b>Charley Wu</b><br><span class="faint">TU Darmstadt (from Tübingen, 2025)</span></td><td>Real-time multi-agent foraging, social learning strategies, GP generalization</td><td>Unusual depth of experience running real-time spatial multi-agent tasks <em>with a fitted moment-to-moment choice model</em> rather than aggregate outcomes.</td></tr>
+<tr><td><b>Natalia Vélez</b><br><span class="faint">UC San Diego (from Princeton, 2026)</span></td><td>Division of labor, collective intelligence, competence and effort inference</td><td>Mostly one abstraction level above dyadic coordination; the Griffiths-lab MARL papers are the directly applicable part.</td></tr>
+<tr><td><b>Julian Jara-Ettinger</b><br><span class="faint">Yale</span></td><td>Naïve utility calculus; &ldquo;restricted scope models&rdquo;</td><td>The social-cognition analogue of simplified task representations in planning. The overlap is largely unclaimed.</td></tr>
+<tr><td><b>Tenenbaum / Zhi-Xuan / Ying</b><br><span class="faint">MIT CoCoSci</span></td><td>Bayesian ToM, cooperative language-guided inverse planning, norm induction</td><td>Where much of the inference machinery gets built.</td></tr>
+<tr><td><b>Sugden, Colman, Gold</b><br><span class="faint">UEA, Leicester</span></td><td>Team reasoning, focal points, the Bacharach line</td><td>Economics has been arguing about &ldquo;we-mode&rdquo; since the 1990s. A good deal of what reads as new in cognitive science is a rediscovery.</td></tr>
+<tr><td><b>Sebanz &amp; Knoblich</b><br><span class="faint">Central European University</span></td><td>The empirical joint-action programme</td><td>A separate tradition — sensorimotor, real-time, embodied — whose citation graph barely touches the modeling one.</td></tr>
+<tr><td><b>Jakob Foerster · Cooperative AI Foundation</b><br><span class="faint">Oxford FLAIR</span></td><td>Zero-shot coordination, other-play, Hanabi, JaxMARL</td><td>The AI-side audience: different venues, different standards of evidence.</td></tr>
+</tbody></table>
+<div class="foot">
+<p><b>Citation traps flagged in this list.</b> &ldquo;Too many cooks&rdquo; circulates under
+multiple titles and author orders — the journal of record is the 2021 <i>Topics in Cognitive
+Science</i> version. Stacy et al., &ldquo;Intuitive signaling through an &lsquo;imagined
+we&rsquo;,&rdquo; is CogSci 2020, not 2021. There is no Ho &amp; Griffiths review titled
+&ldquo;the cognitive science of planning&rdquo;; the actual review is the 2022 <i>Annual Review
+of Control, Robotics, and Autonomous Systems</i> piece, framed for a robotics audience, and it is
+not the same as Gollwitzer &amp; Sheeran's 2025 <i>Annual Review of Psychology</i>
+&ldquo;Psychology of Planning,&rdquo; which concerns implementation intentions and a different
+literature entirely. Vélez has moved Princeton → UCSD and Wu Tübingen → TU Darmstadt; many pages
+still say otherwise. Deng et al. (2026, <i>PNAS</i>) is partially verified only — confirm the
+author list from the DOI. Xiang, Gershman &amp; Vélez, &ldquo;Cognitive foundations of
+collaboration,&rdquo; is listed as under review with no public preprint.</p>
+
+<p>Roughly half these entries are CogSci proceedings with no DOI — worth knowing before building
+anything that keys on one. Citations were verified against publisher pages, author-hosted PDFs,
+arXiv/OpenReview, or lab publication lists; errors that remain are the compiler's.</p>
+
+<p>Annotations are editorial judgments, not consensus positions. Corrections and additions
+welcome.</p>
+</div>
+</div></body></html>
