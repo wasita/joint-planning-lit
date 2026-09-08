@@ -13,6 +13,9 @@ _stage/
 _incoming/
 .DS_Store
 
+# ── uv-managed environment for notebooks/ (uv.lock is committed, .venv is not) ──
+.venv/
+
 # ── Obsidian workspace state (per-machine, not content) ──
 vault/.obsidian/workspace*.json
 vault/.obsidian/cache

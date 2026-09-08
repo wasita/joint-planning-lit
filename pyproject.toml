@@ -1,0 +1,15 @@
+[project]
+name = "joint-planning-lit"
+version = "0.1.0"
+description = "Reading list vault, site generator, and helper notebooks for joint planning & multi-agent coordination"
+requires-python = ">=3.10"
+dependencies = [
+    "anthropic>=1.4.0",
+    "marimo>=0.24.0",
+    "matplotlib>=3.10.9",
+    "numpy>=2.2.6",
+    "pydantic-ai-slim>=2.41.0",
+]
+
+[tool.uv]
+package = false
