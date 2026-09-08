@@ -235,16 +235,26 @@ td:first-child{width:23%}
 </style>
 </head><body><div class="wrap">
 <header class="top">
-<p class="eyebrow label">annotated reading list · 123 papers · 8 threads · v1.3 · updated 2026-08-10</p>
+<p class="eyebrow label">annotated reading list · 124 papers · 8 threads · v1.4 · updated 2026-09-08</p>
 <h1>joint planning &amp;<br>coordination</h1>
 <p class="dek">Where computational cognitive science, behavioral game theory, and multi-agent AI meet on the problem of two or more agents forming and acting on a shared plan. Every entry carries a tier, a note on why it earns its place, and — where relevant — a flag for a common citation trap.</p>
 </header>
 <div class="taped"><span class="label">how to read the tiers</span>
-<p><b>Tier 1</b> (25 papers) — read in full. <b>Tier 2</b> — skim the introduction and discussion. <b>Tier 3</b> — know it exists, cite when relevant. Tiers reflect value to someone building computational models of coordination, not the importance of the work in its own field; several Tier 3 entries are classics that simply are not the fastest route in.</p>
+<p><b>Tier 1</b> (27 papers) — read in full. <b>Tier 2</b> — skim the introduction and discussion. <b>Tier 3</b> — know it exists, cite when relevant. Tiers reflect value to someone building computational models of coordination, not the importance of the work in its own field; several Tier 3 entries are classics that simply are not the fastest route in.</p>
 <p>The threads are not mutually exclusive and the boundaries are arguable — thread <b>G</b> in particular cuts across <b>A</b> and <b>D</b> on the axis of continuous versus discrete time, which turns out to matter more than the disciplinary split.</p></div>
 <div class="sec"><span class="num">01</span><h2>a four-week path</h2></div>
 <p class="sec-note">Sixteen of the papers below, sequenced as roughly four hours a week for a month. The social and joint-planning material comes first deliberately: the single-agent resource-rational work is easier to absorb later, whereas these shape which questions look worth asking.</p>
-<div class="week"><div class="week-head"><span class="week-num">01</span><span class="week-title">foundations: planning, theory of mind, joint intention</span><span class="count label">4 papers · ~4.5 h</span></div>
+<div class="week"><div class="week-head"><span class="week-num">01</span><span class="week-title">foundations: planning, theory of mind, joint intention</span><span class="count label">6 papers · ~6 h</span></div>
+<div class="lib">
+<p class="cite"><b>Yoshida, Dolan &amp; Friston (2008).</b> Game theory of mind. <i>PLOS Computational Biology</i>, 4(12), e1000254.</p>
+<p class="why">The recursive-ToM counterpart to Camerer et al.'s cognitive hierarchy, arrived at independently in neuroscience: a k-th order player models a (k−1)-order opponent's value function, with the regress bottomed out by bounded rationality rather than an infinite tower of beliefs. Read alongside Camerer–Ho–Chong — same move (truncate the recursion), same year the field converged on it (economics: 2004; here: 2008), different bottoming-out mechanism (Poisson-weighted step distribution vs. a hard sophistication ceiling K). Devaine et al. (2014, thread C) builds directly on this k-ToM formalism.</p>
+<div class="meta"><span class="tag t1">Tier 1</span><span class="tag hrs">1 h</span><a class="tag" href="https://doi.org/10.1371/journal.pcbi.1000254" target="_blank" rel="noopener">PLOS (open access)</a></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Camerer, Ho &amp; Chong (2004).</b> A cognitive hierarchy model of games. <i>Quarterly Journal of Economics</i>, 119(3), 861–898.</p>
+<p class="why">Skim for the model, not the applications — the Poisson-CH generative story is the payload, and it is typically the first baseline implemented in simulations of this kind. Pair it with the level-0 problem: what a level-0 agent does is a modeling choice that silently determines everything above it, and it's the most common way these models get quietly mis-specified.</p>
+<div class="meta"><span class="tag t1">Tier 1</span><span class="tag hrs">0.5 h</span><a class="tag" href="https://www.csc2.ncsu.edu/faculty/mpsingh/local/Social/f25/wrap/readings/Camerer+Ho+Chong-cognitive-hierarchy-of-games-2004.pdf" target="_blank" rel="noopener">PDF</a></div>
+</div>
 <div class="lib">
 <p class="cite"><b>Ho, Saxe &amp; Cushman (2022).</b> Planning with theory of mind. <i>Trends in Cognitive Sciences</i>, 26(11), 959–971.</p>
 <p class="why">Read this before anything technical. Ho's own framing of the multi-agent planning problem, and a serviceable MDP refresher — it reintroduces the planning formalism in 12 pages of prose rather than 200 of Sutton &amp; Barto. Highest hours-saved-per-hour-spent item on the whole list.</p>
@@ -266,7 +276,7 @@ td:first-child{width:23%}
 <div class="meta"><span class="tag t1">Tier 1</span><span class="tag hrs">1.25 h</span><a class="tag" href="https://codec-lab.github.io/documents/ho_et_al_normlearning_2016.pdf" target="_blank" rel="noopener">PDF</a><a class="tag" href="https://github.com/markkho/norms-cogsci2016" target="_blank" rel="noopener">code</a><a class="tag" href="https://markkho.github.io/pages/demos.html" target="_blank" rel="noopener">demos</a></div>
 </div>
 </div>
-<div class="week"><div class="week-head"><span class="week-num">02</span><span class="week-title">the behavioral-economics half</span><span class="count label">4 papers · ~4 h</span></div>
+<div class="week"><div class="week-head"><span class="week-num">02</span><span class="week-title">the behavioral-economics half</span><span class="count label">3 papers · ~3.5 h</span></div>
 <div class="lib">
 <p class="cite"><b>Crawford, Costa-Gomes &amp; Iriberri (2013).</b> Structural models of nonequilibrium strategic thinking: theory, evidence, and applications. <i>Journal of Economic Literature</i>, 51(1), 5–62.</p>
 <p class="why">If only one item in this entire guide gets read, make it this. It converts “behavioral game theory” into “a model class with a writable likelihood” — identification, level-0 specification, structural estimation — which is the register Bayesian cognitive modelers already speak. It teaches the game theory as it goes. Read §1–4 and the coordination application; skip auctions and bilateral trade.</p>
@@ -281,11 +291,6 @@ td:first-child{width:23%}
 <p class="cite"><b>Misyak, Melkonyan, Zeitoun &amp; Chater (2014).</b> Unwritten rules: virtual bargaining underpins social interaction, culture, and society. <i>TiCS</i>, 18(10), 512–519.</p>
 <p class="why">The third live theory: people coordinate by simulating a negotiation they never actually have, then acting on its imagined outcome. Shortest, clearest statement. It matters disproportionately because it has the most active current modeling program attached (see Week 3).</p>
 <div class="meta"><span class="tag t1">Tier 1</span><span class="tag hrs">0.5 h</span><a class="tag" href="https://wrap.warwick.ac.uk/id/eprint/62151/3/WRAP_Chater_PIIS1364661314001314.pdf" target="_blank" rel="noopener">PDF</a></div>
-</div>
-<div class="lib">
-<p class="cite"><b>Camerer, Ho &amp; Chong (2004).</b> A cognitive hierarchy model of games. <i>Quarterly Journal of Economics</i>, 119(3), 861–898.</p>
-<p class="why">Skim for the model, not the applications — the Poisson-CH generative story is the payload, and it is typically the first baseline implemented in simulations of this kind. Pair it with the level-0 problem: what a level-0 agent does is a modeling choice that silently determines everything above it, and it's the most common way these models get quietly mis-specified.</p>
-<div class="meta"><span class="tag t2">Tier 2</span><span class="tag hrs">0.5 h</span><a class="tag" href="https://www.csc2.ncsu.edu/faculty/mpsingh/local/Social/f25/wrap/readings/Camerer+Ho+Chong-cognitive-hierarchy-of-games-2004.pdf" target="_blank" rel="noopener">PDF</a></div>
 </div>
 </div>
 <div class="week"><div class="week-head"><span class="week-num">03</span><span class="week-title">models that actually run</span><span class="count label">5 papers · ~5.5 h</span></div>
@@ -355,6 +360,11 @@ td:first-child{width:23%}
 <div class="meta"><span class="tag t1">Tier 1</span></div>
 </div>
 <div class="lib">
+<p class="cite"><b>Camerer, Ho &amp; Chong (2004).</b> A cognitive hierarchy model of games. <i>Quarterly Journal of Economics</i>, 119(3), 861–898.</p>
+<p class="why">Skim for the model, not the applications — the Poisson-CH generative story is the payload, and it is typically the first baseline implemented in simulations of this kind. Pair it with the level-0 problem: what a level-0 agent does is a modeling choice that silently determines everything above it, and it's the most common way these models get quietly mis-specified.</p>
+<div class="meta"><span class="tag t1">Tier 1</span><span class="tag hrs">0.5 h</span><a class="tag" href="https://www.csc2.ncsu.edu/faculty/mpsingh/local/Social/f25/wrap/readings/Camerer+Ho+Chong-cognitive-hierarchy-of-games-2004.pdf" target="_blank" rel="noopener">PDF</a></div>
+</div>
+<div class="lib">
 <p class="cite"><b>Btesh, V., &amp; Ho, M. K. (2026).</b> Let's be friends! People work together even when there is no incentive to do so. <i>Proc. 48th CogSci</i> (in press).</p>
 <p class="why">People choose to work together in the absence of any material reason to. If that holds up, it is a direct challenge to accounts on which joint action is explained by payoff structure — team reasoning, virtual bargaining and joint-intention models all predict cooperation &lt;em&gt;because&lt;/em&gt; it pays, and would need something further to explain cooperating when it does not. Listed from the first author's own page; the proceedings were not yet posted at the time of writing.</p>
 <div class="meta"><span class="tag t2">Tier 2</span><a class="tag" href="https://vbtesh.github.io/" target="_blank" rel="noopener">author page</a></div>
@@ -383,11 +393,6 @@ td:first-child{width:23%}
 <p class="cite"><b>Devetag &amp; Ortmann (2007).</b> When and why? A critical survey on coordination failure in the laboratory. <i>Experimental Economics</i>, 10(3), 331–344.</p>
 <p class="why">Fastest 15pp route to “what actually makes coordination succeed or fail in a lab.”</p>
 <div class="meta"><span class="tag t2">Tier 2</span></div>
-</div>
-<div class="lib">
-<p class="cite"><b>Camerer, Ho &amp; Chong (2004).</b> A cognitive hierarchy model of games. <i>Quarterly Journal of Economics</i>, 119(3), 861–898.</p>
-<p class="why">Skim for the model, not the applications — the Poisson-CH generative story is the payload, and it is typically the first baseline implemented in simulations of this kind. Pair it with the level-0 problem: what a level-0 agent does is a modeling choice that silently determines everything above it, and it's the most common way these models get quietly mis-specified.</p>
-<div class="meta"><span class="tag t2">Tier 2</span><span class="tag hrs">0.5 h</span><a class="tag" href="https://www.csc2.ncsu.edu/faculty/mpsingh/local/Social/f25/wrap/readings/Camerer+Ho+Chong-cognitive-hierarchy-of-games-2004.pdf" target="_blank" rel="noopener">PDF</a></div>
 </div>
 <div class="lib">
 <p class="cite"><b>Farrell &amp; Rabin (1996).</b> Cheap talk. <i>JEP</i>, 10(3), 103–118.</p>
@@ -476,7 +481,7 @@ td:first-child{width:23%}
 <div class="meta"><span class="tag">Tier 3</span></div>
 </div>
 </div></details>
-<details class="thread"><summary>C · computational theory of mind &amp; inverse planning<span class="cnt">13 items</span></summary><div class="inner">
+<details class="thread"><summary>C · computational theory of mind &amp; inverse planning<span class="cnt">14 items</span></summary><div class="inner">
 <div class="lib">
 <p class="cite"><b>Wang, Davis &amp; Jara-Ettinger (2025).</b> Modeling other minds: a computational account of social cognition and its development. <i>Annual Review of Developmental Psychology</i>, 7.</p>
 <p class="why">One of the most important bridges on this page. Its central construct — “restricted scope models,” context-specific simplifications that make social reasoning tractable — is the direct social-cognition analogue of Ho's simplified task representations. An open direction sits somewhere in that overlap.</p>
@@ -486,6 +491,11 @@ td:first-child{width:23%}
 <p class="cite"><b>Stacy, S., Gong, S., Parab, A., Zhao, M., Jiang, K., &amp; Gao, T. (2023).</b> A Bayesian theory of mind approach to modeling cooperation and communication. <i>WIREs Computational Statistics</i>, 16(1), e1631.</p>
 <p class="why">The review-length statement of the Imagined We programme, and the best single place to see cooperation and communication derived from one framework rather than treated as separate problems. Signals are modelled as a species of rational action — chosen because of what they let a partner infer — and shared agency, rather than recursive individual reasoning, is what makes the inference tractable. Read this before the individual Imagined We papers; it supplies the scaffolding they assume.</p>
 <div class="meta"><span class="tag t1">Tier 1</span><a class="tag" href="https://doi.org/10.1002/wics.1631" target="_blank" rel="noopener">DOI</a></div>
+</div>
+<div class="lib">
+<p class="cite"><b>Yoshida, Dolan &amp; Friston (2008).</b> Game theory of mind. <i>PLOS Computational Biology</i>, 4(12), e1000254.</p>
+<p class="why">The recursive-ToM counterpart to Camerer et al.'s cognitive hierarchy, arrived at independently in neuroscience: a k-th order player models a (k−1)-order opponent's value function, with the regress bottomed out by bounded rationality rather than an infinite tower of beliefs. Read alongside Camerer–Ho–Chong — same move (truncate the recursion), same year the field converged on it (economics: 2004; here: 2008), different bottoming-out mechanism (Poisson-weighted step distribution vs. a hard sophistication ceiling K). Devaine et al. (2014, thread C) builds directly on this k-ToM formalism.</p>
+<div class="meta"><span class="tag t1">Tier 1</span><span class="tag hrs">1 h</span><a class="tag" href="https://doi.org/10.1371/journal.pcbi.1000254" target="_blank" rel="noopener">PLOS (open access)</a></div>
 </div>
 <div class="lib">
 <p class="cite"><b>Banerjee, Cornelisse, Gopinath, Sumner, DeCastro, Rosman, Vinitsky &amp; Ho (2025).</b> Estimating cognitive biases with attention-aware inverse planning. <i>NeurIPS 38</i> (Spotlight).</p>
@@ -1075,7 +1085,7 @@ human data at all.</p>
 <tr><td><b>Max E. Potter</b><br><span class="faint"><span class='faint'>cogsci.ucsd.edu</span></span></td><td class="faint">PhD student, UC San Diego, w/ Rossano</td><td><b>D</b> · Coordinative difficulty as a driver of role-taking in group tasks</td><td>Role differentiation as a response to coordination cost is exactly the phenomenon a joint-planning model has to predict. Comparative/behavioural tradition, so the phenomenon travels, not the model.</td></tr>
 <tr><td><b>Julien Lie-Panis</b><br><span class="faint"><a href='https://jliep.github.io/' target='_blank' rel='noopener'>jliep.github.io</a></span></td><td class="faint">Postdoc, joining SMILE at ENS (Sept 2026)</td><td><b>D</b> · Institutions as commitment devices; why moral rules are rigid; cooperation as a signal of time preferences</td><td>The population-scale analogue of commitment — evolutionary game theory rather than planning representations, but the rigidity-of-rules work is directly usable.</td></tr>
 </tbody></table>
-<div class="foot"><p><b>Version 1.3</b>, last updated 2026-08-10. 123 entries.</p>
+<div class="foot"><p><b>Version 1.4</b>, last updated 2026-09-08. 124 entries.</p>
 
 <p>Roughly half these entries are CogSci proceedings with no DOI — worth knowing before building
 anything that keys on one. Citations were verified against publisher pages, author-hosted PDFs,

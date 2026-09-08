@@ -1,8 +1,74 @@
 {
   "schemaVersion": 1,
   "source": "joint-planning-onboarding.html",
-  "count": 123,
+  "count": 124,
   "papers": [
+    {
+      "authors_raw": "Yoshida, Dolan & Friston",
+      "year": "2008",
+      "title": "Game theory of mind",
+      "venue": "PLOS Computational Biology, 4(12), e1000254",
+      "citation_raw": "Yoshida, Dolan & Friston (2008). Game theory of mind. PLOS Computational Biology, 4(12), e1000254.",
+      "citation_html": "<b>Yoshida, Dolan &amp; Friston (2008).</b> Game theory of mind. <i>PLOS Computational Biology</i>, 4(12), e1000254.",
+      "why": "The recursive-ToM counterpart to Camerer et al.'s cognitive hierarchy, arrived at independently in neuroscience: a k-th order player models a (k−1)-order opponent's value function, with the regress bottomed out by bounded rationality rather than an infinite tower of beliefs. Read alongside Camerer–Ho–Chong — same move (truncate the recursion), same year the field converged on it (economics: 2004; here: 2008), different bottoming-out mechanism (Poisson-weighted step distribution vs. a hard sophistication ceiling K). Devaine et al. (2014, thread C) builds directly on this k-ToM formalism.",
+      "tier": 1,
+      "est_hours": 1.0,
+      "links": [
+        {
+          "label": "PLOS (open access)",
+          "url": "https://doi.org/10.1371/journal.pcbi.1000254"
+        }
+      ],
+      "flags": [],
+      "thread": {
+        "key": "C",
+        "label": "C · computational theory of mind & inverse planning"
+      },
+      "week": {
+        "n": 1,
+        "title": "foundations: planning, theory of mind, joint intention",
+        "dates": "Sep 1–7"
+      },
+      "doi": "10.1371/journal.pcbi.1000254",
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2008-game-theory-of-mind"
+    },
+    {
+      "authors_raw": "Camerer, Ho & Chong",
+      "year": "2004",
+      "title": "A cognitive hierarchy model of games",
+      "venue": "Quarterly Journal of Economics, 119(3), 861–898",
+      "citation_raw": "Camerer, Ho & Chong (2004). A cognitive hierarchy model of games. Quarterly Journal of Economics, 119(3), 861–898.",
+      "citation_html": "<b>Camerer, Ho &amp; Chong (2004).</b> A cognitive hierarchy model of games. <i>Quarterly Journal of Economics</i>, 119(3), 861–898.",
+      "why": "Skim for the model, not the applications — the Poisson-CH generative story is the payload, and it is typically the first baseline implemented in simulations of this kind. Pair it with the level-0 problem: what a level-0 agent does is a modeling choice that silently determines everything above it, and it's the most common way these models get quietly mis-specified.",
+      "tier": 1,
+      "est_hours": 0.5,
+      "links": [
+        {
+          "label": "PDF",
+          "url": "https://www.csc2.ncsu.edu/faculty/mpsingh/local/Social/f25/wrap/readings/Camerer+Ho+Chong-cognitive-hierarchy-of-games-2004.pdf"
+        }
+      ],
+      "flags": [],
+      "thread": {
+        "key": "A",
+        "label": "A · behavioral game theory & coordination"
+      },
+      "week": {
+        "n": 1,
+        "title": "foundations: planning, theory of mind, joint intention",
+        "dates": "Sep 1–7"
+      },
+      "doi": null,
+      "corpusId": null,
+      "abstract": null,
+      "tags": [],
+      "status": "to-read",
+      "id": "2004-a-cognitive-hierarchy-model-of-games"
+    },
     {
       "authors_raw": "Ho, Saxe & Cushman",
       "year": "2022",
@@ -236,39 +302,6 @@
       "tags": [],
       "status": "to-read",
       "id": "2014-unwritten-rules-virtual-bargaining-underpins-social-int"
-    },
-    {
-      "authors_raw": "Camerer, Ho & Chong",
-      "year": "2004",
-      "title": "A cognitive hierarchy model of games",
-      "venue": "Quarterly Journal of Economics, 119(3), 861–898",
-      "citation_raw": "Camerer, Ho & Chong (2004). A cognitive hierarchy model of games. Quarterly Journal of Economics, 119(3), 861–898.",
-      "citation_html": "<b>Camerer, Ho &amp; Chong (2004).</b> A cognitive hierarchy model of games. <i>Quarterly Journal of Economics</i>, 119(3), 861–898.",
-      "why": "Skim for the model, not the applications — the Poisson-CH generative story is the payload, and it is typically the first baseline implemented in simulations of this kind. Pair it with the level-0 problem: what a level-0 agent does is a modeling choice that silently determines everything above it, and it's the most common way these models get quietly mis-specified.",
-      "tier": 2,
-      "est_hours": 0.5,
-      "links": [
-        {
-          "label": "PDF",
-          "url": "https://www.csc2.ncsu.edu/faculty/mpsingh/local/Social/f25/wrap/readings/Camerer+Ho+Chong-cognitive-hierarchy-of-games-2004.pdf"
-        }
-      ],
-      "flags": [],
-      "thread": {
-        "key": "A",
-        "label": "A · behavioral game theory & coordination"
-      },
-      "week": {
-        "n": 2,
-        "title": "the behavioral-economics half",
-        "dates": "Sep 8–14"
-      },
-      "doi": null,
-      "corpusId": null,
-      "abstract": null,
-      "tags": [],
-      "status": "to-read",
-      "id": "2004-a-cognitive-hierarchy-model-of-games"
     },
     {
       "authors_raw": "Wu, Wang, Evans, Tenenbaum, Parkes & Kleiman-Weiner",
@@ -3365,6 +3398,6 @@
     }
   ],
   "note": "Curated reading list on joint planning and multi-agent coordination. Annotations are editorial judgments, not consensus positions.",
-  "version": "1.3",
-  "updated": "2026-08-10"
+  "version": "1.4",
+  "updated": "2026-09-08"
 }

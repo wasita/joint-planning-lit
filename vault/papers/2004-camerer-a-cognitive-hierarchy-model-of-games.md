@@ -3,12 +3,12 @@ title: "A cognitive hierarchy model of games"
 authors: "Camerer, Ho & Chong"
 year: 2004
 venue: "Quarterly Journal of Economics, 119(3), 861–898"
-tier: 2
+tier: 1
 thread: "A"
 thread_label: "A · behavioral game theory & coordination"
-week: 2
-week_title: "the behavioral-economics half"
-week_dates: "Sep 8–14"
+week: 1
+week_title: "foundations: planning, theory of mind, joint intention"
+week_dates: "Sep 1–7"
 est_hours: 0.5
 status: to-read
 rating: 
