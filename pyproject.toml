@@ -9,6 +9,7 @@ dependencies = [
     "matplotlib>=3.10.9",
     "numpy>=2.2.6",
     "pydantic-ai-slim>=2.41.0",
+    "ruff>=0.16.8",
 ]
 
 [tool.uv]

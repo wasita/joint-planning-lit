@@ -3,33 +3,29 @@ import marimo
 __generated_with = "0.24.0"
 app = marimo.App(width="medium")
 
-
-@app.cell(hide_code=True)
-def setup():
+with app.setup(hide_code=True):
     import marimo as mo
     import numpy as np
     import matplotlib.pyplot as plt
 
-    return mo, np, plt
-
 
 @app.cell(hide_code=True)
-def title_md(mo):
+def title_md():
     mo.md(r"""
     # Finite Markov Decision Processes (Sutton & Barto, Chapter 3)
 
-    A working notebook version of the chapter summary -- every worked example
-    that has concrete enough parameters to simulate (the recycling robot, the
-    gridworld, the returns exercise) is implemented as live, interactive code
-    rather than just described. Sections without a natural simulation (goals
-    and rewards, unified notation, optimality and approximation) stay as
-    markdown.
+    ## Overview
+
+    - Finite MDPs involve evaluative feedback, as in bandits, but also an associative aspect, as in choosing different actions in different situations.
+    - classical formalization of sequential decision making; actions influence subsequent situations or states, and through those future rewards
+
+    - in comparison to bandit problems, where $q_*(a)$ is estimated for each action $a$, in MDPs we estimate the value $q_*(s,a)$ of each action $a$ in each state $s$, or we estimate the value $v_*(s)$ of each state given optimal action selections
     """)
     return
 
 
 @app.cell(hide_code=True)
-def sec31_md(mo):
+def sec31_md():
     mo.md(r"""
     ## 3.1 -- The Agent-Environment Interface
 
@@ -75,7 +71,7 @@ def sec31_md(mo):
 
 
 @app.cell(hide_code=True)
-def rr_sliders(mo):
+def rr_sliders():
     alpha_s = mo.ui.slider(0.0, 1.0, step=0.05, value=0.7, label="α (search succeeds at high)")
     beta_s = mo.ui.slider(0.0, 1.0, step=0.05, value=0.5, label="β (search succeeds at low)")
     rsearch_s = mo.ui.slider(0.0, 5.0, step=0.1, value=2.0, label="r_search")
@@ -86,7 +82,7 @@ def rr_sliders(mo):
 
 
 @app.cell(hide_code=True)
-def rr_solve(alpha_s, beta_s, mo, rr_gamma_s, rsearch_s, rwait_s):
+def rr_solve(alpha_s, beta_s, rr_gamma_s, rsearch_s, rwait_s):
     alpha, beta = alpha_s.value, beta_s.value
     r_search, r_wait, gamma_rr = rsearch_s.value, rwait_s.value, rr_gamma_s.value
 
@@ -131,7 +127,7 @@ def rr_solve(alpha_s, beta_s, mo, rr_gamma_s, rsearch_s, rwait_s):
 
 
 @app.cell(hide_code=True)
-def sec32_md(mo):
+def sec32_md():
     mo.md(r"""
     ## 3.2 -- Goals and Rewards
 
@@ -149,7 +145,7 @@ def sec32_md(mo):
 
 
 @app.cell(hide_code=True)
-def sec33_md(mo):
+def sec33_md():
     mo.md(r"""
     ## 3.3 -- Returns and Episodes
 
@@ -175,14 +171,14 @@ def sec33_md(mo):
 
 
 @app.cell(hide_code=True)
-def returns_slider(mo):
+def returns_slider():
     returns_gamma_s = mo.ui.slider(0.0, 1.0, step=0.05, value=0.5, label="γ")
     returns_gamma_s
     return (returns_gamma_s,)
 
 
 @app.cell(hide_code=True)
-def returns_compute(mo, np, returns_gamma_s):
+def returns_compute(returns_gamma_s):
     R = np.array([-1.0, 2.0, 6.0, 3.0, 2.0])  # R_1 .. R_5
     T = len(R)
     gamma_ret = returns_gamma_s.value
@@ -197,7 +193,7 @@ def returns_compute(mo, np, returns_gamma_s):
 
 
 @app.cell(hide_code=True)
-def sec34_md(mo):
+def sec34_md():
     mo.md(r"""
     ## 3.4 -- Unified Notation for Episodic and Continuing Tasks
 
@@ -214,7 +210,7 @@ def sec34_md(mo):
 
 
 @app.cell(hide_code=True)
-def sec35_md(mo):
+def sec35_md():
     mo.md(r"""
     ## 3.5 -- Policies and Value Functions
 
@@ -242,7 +238,7 @@ def sec35_md(mo):
 
 
 @app.cell(hide_code=True)
-def gridworld_setup(np):
+def gridworld_setup():
     GW_N = 5
     GW_A, GW_APRIME, GW_AREWARD = (0, 1), (4, 1), 10.0
     GW_B, GW_BPRIME, GW_BREWARD = (0, 3), (2, 3), 5.0
@@ -263,18 +259,18 @@ def gridworld_setup(np):
     def gw_idx(s):
         return s[0] * GW_N + s[1]
 
-    return GW_A, GW_ACTIONS, GW_B, GW_N, gw_idx, gw_step
+    return GW_ACTIONS, GW_N, gw_idx, gw_step
 
 
 @app.cell(hide_code=True)
-def gridworld_gamma_slider(mo):
+def gridworld_gamma_slider():
     gw_gamma_s = mo.ui.slider(0.0, 0.99, step=0.01, value=0.9, label="γ (gridworld)")
     gw_gamma_s
     return (gw_gamma_s,)
 
 
 @app.cell(hide_code=True)
-def gridworld_random_policy(GW_ACTIONS, GW_N, gw_gamma_s, gw_idx, gw_step, np, plt):
+def gridworld_random_policy(GW_ACTIONS, GW_N, gw_gamma_s, gw_idx, gw_step):
     gw_gamma = gw_gamma_s.value
     P_pi = np.zeros((GW_N * GW_N, GW_N * GW_N))
     r_pi = np.zeros(GW_N * GW_N)
@@ -302,7 +298,7 @@ def gridworld_random_policy(GW_ACTIONS, GW_N, gw_gamma_s, gw_idx, gw_step, np, p
 
 
 @app.cell(hide_code=True)
-def sec36_md(mo):
+def sec36_md():
     mo.md(r"""
     ## 3.6 -- Optimal Policies and Optimal Value Functions
 
@@ -329,7 +325,7 @@ def sec36_md(mo):
 
 
 @app.cell(hide_code=True)
-def gridworld_optimal(GW_ACTIONS, GW_N, gw_gamma_s, gw_idx, gw_step, np, plt):
+def gridworld_optimal(GW_ACTIONS, GW_N, gw_gamma_s, gw_idx, gw_step):
     gw_gamma_star = gw_gamma_s.value
     v_star = np.zeros(GW_N * GW_N)
     for _ in range(1000):
@@ -367,7 +363,7 @@ def gridworld_optimal(GW_ACTIONS, GW_N, gw_gamma_s, gw_idx, gw_step, np, plt):
 
 
 @app.cell(hide_code=True)
-def sec37_md(mo):
+def sec37_md():
     mo.md(r"""
     ## 3.7 -- Optimality and Approximation
 
@@ -386,7 +382,7 @@ def sec37_md(mo):
 
 
 @app.cell(hide_code=True)
-def sec38_md(mo):
+def sec38_md():
     mo.md(r"""
     ## 3.8 -- Summary
 
@@ -403,7 +399,7 @@ def sec38_md(mo):
 
 
 @app.cell(hide_code=True)
-def key_equations_md(mo):
+def key_equations_md():
     mo.md(r"""
     ## Key equations at a glance
 
@@ -422,7 +418,7 @@ def key_equations_md(mo):
 
 
 @app.cell(hide_code=True)
-def ch_bridge_md(mo):
+def ch_bridge_md():
     mo.md(r"""
     ## Note: connection to the Poisson-CH reading
 
