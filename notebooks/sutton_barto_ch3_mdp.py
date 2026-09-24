@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.24.0"
+__generated_with = "0.24.2"
 app = marimo.App(width="medium")
 
 with app.setup(hide_code=True):
@@ -12,14 +12,16 @@ with app.setup(hide_code=True):
 @app.cell(hide_code=True)
 def title_md():
     mo.md(r"""
-    # Finite Markov Decision Processes (Sutton & Barto, Chapter 3)
+    # S&B (Ch3) - Finite Markov Decision Processes
 
-    ## Overview
+    ## Overview test
 
     - Finite MDPs involve evaluative feedback, as in bandits, but also an associative aspect, as in choosing different actions in different situations.
     - classical formalization of sequential decision making; actions influence subsequent situations or states, and through those future rewards
 
     - in comparison to bandit problems, where $q_*(a)$ is estimated for each action $a$, in MDPs we estimate the value $q_*(s,a)$ of each action $a$ in each state $s$, or we estimate the value $v_*(s)$ of each state given optimal action selections
+
+    - key mathematical elements: returns, value functions, Bellman equations
     """)
     return
 
@@ -27,7 +29,20 @@ def title_md():
 @app.cell(hide_code=True)
 def sec31_md():
     mo.md(r"""
-    ## 3.1 -- The Agent-Environment Interface
+    ## 3.1 - The Agent-Environment Interface
+
+                        ┌─────────┐
+                  ┌────▶│  Agent  │
+                  │     └────┬────┘
+            state │          │ action
+             S_t  │  reward  │  A_t
+                  │    R_t   │
+                  │          ▼
+                  │    ┌──────────────┐
+                  └────┤ Environment  │
+          R_{t+1} ┊     └──────┬───────┘
+          S_{t+1} ┊            │
+                  └────────────┘
 
     Agent and environment interact over discrete time steps. At each step $t$
     the agent receives a state $S_t \in \mathcal{S}$, selects an action
@@ -44,13 +59,22 @@ def sec31_md():
     Probabilities depending only on the immediately preceding state/action
     (not the full history) is the **Markov property**. The agent-environment
     boundary is not a robot's physical body -- the rule is: anything the agent
-    cannot change arbitrarily counts as environment. The boundary marks the
+    cannot change arbitrarily counts as environment. Secondly, we can't assume that the agent is unaware of everything in its environment. In fact, the agent can be aware of everything in its environment but still faces a difficult reinforcement learning task. The boundary marks the
     limit of the agent's *control*, not its *knowledge*.
+    """)
+    return
 
-    **Example 3.3 -- Recycling Robot** (the running example used again in
-    Section 3.6 below): two battery states, `high`/`low`. At `high` the agent
-    can `search` or `wait`; at `low` it can also `recharge`. Searching risks
-    draining the battery (a costly rescue, reward $-3$); recharging is safe
+
+@app.cell(hide_code=True)
+def _():
+    mo.md(r"""
+    **Example 3.3 -- Recycling Robot**
+
+    (the running example used again in
+    Section 3.6 below):
+    two battery states, `high`/`low`. At `high` the agent
+    can `search` or `wait`; at `low` it can also `recharge`.
+    Searching risks draining the battery (a costly rescue, reward $-3$); recharging is safe
     but forgoes a step of searching.
 
     | $s$ | $a$ | $s'$ | $p(s'\mid s,a)$ | $r(s,a,s')$ |
@@ -72,8 +96,12 @@ def sec31_md():
 
 @app.cell(hide_code=True)
 def rr_sliders():
-    alpha_s = mo.ui.slider(0.0, 1.0, step=0.05, value=0.7, label="α (search succeeds at high)")
-    beta_s = mo.ui.slider(0.0, 1.0, step=0.05, value=0.5, label="β (search succeeds at low)")
+    alpha_s = mo.ui.slider(
+        0.0, 1.0, step=0.05, value=0.7, label="α (search succeeds at high)"
+    )
+    beta_s = mo.ui.slider(
+        0.0, 1.0, step=0.05, value=0.5, label="β (search succeeds at low)"
+    )
     rsearch_s = mo.ui.slider(0.0, 5.0, step=0.1, value=2.0, label="r_search")
     rwait_s = mo.ui.slider(0.0, 5.0, step=0.1, value=0.5, label="r_wait")
     rr_gamma_s = mo.ui.slider(0.0, 0.99, step=0.01, value=0.9, label="γ")
@@ -84,11 +112,18 @@ def rr_sliders():
 @app.cell(hide_code=True)
 def rr_solve(alpha_s, beta_s, rr_gamma_s, rsearch_s, rwait_s):
     alpha, beta = alpha_s.value, beta_s.value
-    r_search, r_wait, gamma_rr = rsearch_s.value, rwait_s.value, rr_gamma_s.value
+    r_search, r_wait, gamma_rr = (
+        rsearch_s.value,
+        rwait_s.value,
+        rr_gamma_s.value,
+    )
 
     rr_transitions = {
         "high": {
-            "search": [(alpha, "high", r_search), (1 - alpha, "low", r_search)],
+            "search": [
+                (alpha, "high", r_search),
+                (1 - alpha, "low", r_search),
+            ],
             "wait": [(1.0, "high", r_wait)],
         },
         "low": {
@@ -102,8 +137,10 @@ def rr_solve(alpha_s, beta_s, rr_gamma_s, rsearch_s, rwait_s):
     for _ in range(500):
         new_v = {}
         for s, actions in rr_transitions.items():
-            qs = {a: sum(p * (r + gamma_rr * v_rr[s2]) for p, s2, r in outcomes)
-                  for a, outcomes in actions.items()}
+            qs = {
+                a: sum(p * (r + gamma_rr * v_rr[s2]) for p, s2, r in outcomes)
+                for a, outcomes in actions.items()
+            }
             new_v[s] = max(qs.values())
         if max(abs(new_v[s] - v_rr[s]) for s in v_rr) < 1e-10:
             v_rr = new_v
@@ -112,11 +149,16 @@ def rr_solve(alpha_s, beta_s, rr_gamma_s, rsearch_s, rwait_s):
 
     rr_rows = []
     for s, actions in rr_transitions.items():
-        qs = {a: sum(p * (r + gamma_rr * v_rr[s2]) for p, s2, r in outcomes)
-              for a, outcomes in actions.items()}
+        qs = {
+            a: sum(p * (r + gamma_rr * v_rr[s2]) for p, s2, r in outcomes)
+            for a, outcomes in actions.items()
+        }
         best = max(qs, key=qs.get)
-        rr_rows.append(f"| {s} | **{best}** | {v_rr[s]:.2f} | " +
-                        ", ".join(f"{a}={q:.2f}" for a, q in qs.items()) + " |")
+        rr_rows.append(
+            f"| {s} | **{best}** | {v_rr[s]:.2f} | "
+            + ", ".join(f"{a}={q:.2f}" for a, q in qs.items())
+            + " |"
+        )
 
     mo.md(
         "**Solved via value iteration on the Bellman optimality equation:**\n\n"
@@ -214,15 +256,19 @@ def sec35_md():
     mo.md(r"""
     ## 3.5 -- Policies and Value Functions
 
+    A *value function*: functions of states (or state-action pairs) that estimate _how good_ it is for the agent to be in a given state (or how good it is to perform a given action in a given state).
+    "How good" = expected future reward or expected return.
+    Defined with respect to policies.
+
     A **policy** $\pi(a\mid s)$ maps states to action probabilities.
 
     $$v_\pi(s) \doteq \mathbb{E}_\pi[G_t \mid S_t = s] \qquad
     q_\pi(s,a) \doteq \mathbb{E}_\pi[G_t \mid S_t=s, A_t=a]$$
 
     The **Bellman equation for $v_\pi$** -- the value of a state equals
-    expected immediate reward plus discounted value of the next state,
-    averaged over the policy's action probabilities and the environment's
-    dynamics:
+    *expected immediate reward plus discounted value of the next state*,
+    *averaged over the policy's action probabilities and the environment's
+    dynamics*:
 
     $$v_\pi(s) = \sum_a \pi(a\mid s) \sum_{s',r} p(s',r\mid s,a)\big[r + \gamma v_\pi(s')\big]$$
 
@@ -243,7 +289,12 @@ def gridworld_setup():
     GW_A, GW_APRIME, GW_AREWARD = (0, 1), (4, 1), 10.0
     GW_B, GW_BPRIME, GW_BREWARD = (0, 3), (2, 3), 5.0
     GW_ACTIONS = ["north", "south", "east", "west"]
-    GW_DELTAS = {"north": (-1, 0), "south": (1, 0), "east": (0, 1), "west": (0, -1)}
+    GW_DELTAS = {
+        "north": (-1, 0),
+        "south": (1, 0),
+        "east": (0, 1),
+        "west": (0, -1),
+    }
 
     def gw_step(s, a):
         if s == GW_A:
@@ -264,7 +315,9 @@ def gridworld_setup():
 
 @app.cell(hide_code=True)
 def gridworld_gamma_slider():
-    gw_gamma_s = mo.ui.slider(0.0, 0.99, step=0.01, value=0.9, label="γ (gridworld)")
+    gw_gamma_s = mo.ui.slider(
+        0.0, 0.99, step=0.01, value=0.9, label="γ (gridworld)"
+    )
     gw_gamma_s
     return (gw_gamma_s,)
 
@@ -282,16 +335,22 @@ def gridworld_random_policy(GW_ACTIONS, GW_N, gw_gamma_s, gw_idx, gw_step):
                 P_pi[i, gw_idx(s2)] += 0.25
                 r_pi[i] += 0.25 * rew
 
-    v_random = np.linalg.solve(np.eye(GW_N * GW_N) - gw_gamma * P_pi, r_pi).reshape(GW_N, GW_N)
+    v_random = np.linalg.solve(
+        np.eye(GW_N * GW_N) - gw_gamma * P_pi, r_pi
+    ).reshape(GW_N, GW_N)
 
     fig_gw1, ax_gw1 = plt.subplots(figsize=(4.5, 4.5))
     ax_gw1.imshow(v_random, cmap="Blues")
     for row in range(GW_N):
         for col in range(GW_N):
-            ax_gw1.text(col, row, f"{v_random[row, col]:.1f}", ha="center", va="center")
+            ax_gw1.text(
+                col, row, f"{v_random[row, col]:.1f}", ha="center", va="center"
+            )
     ax_gw1.set_xticks([])
     ax_gw1.set_yticks([])
-    ax_gw1.set_title(f"$v_\\pi$, equiprobable random policy (γ={gw_gamma:.2f})")
+    ax_gw1.set_title(
+        f"$v_\\pi$, equiprobable random policy (γ={gw_gamma:.2f})"
+    )
     plt.close(fig_gw1)
     fig_gw1
     return
@@ -332,28 +391,54 @@ def gridworld_optimal(GW_ACTIONS, GW_N, gw_gamma_s, gw_idx, gw_step):
         v_new = np.zeros(GW_N * GW_N)
         for orow in range(GW_N):
             for ocol in range(GW_N):
-                qs2 = [gw_step((orow, ocol), act)[1] + gw_gamma_star * v_star[gw_idx(gw_step((orow, ocol), act)[0])]
-                       for act in GW_ACTIONS]
+                qs2 = [
+                    gw_step((orow, ocol), act)[1]
+                    + gw_gamma_star
+                    * v_star[gw_idx(gw_step((orow, ocol), act)[0])]
+                    for act in GW_ACTIONS
+                ]
                 v_new[gw_idx((orow, ocol))] = max(qs2)
         if np.max(np.abs(v_new - v_star)) < 1e-10:
             v_star = v_new
             break
         v_star = v_new
 
-    arrow = {"north": (0, -0.35), "south": (0, 0.35), "east": (0.35, 0), "west": (-0.35, 0)}
+    arrow = {
+        "north": (0, -0.35),
+        "south": (0, 0.35),
+        "east": (0.35, 0),
+        "west": (-0.35, 0),
+    }
     fig_gw2, ax_gw2 = plt.subplots(figsize=(4.5, 4.5))
     ax_gw2.imshow(v_star.reshape(GW_N, GW_N), cmap="Greens")
     for orow in range(GW_N):
         for ocol in range(GW_N):
             val = v_star[gw_idx((orow, ocol))]
-            ax_gw2.text(ocol, orow - 0.25, f"{val:.1f}", ha="center", va="center", fontsize=8)
-            qs2 = {act: gw_step((orow, ocol), act)[1] + gw_gamma_star * v_star[gw_idx(gw_step((orow, ocol), act)[0])]
-                   for act in GW_ACTIONS}
+            ax_gw2.text(
+                ocol,
+                orow - 0.25,
+                f"{val:.1f}",
+                ha="center",
+                va="center",
+                fontsize=8,
+            )
+            qs2 = {
+                act: gw_step((orow, ocol), act)[1]
+                + gw_gamma_star * v_star[gw_idx(gw_step((orow, ocol), act)[0])]
+                for act in GW_ACTIONS
+            }
             best_q = max(qs2.values())
             for act, qval in qs2.items():
                 if np.isclose(qval, best_q, atol=1e-6):
                     dx, dy = arrow[act]
-                    ax_gw2.arrow(ocol, orow + 0.15, dx, dy, head_width=0.08, color="black")
+                    ax_gw2.arrow(
+                        ocol,
+                        orow + 0.15,
+                        dx,
+                        dy,
+                        head_width=0.08,
+                        color="black",
+                    )
     ax_gw2.set_xticks([])
     ax_gw2.set_yticks([])
     ax_gw2.set_title(f"$v_*$ and greedy $\\pi_*$ (γ={gw_gamma_star:.2f})")
