@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.24.0"
+__generated_with = "0.24.2"
 app = marimo.App(width="medium")
 
 with app.setup(hide_code=True):
@@ -143,25 +143,36 @@ def title_md():
     mo.md(r"""
     # Fitting models to behavioral data
 
-    By [Shawn A. Rhoads, Ph.D.](https://shawnrhoads.github.io/) -- New York
-    Computational Psychiatry Workshop 2025. Adapted from Rhoads' PSYC 347
-    course, the [pyEM](https://github.com/shawnrhoads/pyEM) package examples,
-    and the Neuromatch Academy tutorials. Marimo conversion keeps every real
-    computation live; only the Colab badge and the `ipywidgets` cell (replaced
-    with `mo.ui` sliders, since `ipywidgets` doesn't run in marimo) changed.
+    By [Shawn A. Rhoads, Ph.D.](https://shawnrhoads.github.io/)<br>New York
+    Computational Psychiatry Workshop 2025
 
-    **Goals**
+    This tutorial was inspired by and adapted from Shawn A. Rhoads'
+    [PSYC 347 Course](https://shawnrhoads.github.io/gu-psyc-347/)
+    [[CC BY-SA 4.0 License](https://creativecommons.org/licenses/by-sa/4.0/)],
+    the examples from the [pyEM Python package](https://github.com/shawnrhoads/pyEM)
+    and the [Neuromatch Academy tutorials](https://github.com/NeuromatchAcademy/course-content)
+    [[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)].
 
-    1. Understand Maximum Likelihood Estimation (**MLE**) and algorithms to
-       maximize the log-likelihood (or minimize the negative log-likelihood).
-    2. Apply **MLE** to fit a linear regression model via grid search and an
-       optimization algorithm.
-    3. Apply **MLE** to fit a reinforcement learning model via grid search and
-       an optimization algorithm.
-    4. Understand Maximum A Posteriori (**MAP**) estimation, hierarchical
-       modeling, and the expectation-maximization (**EM**) algorithm.
-    5. Apply **MAP** to fit a linear regression model using EM.
-    6. Apply **MAP** to fit a reinforcement learning model using EM.
+    *Marimo conversion note: every real computation below is kept live. Only
+    the Colab badge (not applicable locally) and the `ipywidgets` cell
+    (replaced with `mo.ui` sliders, since `ipywidgets` doesn't run in marimo)
+    changed from the original.*
+
+    ## Goals of this tutorial
+
+    1. Understand the concept of Maximum Likelihood Estimation (**MLE**) and
+       algorithms to maximize the log-likelihood (or minimize the negative
+       log-likelihood)
+    2. Apply **MLE** to fit a linear regression model to data using a grid
+       search and optimization algorithm
+    3. Apply **MLE** to fit a reinforcement learning model to data using a
+       grid search and optimization algorithm
+    4. Understand the concept of Maximum A Posteriori (**MAP**) estimation,
+       hierarchical modeling, and the expectation-maximization (EM) algorithm
+    5. Apply **MAP Estimation** to fit a linear regression model to data
+       using the EM algorithm
+    6. Apply **MAP Estimation** to fit a reinforcement learning model to
+       data using the EM algorithm
     """)
     return
 
@@ -171,25 +182,48 @@ def sec_mle_intro_md():
     mo.md(r"""
     ## What is Maximum Likelihood Estimation (MLE)?
 
-    MLE estimates a model's parameters by finding the values that make the
-    observed data most probable. In simple terms: *given the data we've
-    observed, what parameter values maximize the probability of observing
-    exactly this data?* We assume a specific form for the data's probability
-    distribution and adjust the model's parameters until the likelihood is
-    highest.
+    Maximum Likelihood Estimation (MLE) is a fundamental method used to
+    estimate the parameters of a model by finding the parameter values that
+    make the observed data most probable. This concept is widely used across
+    various fields to fit models to behavioral and cognitive data.
 
-    ### Key concepts
+    In simple terms, MLE attempts to answer the question: *Given the data we
+    have observed, what are the parameter values that maximize the
+    probability of observing this data?*
 
-    Given observed data $\mathcal{D}$ and parameters $\theta$, MLE maximizes
-    the likelihood function:
+    In MLE, we assume a specific form for the probability distribution of
+    the data and adjust the model's parameters until we find the highest
+    likelihood.
+
+    ### Key Concepts
+
+    Given a set of observed data points, MLE aims to find the values of the
+    parameters, denoted by ($\theta$), that maximize the likelihood function:
 
     $$\mathcal{L}(\theta) = P(\mathcal{D} \mid \theta)$$
 
-    MLE finds $\theta^\ast = \arg\max_\theta \log\mathcal{L}(\theta)$ -- the
-    *log*-likelihood, because it's more numerically convenient (turns
-    products of probabilities into sums, avoids underflow). Finding
-    $\theta^\ast$ is an optimization problem, solvable by grid search or
-    iterative optimization algorithms.
+    Here:
+
+    - $\mathcal{D}$ represents the observed data.
+    - $\theta$ represents the set of parameters of the model.
+
+    The likelihood function, $\mathcal{L}(\theta)$, expresses how likely the
+    observed data is for different parameter values. MLE finds the parameter
+    value $\theta^\ast$ that maximizes this likelihood function, which can
+    also be equivalently done by maximizing the log-likelihood, as it is
+    often easier to work with:
+
+    $$\theta^\ast = \arg\max_\theta \; \log \mathcal{L}(\theta)$$
+
+    Instead of working directly with the likelihood function, it is often
+    easier to work with the logarithm of the likelihood, called the
+    *log-likelihood*. The log-likelihood is more computationally convenient,
+    especially when dealing with products of probabilities.
+
+    MLE requires finding the parameter values that maximize the likelihood
+    or log-likelihood. This is an optimization problem and can be solved
+    using various methods, such as grid search or iterative optimization
+    algorithms.
     """)
     return
 
@@ -199,16 +233,32 @@ def sec_linreg_intro_md():
     mo.md(r"""
     ### Example 1: Linear Regression Model
 
-    A multivariate linear regression model:
+    In the first example, we'll discuss fitting a **multivariate linear
+    regression model** using MLE. I like to start with this example because
+    it's a simple and intuitive model that many people are familiar with.
+
+    A multivariate linear regression model extends simple linear regression
+    to multiple predictors. Given a set of observed data points, our goal is
+    to estimate the relationship between the predictors and the outcome
+    variable. Mathematically, the model can be represented as:
 
     $$Y = X\beta + \epsilon$$
 
-    - $Y$: observed outcomes, shape $(n,1)$
-    - $X$: predictor matrix, shape $(n,p)$
-    - $\beta$: regression coefficients to estimate, shape $(p,1)$
-    - $\epsilon$: error term, typically $\mathcal{N}(0,\sigma^2)$
+    Here:
 
-    Expanded per observation $i$: $y_i = \beta_0 + \beta_1 x_{i1} + \dots + \beta_p x_{ip} + \epsilon_i$.
+    - $Y$ is the vector of observed outcome values with shape $(n, 1)$,
+      where $n$ is the number of observations.
+    - $X$ is the matrix of predictor variables with shape $(n, p)$, where
+      $n$ is the number of observations and $p$ is the number of predictors.
+    - $\beta$ is the vector of regression coefficients (parameters we wish
+      to estimate) with shape $(p, 1)$.
+    - $\epsilon$ represents the error term, which is typically assumed to be
+      normally distributed with mean zero and variance $\sigma^2$.
+
+    We can also write the expanded form of the model for each observation
+    $i$ as:
+
+    $$y_i = \beta_0 + \beta_1 x_{i1} + \beta_2 x_{i2} + \ldots + \beta_p x_{ip} + \epsilon_i$$
     """)
     return
 
@@ -224,7 +274,7 @@ def linreg_simulate():
     b1 = 1.64  # slope 1
     b2 = -3.27  # slope 2
     y = b0 + b1 * x1 + b2 * x2 + noise_lr
-    return b0, b1, b2, n_lr, x1, x2, y
+    return b0, b1, b2, x1, x2, y
 
 
 @app.cell(hide_code=True)
@@ -247,15 +297,38 @@ def sec_linreg_gaussian_md():
     mo.md(r"""
     ---
 
-    Now we estimate the free parameters `b0`, `b1`, `b2`. To do so we need
-    the probability distribution of the errors. A Gaussian is the common
-    choice: errors symmetric around zero, most values close to zero.
+    Now we can try to estimate the free parameters: `b0`, `b1`, and `b2`. To
+    understand how we estimate the parameters of the model, we need to
+    describe the probability distribution of the errors.
 
-    $$P(\mathcal{D}\mid\beta) = \prod_{i=1}^n \frac{1}{\sqrt{2\pi\sigma^2}}\exp\left(-\frac{(y_i - X_i\beta)^2}{2\sigma^2}\right)$$
+    The Gaussian distribution is a common choice for modeling the errors
+    (residuals) in a regression model. This distribution assumes that the
+    errors are normally distributed, meaning that they are symmetrically
+    distributed around zero, and most of the error values are close to zero
+    with fewer extreme values.
 
-    The normalization term keeps the total area under the curve equal to 1;
-    the exponential term shrinks the likelihood of an observation as the gap
-    between predicted ($X_i\beta$) and actual ($y_i$) grows.
+    The [probability density function](https://en.wikipedia.org/wiki/Probability_density_function)
+    (PDF) for the observed outcomes, assuming normally distributed errors,
+    is given by:
+
+    $$P(\mathcal{D} \mid \beta) = \prod_{i=1}^n \frac{1}{\sqrt{2\pi\sigma^2}} \exp\left( -\frac{(y_i - X_i \beta)^2}{2\sigma^2} \right)$$
+
+    Let's break this down:
+
+    - The term $\frac{1}{\sqrt{2\pi\sigma^2}}$ represents the normalization
+      factor of the Gaussian distribution, which ensures that the total
+      area under the curve is equal to 1.
+    - The exponential term $\exp\left( -\frac{(y_i - X_i \beta)^2}{2\sigma^2} \right)$
+      represents how the likelihood of each observation decreases as the
+      difference between the predicted value ($X_i \beta$) and the actual
+      value ($y_i$) increases. This term captures how well the model fits
+      the data.
+
+    Where $y_i$ represents the $i$-th observed value and $X_i$ represents
+    the corresponding row of the predictor matrix. The goal of MLE is to
+    find the parameters $\beta$ that maximize this likelihood function,
+    which means finding the values of $\beta$ that make the observed data
+    most probable.
     """)
     return
 
@@ -292,27 +365,38 @@ def normal_pdf_plot(mu_s, sigma_s):
 @app.cell(hide_code=True)
 def sec_loglik_md():
     mo.md(r"""
-    In practice we maximize the *log*-likelihood (numerical stability,
-    products become sums, handles large datasets by additivity) -- or,
-    equivalently, minimize the *negative* log-likelihood, since most
-    optimizers minimize by default.
+    In practice, we often maximize the log-likelihood instead of the
+    likelihood function, as it improves numerical stability (i.e., avoids
+    underflow with very small values), simplifies calculations (i.e.,
+    transforms products into sums), allows for easier interpretation (i.e.,
+    compresses the range of values for comparison), handles large datasets
+    efficiently through additivity (i.e., sums log-likelihoods across
+    observations), and avoids issues with underflow and overflow in
+    numerical computations (i.e., prevents extreme values in floating-point
+    operations).
 
-    > **Note:** linear regression has an analytic solution for $\beta$. We
-    > use MLE here anyway to demonstrate an approach that generalizes to
-    > models with no closed-form solution.
+    Additionally, instead of maximizing the log-likelihood, we can
+    equivalently minimize the negative log-likelihood. This approach is
+    often used because many optimization libraries are designed to minimize
+    functions by default, making it convenient to use negative
+    log-likelihood as our "objective function."
+
+    > **Note:** Wait -- but can't we just use the analytic solution for
+    > linear regression? Yes, for linear regression we can easily derive an
+    > analytic solution for $\beta$. However, we are starting with a linear
+    > model to demonstrate how MLE can be applied to a simple model, as the
+    > same approach generalizes to more complex models where an analytic
+    > solution is not available.
     """)
     return
 
 
-@app.cell(hide_code=True)
-def negll_lm_func():
-    def negll_lm(params, y_data, x1_data, x2_data):
-        nb0, nb1, nb2 = params
-        y_pred = nb0 + nb1 * x1_data + nb2 * x2_data
-        likelihoods = scipy.stats.norm.logpdf(y_data, y_pred)
-        return -np.sum(likelihoods)
-
-    return (negll_lm,)
+@app.function(hide_code=True)
+def negll_lm(params, y_data, x1_data, x2_data):
+    nb0, nb1, nb2 = params
+    y_pred = nb0 + nb1 * x1_data + nb2 * x2_data
+    likelihoods = scipy.stats.norm.logpdf(y_data, y_pred)
+    return -np.sum(likelihoods)
 
 
 @app.cell(hide_code=True)
@@ -322,18 +406,34 @@ def sec_optim_algos_md():
 
     ### Algorithms for Maximizing Likelihood
 
-    - **Grid search** -- evaluate the likelihood over a grid of parameter
-      values, pick the best. Simple but expensive for high-dimensional
-      parameter spaces.
-    - **Gradient-based optimization** (e.g. **BFGS**, `scipy.optimize.minimize`'s
-      default) -- iteratively follow the likelihood's gradient to converge on
-      the optimum. Far more efficient than grid search.
+    To estimate the model parameters using MLE, we often use optimization
+    algorithms. Some common approaches include:
+
+    - **Grid Search**: This involves evaluating the likelihood at a grid of
+      parameter values and selecting the one with the highest value. This
+      is straightforward but computationally expensive for complex models
+      or high-dimensional parameter spaces.
+    - **Gradient-Based Optimization**: Algorithms like **BFGS** are commonly
+      used to find the parameters that maximize the likelihood. These
+      methods iteratively adjust the parameters based on the gradient of
+      the likelihood function, converging to the optimal values. In Python,
+      the `scipy.optimize.minimize` function is often used for this
+      purpose, with **BFGS** being the default method for unconstrained
+      problems. This function provides a flexible way to optimize the
+      negative log-likelihood function, allowing us to effectively maximize
+      the likelihood of the observed data given the model parameters.
+
+    In the next sections, we will explore how to apply MLE to fit different
+    models, starting with a simple linear regression model and then moving
+    on to a reinforcement learning model. We will use both grid search and
+    gradient-based optimization approaches to illustrate the versatility of
+    MLE.
     """)
     return
 
 
 @app.cell(hide_code=True)
-def linreg_grid_search(negll_lm, x1, x2, y):
+def linreg_grid_search(x1, x2, y):
     b0_grid = np.linspace(-10, 10, 50)
     b1_grid = np.linspace(-10, 10, 50)
     b2_grid = np.linspace(-10, 10, 50)
@@ -347,11 +447,21 @@ def linreg_grid_search(negll_lm, x1, x2, y):
     b0_opt = b0_grid[gi_opt]
     b1_opt = b1_grid[gj_opt]
     b2_opt = b2_grid[gk_opt]
-    return b0_grid, b0_opt, b1_grid, b1_opt, b2_grid, b2_opt, gi_opt, gj_opt, gk_opt, nll_lr
+    return (
+        b0_opt,
+        b1_grid,
+        b1_opt,
+        b2_grid,
+        b2_opt,
+        gi_opt,
+        gj_opt,
+        gk_opt,
+        nll_lr,
+    )
 
 
 @app.cell(hide_code=True)
-def linreg_grid_heatmap_plot(b1_grid, b2_grid, gi_opt, gj_opt, gk_opt, nll_lr):
+def linreg_grid_heatmap_plot(gi_opt, gj_opt, gk_opt, nll_lr):
     fig03, ax03 = plt.subplots()
     sns.heatmap(nll_lr[gi_opt, :, :], ax=ax03, cmap="Spectral")
     ax03.set_xlabel(r"$b_2$")
@@ -369,7 +479,16 @@ def linreg_grid_heatmap_plot(b1_grid, b2_grid, gi_opt, gj_opt, gk_opt, nll_lr):
 
 
 @app.cell(hide_code=True)
-def linreg_grid_3d_plot(b1_grid, b1_opt, b2_grid, b2_opt, gi_opt, gj_opt, gk_opt, nll_lr):
+def linreg_grid_3d_plot(
+    b1_grid,
+    b1_opt,
+    b2_grid,
+    b2_opt,
+    gi_opt,
+    gj_opt,
+    gk_opt,
+    nll_lr,
+):
     fig04 = plt.figure()
     ax04 = fig04.add_subplot(111, projection="3d")
     X_mesh, Y_mesh = np.meshgrid(b1_grid, b2_grid)
@@ -399,7 +518,7 @@ def linreg_grid_print(b0, b0_opt, b1, b1_opt, b2, b2_opt):
 
 
 @app.cell(hide_code=True)
-def linreg_scipy_optimize(negll_lm, x1, x2, y):
+def linreg_scipy_optimize(x1, x2, y):
     linreg_result = scipy.optimize.minimize(negll_lm, [0, 0, 0], args=(y, x1, x2))
     b0_hat, b1_hat, b2_hat = linreg_result.x
     return b0_hat, b1_hat, b2_hat
@@ -437,40 +556,81 @@ def linreg_fit_plot(b0_hat, b1_hat, b2_hat, x1, x2, y):
 @app.cell(hide_code=True)
 def sec_linreg_summary_md():
     mo.md(r"""
-    Both methods recovered parameters close to, but not exactly matching,
-    the true values -- expected, given noise in the data (models only ever
-    approximate the true data-generating process). `scipy.optimize.minimize`
-    (BFGS) generally outperformed grid search: it follows gradient
-    information instead of exhaustively evaluating a fixed grid.
+    Now, we have estimated the parameters of a linear regression model
+    using both a brute force grid search and the `scipy.optimize.minimize`
+    function. Notice that the estimated parameters from both methods did
+    not exactly match the actual parameters used to generate the data. This
+    discrepancy can be attributed to noise in the data and the limitations
+    of the optimization methods. (Also remember that all models just
+    approximate the true observed data, so we should never expect the
+    estimated parameters to perfectly match the true parameters.)
+
+    Additionally, the optimization performed by `scipy` generally did a
+    better job compared to the brute force grid search. This is because
+    `scipy.optimize.minimize` uses more sophisticated algorithms like
+    **BFGS** that can efficiently navigate the parameter space by
+    leveraging gradient information, whereas grid search exhaustively
+    evaluates a fixed grid of values, which is computationally expensive
+    and less precise.
 
     ---
 
     ### Example 2: Temporal Difference (TD) Learning Model
 
-    TD learning estimates state/action values to predict long-term reward,
-    updating iteratively from observed experience:
+    Now let's use **MLE** to fit a model to choice behavior. Recall the
+    **Temporal Difference (TD) Learning Model** from yesterday. TD Learning
+    is a core concept in reinforcement learning that involves estimating
+    the value of different states to predict long-term rewards. By
+    observing experiences, we iteratively update our value estimates for
+    the states.
 
-    $$Q_{t+1}(S_t,A_t) = Q_t(S_t,A_t) + \alpha\big[R_{t+1} + \gamma\max_a Q_t(S_{t+1},a) - Q_t(S_t,A_t)\big]$$
+    TD-Learning can be written as follows:
 
-    - $Q_t(S_t,A_t)$: value of action $A_t$ in state $S_t$ at time $t$
-    - $\alpha \in (0,1)$: learning rate
-    - $R_{t+1}$: reward received
-    - $\gamma$: discount factor
-    - $\max_a Q_t(S_{t+1},a)$: best estimated value of the next state
+    $$Q_{t+1}(S_t, A_t) = Q_t(S_t, A_t) + \alpha \left[R_{t+1} + \gamma \max\limits_{a} Q_t(S_{t+1}, a) - Q_t(S_t, A_t)\right]$$
 
-    Action selection uses **softmax**: $P(a) = \dfrac{e^{\beta Q(S_t,a)}}{\sum_{a'} e^{\beta Q(S_t,a')}}$,
-    with inverse-temperature $\beta$ controlling choice randomness (high
-    $\beta$ = deterministic, low $\beta$ = exploratory). Two free parameters
-    to estimate: $\alpha$ (learning rate) and $\beta$ (inverse temperature).
+    Unpacking the terms:
+
+    - $Q_t(S_t, A_t)$: value of taking action $A_t$ in state $S_t$ at time $t$
+    - $0 < \alpha < 1$: learning rate, which controls how "quickly" the
+      value is updated
+    - $R_{t+1}$: immediate reward received after taking action $A_t$ in
+      state $S_t$
+    - $\gamma$: discount factor, which determines the importance of future
+      rewards
+    - $\max\limits_{a} Q_t(S_{t+1}, a)$: the maximum estimated value of the
+      next state $S_{t+1}$ over all possible actions
+
+    The action selection is often guided by the softmax function, which
+    converts the estimated values of available actions into a probability
+    distribution over actions. The probability of selecting action $a$
+    given the estimated value $V(S_t, a)$ is given by the softmax function:
+
+    $$P(a) = \frac{e^{\beta Q(S_t, a)}}{\sum_{a'} e^{\beta Q(S_t, a')}}$$
+
+    Here, $\beta$ is the inverse temperature parameter that controls the
+    randomness of action selection. A high $\beta$ value leads to more
+    deterministic choices based on the action values, while a low $\beta$
+    value leads to more random exploration.
+
+    We aim to estimate two free parameters:
+
+    - **$\alpha$** (learning rate)
+    - **$\beta$** (inverse temperature)
 
     #### Two-Armed Bandit Task
 
-    Choose between two options, each rewarding with some fixed probability
-    (e.g. 80% vs 20%); learn which is better through exploration and
-    exploitation. With no state transitions, the TD update drops the
-    discounted next-state term:
+    A common setting for studying decision-making in reinforcement learning
+    is the **two-armed bandit task**. In this task, the agent has to choose
+    between two options (or arms), each of which provides a reward with a
+    certain probability. One arm might provide a reward 80% of the time,
+    while the other only 20% of the time. The agent has to learn which arm
+    is more rewarding over time through exploration and exploitation.
 
-    $$Q_{t+1} = Q_t + \alpha\big[R_t - Q_t\big]$$
+    In a simple two-armed bandit task, we can exclude the
+    $\gamma Q_{t+1}(S_{t+1}, a)$ term from the TD Learning model, as there
+    is no transition between states. This simplifies the model to:
+
+    $$Q_{t+1} = Q_t + \alpha \left[R_{t} - Q_t\right]$$
     """)
     return
 
@@ -487,7 +647,7 @@ def rw_sim_params():
     alpha_rv = beta_dist.ppf(a_lo + np.random.rand(nsubjects) * (a_hi - a_lo), 1.1, 1.1)
     rl_params = np.column_stack((beta_rv, alpha_rv))
     rl_param_names = ["beta", "alpha"]
-    return alpha_rv, beta_rv, nblocks, nsubjects, ntrials, rl_param_names, rl_params
+    return nblocks, nsubjects, ntrials, rl_param_names, rl_params
 
 
 @app.cell(hide_code=True)
@@ -539,10 +699,23 @@ def sec_mle_rl_md():
 
     ### Estimating Parameters with MLE
 
-    Now estimate $\alpha$ and $\beta$ that best explain the observed choices
-    and rewards, again via grid search and `scipy.optimize.minimize`:
+    Now we can try to accurately estimate the free parameters: $\alpha$ and
+    $\beta$ that best explain a set of observed state transitions and
+    rewards. Similar to the linear regression example, we will use both
+    **grid search** and **`scipy.optimize.minimize`** to find the parameter
+    values that maximize the likelihood of the observed data.
 
-    $$-\log\mathcal{L}(\beta,\alpha,\gamma) = -\sum_{t=1}^T \log P(A_t\mid S_t,\beta,\alpha)$$
+    The likelihood of the observed data depends on both the value updates
+    and the action choices made by the agent. We will use the **negative
+    log-likelihood** as the objective function to minimize.
+
+    The negative log-likelihood function for the TD Learning model can be
+    expressed as:
+
+    $$-\log \mathcal{L}(\beta, \alpha, \gamma) = -\sum_{t=1}^{T} \log P(A_t \mid S_t, \beta, \alpha)$$
+
+    where $P(A_t \mid S_t, \beta, \alpha)$ is the probability of selecting
+    action $A_t$ given state $S_t$ and the model parameters $\beta, \alpha$.
     """)
     return
 
@@ -566,7 +739,7 @@ def rw_grid_search(sim_output):
     ri_opt, rj_opt = np.unravel_index(nll_rw.argmin(), nll_rw.shape)
     beta_opt = beta_grid[ri_opt]
     alpha_opt = alpha_grid[rj_opt]
-    return alpha_grid, alpha_opt, beta_grid, nll_rw, ri_opt, rj_opt
+    return alpha_grid, alpha_opt, beta_grid, beta_opt, nll_rw, ri_opt, rj_opt
 
 
 @app.cell(hide_code=True)
@@ -662,7 +835,7 @@ def rw_avg_q_plot(nsubjects, ntrials, sim_output):
 
 
 @app.cell(hide_code=True)
-def rw_fit_all_subjects(nsubjects, rl_params, sim_output):
+def rw_fit_all_subjects(nsubjects, sim_output):
     rl_est_params = np.zeros((nsubjects, 2))
     for fs in range(nsubjects):
         fs_guess = np.random.normal(-1, 1, 2)
@@ -701,51 +874,79 @@ def rw_recovery_plot(rl_est_params, rl_param_names, rl_params):
 @app.cell(hide_code=True)
 def sec_mle_limitations_md():
     mo.md(r"""
-    Both grid search and `scipy.optimize.minimize` failed to perfectly
-    recover the true parameters, and `scipy.optimize.minimize` again
-    outperformed grid search. MLE alone struggles to capture individual
-    agent variability -- next: hierarchical modeling.
+    Now, we have estimated the parameters of the TD Learning model using
+    both a brute force grid search and scipy.optimize.minimize. Both
+    methods failed to perfectly match the true parameters due to data noise
+    and optimization limitations. MLE also performed poorly, highlighting
+    its limitations in capturing the variability of individual agents.
+
+    The scipy.optimize.minimize function generally outperformed grid
+    search, as it uses advanced algorithms like BFGS to efficiently
+    navigate the parameter space with gradient information, while grid
+    search is computationally expensive and less precise.
+
+    Next, we turn to hierarchical modeling, which can help us better
+    account for individual differences (when fitting models to multiple
+    agents' behavior) and improve parameter estimation.
 
     ---
 
-    ## Hierarchical Modeling, MAP Estimation, and the EM Algorithm
+    ## Hierarchical Modeling, Maximum A Posteriori (MAP) Estimation, and the Expectation-Maximization (EM) Algorithm
 
-    Hierarchical modeling estimates parameters at multiple levels at once --
-    individual-level parameters (e.g. learning rate, inverse temperature)
-    and group-level "hyper" parameters (e.g. their mean, variance) --
-    capturing individual differences while pooling information across
-    subjects.
+    Hierarchical modeling is a powerful technique that allows us to
+    estimate parameters at multiple levels of a model. This approach is
+    particularly useful when we have data from multiple subjects or
+    conditions and want to estimate parameters that vary across these
+    groups.
+
+    In the context of MLE, hierarchical modeling can be used to estimate
+    individual-level parameters (e.g., learning rate, inverse temperature)
+    and group-level "hyper" parameters (e.g., their mean, variance)
+    simultaneously. This approach allows us to capture individual
+    differences while also leveraging information across subjects to
+    improve parameter estimation.
 
     ### What is Maximum A Posteriori (MAP) Estimation?
 
-    MAP combines a prior belief about parameters, $P(\theta)$, with the data
-    likelihood to estimate the parameters that maximize the *posterior*:
+    Maximum A Posteriori (MAP) estimation is a Bayesian approach that
+    combines prior knowledge about the parameters with the likelihood of
+    the observed data to estimate the parameters. In contrast to MLE, which
+    only considers the likelihood of the data, MAP estimation incorporates
+    prior beliefs about the parameters into the estimation process.
 
-    $$\theta^\ast = \arg\max_\theta P(\theta\mid\mathcal{D}) = \arg\max_\theta P(\mathcal{D}\mid\theta)\cdot P(\theta)$$
+    Our likelihood function is the same as in MLE, representing the
+    probability of observing the data given the parameters:
+
+    $$\mathcal{L}(\theta) = P(\mathcal{D} \mid \theta)$$
+
+    In MAP estimation, we also include a prior distribution over the
+    parameters, denoted as $P(\theta)$, which captures our beliefs about
+    the parameters before observing the data. The goal of MAP estimation is
+    to find the parameter values that maximize the posterior distribution
+    of the parameters given the data:
+
+    $$\theta^\ast = \arg\max_\theta \; P(\theta \mid \mathcal{D}) = \arg\max_\theta \; P(\mathcal{D} \mid \theta) \cdot P(\theta)$$
     """)
     return
 
 
-@app.cell(hide_code=True)
-def lm_simulate_hierarchical_funcs():
-    def simulate_lm(params, trials):
-        """Simulate Y ~ b0 + b1*X1 + b2*X2 + ... with params.shape[1] features."""
-        hsubjects, hparams = params.shape
-        Y_out = np.zeros((hsubjects, trials))
-        X_out = np.zeros((hsubjects, trials, hparams))
-        for hsubj in range(hsubjects):
-            np.random.seed(2021)
-            X_out[hsubj, :, :] = np.concatenate(
-                (np.ones((trials, 1)), np.random.normal(size=(trials, hparams - 1))), axis=1
-            )
-            Y_out[hsubj, :] = np.dot(X_out[hsubj, :], params[hsubj, :]) + np.random.normal(size=(trials,))
-        return X_out, Y_out
-
-    return (simulate_lm,)
+@app.function(hide_code=True)
+def simulate_lm(params, trials):
+    """Simulate Y ~ b0 + b1*X1 + b2*X2 + ... with params.shape[1] features."""
+    hsubjects, hparams = params.shape
+    Y_out = np.zeros((hsubjects, trials))
+    X_out = np.zeros((hsubjects, trials, hparams))
+    for hsubj in range(hsubjects):
+        np.random.seed(2021)
+        X_out[hsubj, :, :] = np.concatenate(
+            (np.ones((trials, 1)), np.random.normal(size=(trials, hparams - 1))), axis=1
+        )
+        Y_out[hsubj, :] = np.dot(X_out[hsubj, :], params[hsubj, :]) + np.random.normal(size=(trials,))
+    return X_out, Y_out
 
 
 @app.cell(hide_code=True)
-def lm_simulate_hierarchical_run(simulate_lm):
+def lm_simulate_hierarchical_run():
     np.random.seed(42)
     param_names = ["b0", "b1", "b2"]
     nparams = len(param_names)
@@ -759,7 +960,7 @@ def lm_simulate_hierarchical_run(simulate_lm):
 
     X_out, Y_out = simulate_lm(hparams_arr, hntrials)
     all_data = [[ay, ax] for ay, ax in zip(Y_out, X_out)]
-    return X_out, Y_out, all_data, hnsubjects, hntrials, hparams_arr, nparams, param_names
+    return X_out, Y_out, all_data, hnsubjects, hntrials, hparams_arr, nparams
 
 
 @app.cell(hide_code=True)
@@ -777,27 +978,24 @@ def lm_hierarchical_subject_plot(X_out, Y_out, hparams_arr):
     return (subject_test,)
 
 
-@app.cell(hide_code=True)
-def map_lm_func():
-    def map_lm(params, y_data, X_data, prior=None, output="npl"):
-        y_pred = np.dot(X_data, params)
-        likelihoods = scipy.stats.norm.logpdf(y_data, y_pred)
-        negll = -np.sum(likelihoods)
+@app.function(hide_code=True)
+def map_lm(params, y_data, X_data, prior=None, output="npl"):
+    y_pred = np.dot(X_data, params)
+    likelihoods = scipy.stats.norm.logpdf(y_data, y_pred)
+    negll = -np.sum(likelihoods)
 
-        if output == "npl" and prior is not None:
-            return -(-negll + prior.logpdf(np.asarray(params)))
-        if output == "nll":
-            return negll
-        if output == "all":
-            return {
-                "params": params,
-                "y_pred": y_pred,
-                "negll": negll,
-                "BIC": len(params) * np.log(len(y_data)) + 2 * negll,
-            }
-        return None
-
-    return (map_lm,)
+    if output == "npl" and prior is not None:
+        return -(-negll + prior.logpdf(np.asarray(params)))
+    if output == "nll":
+        return negll
+    if output == "all":
+        return {
+            "params": params,
+            "y_pred": y_pred,
+            "negll": negll,
+            "BIC": len(params) * np.log(len(y_data)) + 2 * negll,
+        }
+    return None
 
 
 @app.cell(hide_code=True)
@@ -807,41 +1005,54 @@ def sec_em_intro_md():
 
     ### What is Expectation-Maximization (EM)?
 
-    EM iteratively estimates model parameters in two steps:
+    The Expectation-Maximization (EM) algorithm is an iterative
+    optimization method used to estimate model parameters. The EM algorithm
+    consists of two steps:
 
-    1. **Expectation (E) step** -- estimate the expected value of latent
-       variables given the observed data and current parameter estimates.
-    2. **Maximization (M) step** -- maximize the likelihood with respect to
-       the parameters, using those expected values.
+    1. Expectation (E) Step: Estimate the expected value of the latent
+       variables given the observed data and current estimates of the
+       parameters.
+    2. Maximization (M) Step: Maximize the likelihood function with respect
+       to the parameters, using the expected values computed in the E Step.
 
-    Repeat until convergence -- this finds parameters maximizing the
-    likelihood of the observed data even with unobserved components.
+    The EM algorithm repeats these steps until convergence, effectively
+    finding the parameters that maximize the likelihood of the observed
+    data, even when there are unobserved components.
 
-    ### Hierarchical Modeling with EM
+    ### Hierarchical Modeling with the EM Algorithm
 
-    EM estimates both individual- and group-level parameters: E-step infers
-    individual-level parameters given the group-level parameters as a prior;
-    M-step updates the group-level parameters from those individual
-    estimates (used as the next E-step's prior). Repeat until convergence.
+    In the context of hierarchical modeling, the EM algorithm can be used
+    to estimate both individual-level and group-level parameters. The EM
+    algorithm iteratively estimates the individual-level parameters (E
+    Step) and then updates the group-level parameters (M Step) based on the
+    individual-level estimates. This process continues until convergence,
+    providing estimates of both individual and group-level parameters. We
+    can apply the EM algorithm with MAP estimation to fit hierarchical
+    models to behavioral data.
+
+    Pseudo-code for this algorithm:
 
     ```
     1. Initialize the group-level parameters
     2. Repeat until convergence:
-       a. E-step: estimate individual-level parameters given
+       a. E Step: Estimate individual-level parameters given
           group-level parameters as prior
-       b. M-step: update group-level parameters from individual-level
-          estimates (used as new prior)
-    3. Return the individual and group-level estimates
+       b. M Step: Update group-level parameters based on
+          individual-level estimates (use as new prior)
+    3. Return the estimated individual and group-level parameters
     ```
 
-    We use the [pyEM](https://github.com/shawnrhoads/pyEM) package (already
-    a project dependency here) to run this.
+    We can install the pyEM package to do this -- in this notebook it's
+    already a project dependency (added via
+    `uv add "pyem @ git+https://github.com/shawnrhoads/pyEM.git"`), so no
+    separate install step is needed; the original tutorial installs it with
+    `!python -m pip install git+https://github.com/shawnrhoads/pyEM.git`.
     """)
     return
 
 
 @app.cell(hide_code=True)
-def lm_em_fit(all_data, hparams_arr, map_lm, nparams):
+def lm_em_fit(all_data, hparams_arr, nparams):
     lm_em_model = EMModel(all_data=all_data, fit_func=map_lm, param_names=[f"b{pi}" for pi in range(nparams)])
     lm_fit_result = lm_em_model.fit(verbose=0)
 
@@ -852,22 +1063,28 @@ def lm_em_fit(all_data, hparams_arr, map_lm, nparams):
         lm_em_figs.append(
             plotting.plot_scatter(simulated_param, f"Simulated b_{param_idx}", estimated_param, f"Estimated b_{param_idx}")
         )
-    return lm_em_model, lm_fit_result
+    return (lm_fit_result,)
 
 
 @app.cell(hide_code=True)
 def sec_overfitting_check_md():
     mo.md(r"""
-    This is close to perfect recovery of the true parameters -- hierarchical
-    modeling and EM capturing individual differences while improving
-    parameter estimation.
+    This is nearly perfect recovery of the true parameters, demonstrating
+    the power of hierarchical modeling and the EM algorithm in capturing
+    individual differences and improving parameter estimation.
 
-    Are we overfitting? MAP estimation mitigates this: the prior acts as a
-    regularizer, preventing the model from fitting noise and keeping
-    estimates plausible. A quick check: compare predicted vs. actual $y$ for
-    a subject -- an overfit model would show either extreme, near-perfect
-    matches (fitting noise) or an overly tight central-trend fit
-    (under-regularized).
+    You might also ask if we are overfitting the model... However, the use
+    of hierarchical modeling, particularly with MAP estimation, helps
+    mitigate overfitting by incorporating prior information into the
+    parameter estimation process. The prior acts as a regularizer,
+    preventing the model from fitting noise in the data and ensuring that
+    parameter estimates remain plausible.
+
+    We can also quickly check for overfitting by visualizing the predicted
+    versus actual y values. If the model is overfitting, we would expect to
+    see an extremely close match between the predicted and actual values,
+    indicating that the model is capturing noise rather than the underlying
+    structure of the data.
     """)
     return
 
@@ -889,19 +1106,30 @@ def lm_em_overfit_check_plot(X_out, Y_out, hparams_arr, subject_test):
 @app.cell(hide_code=True)
 def sec_overfitting_explanation_md():
     mo.md(r"""
-    A strong correspondence without excessive variance supports good
-    generalization -- the hierarchical structure and priors prevent both
-    overfitting extremes, balancing flexibility against regularization for
-    robust parameter recovery.
+    In our case, the plot shows a strong correspondence without excessive
+    variance, which further supports that the model generalizes well to
+    the data. This balance is key to avoiding overfitting while still
+    capturing individual differences in the data.
+
+    Overfitting would manifest as either extreme deviations in predictions
+    (if we were over-tuning to the noise in the data) or an overly tight
+    fit to the central trend (if we were under-regularizing). Here, the
+    hierarchical structure and priors prevent both extremes, striking a
+    balance between flexibility and regularization, leading to robust
+    parameter recovery.
 
     ---
 
-    This algorithm is a **mixed-effects linear model** in disguise. The
-    individual subject parameters (`b0`, `b1`, `b2`) are akin to **random
-    effects**; the group-level means (`posterior_mu` from pyEM) are akin to
-    **fixed effects**. EM combines both levels of estimation for robust
-    parameter estimates that capture individual differences *and*
-    group-level trends. Let's confirm this with `statsmodels`.
+    You might also notice that this algorithm reflects a mixed-effect
+    linear modeling approach. If so, you would be correct. The individual
+    subject parameters `b0`, `b1`, and `b2` are akin to random effects,
+    while the group-level means (`posterior["mu"]` from `pyEM`) are akin to
+    fixed effects. The EM algorithm effectively combines these two levels
+    of estimation to provide robust parameter estimates that capture both
+    individual differences and group-level trends.
+
+    We can demonstrate this using a standard statistics package like
+    `statsmodels` to fit a mixed-effect linear model to the data.
     """)
     return
 
@@ -943,9 +1171,10 @@ def sec_rl_hierarchical_md():
     mo.md(r"""
     ---
 
-    Now apply MAP estimation and EM to a reinforcement learning model:
-    estimate individual- and group-level parameters together, using EM to
-    iterate between them.
+    Now let's consider how to apply MAP estimation and the EM algorithm to
+    fit a reinforcement learning model to data. We will use a hierarchical
+    model to estimate individual-level and group-level parameters,
+    leveraging the EM algorithm to iteratively estimate the parameters.
     """)
     return
 
@@ -969,39 +1198,56 @@ def sec_summary_md():
 
     ### Summary
 
-    We covered (1) Maximum Likelihood Estimation and (2) hierarchical
-    Maximum A Posteriori estimation with the Expectation-Maximization
-    algorithm, fitting a linear model and reinforcement learning models to
-    behavioral data -- MLE for parameter estimation, hierarchical modeling
-    for capturing individual differences and improving estimation.
+    In this tutorial, we learned (1) Maximum Likelihood Estimation (MLE)
+    and (2) Hierarchical Maximum A Posteriori (MAP) Estimation with the
+    Expectation-Maximization (EM) algorithm. We applied these methods to
+    fit a linear model and reinforcement learning models to behavioral
+    data, demonstrating how MLE can be used to estimate model parameters
+    and how hierarchical modeling can capture individual differences and
+    improve parameter estimation.
 
-    *"All models are wrong, but some are useful." -- George Box*
+    *"All models are wrong, but some are useful."* -- the original tutorial
+    illustrates this with a meme image (`img/meme-all-models-are-wrong.png`)
+    not included in this conversion; that line is the joke.
 
     ### Model Comparison
 
-    Once you've fit a model, compare it against alternatives:
+    When fitting models to data, it is essential to use model comparison to
+    evaluate the relative fit of different models. Common approaches to
+    model comparison include (but are not limited to):
 
-    - **AIC** (Akaike Information Criterion) -- balances fit and complexity;
-      lower is better.
-    - **BIC** (Bayesian Information Criterion) -- like AIC, penalizes
-      complexity more strongly, favoring simpler models.
-    - **LME** (Log Model Evidence) -- Bayesian log-evidence for direct model
-      comparison.
-    - **WAIC** (Widely Applicable Information Criterion) -- Bayesian
-      estimate of out-of-sample predictive accuracy.
-    - **Cross-validation** -- assess generalization by splitting data into
-      training/test sets.
+    - **Akaike Information Criterion (AIC)**: A measure that balances model
+      fit and complexity, with lower AIC values indicating better models.
+    - **Bayesian Information Criterion (BIC)**: Similar to AIC but
+      penalizes model complexity more strongly, often leading to simpler
+      models.
+    - **Log Model Evidence (LME)**: A Bayesian approach that computes the
+      log evidence of the model given the data, allowing for direct
+      comparison of models.
+    - **WAIC (Widely Applicable Information Criterion)**: A Bayesian
+      approach that estimates the out-of-sample predictive accuracy of the
+      model, considering both fit and complexity.
+    - **Cross-Validation**: A technique that assesses how well a model
+      generalizes to new data by splitting the data into training and
+      testing sets.
 
     ### Additional Resources
 
     - Wilson, R. C., & Collins, A. G. (2019). Ten simple rules for the
-      computational modeling of behavioral data. *eLife*, 8, e49547.
+      computational modeling of behavioral data. *eLife*, 8, e49547. doi:
+      10.7554/eLife.49547 https://elifesciences.org/articles/49547
     - Daw, N. D. (2011). Trial-by-trial data analysis using computational
-      models.
+      models. *Decision making, affect, and learning: Attention and
+      performance XXIII*, 23(1). doi: 10.1093/acprof:oso/9780199600434.003.0001
+      https://www.princeton.edu/~ndaw/d10.pdf
     - Rhoads, S. A. (2023). pyEM: Expectation Maximization with MAP
-      estimation in Python. https://github.com/shawnrhoads/pyEM
+      estimation in Python. doi: 10.5281/zenodo.10415396
+      https://github.com/shawnrhoads/pyEM
     - Rhoads, S. A. & Gan, L. (2022). Computational models of human social
-      behavior and neuroscience. *JOSE*, 5(47), 146.
+      behavior and neuroscience: An open educational course and Jupyter
+      Book to advance computational training. *Journal of Open Source
+      Education*, 5(47), 146. doi: 10.21105/jose.00146
+      https://shawnrhoads.github.io/gu-psyc-347/
     """)
     return
 
