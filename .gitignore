@@ -21,3 +21,7 @@ vault/.obsidian/workspace*.json
 vault/.obsidian/cache
 vault/.trash/
 scripts/extract_papers.py
+
+# ── marimo per-machine session/layout state (not notebook content) ──
+notebooks/__marimo__/
+notebooks/layouts/
